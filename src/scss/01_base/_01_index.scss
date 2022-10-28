@@ -1,5 +1,5 @@
+@import "normalize";
 @import "adaptive_fonts";
-@import "variables";
 @import "fonts";
 @import "headings";
 
@@ -13,32 +13,16 @@ body {
   font-weight: 400;
   @extend .adaptive_16px;
   line-height: 135%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  overflow-y: overlay;
   min-width: 320px;
   min-height: 100vh;
   max-width: 100vw;
-}
-
-#app {
+  height: 600vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: 100vh;
 }
 
-.page {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  //overflow-y: auto;
-  //overflow-y: overlay;
-  height: 100%;
-  flex-grow: 1;
-}
 
 .uppercase {
   text-transform: uppercase;
@@ -75,26 +59,16 @@ button, a {
   scrollbar-width: none;
 }
 
-
-.wrapper-padding {
+.standart-padding-both {
   padding: 0 100px;
   @media screen and (max-width: $notebook_start) {
     padding: 0 auto-calculate($notebook_start, $notebook, 100px, 50px);
   }
   @media screen and (max-width: $notebook) {
-    padding: 0 auto-calculate($notebook, $tablet, 50px, 20px);
+    padding: 0 auto-calculate($notebook_start, $tablet, 50px, 20px);
   }
   @media screen and (max-width: $tablet) {
     padding: 0 20px;
   }
-}
-
-.wrapper-maxwidth {
-  width: 100%;
-  max-width: $notebook_start;
-}
-
-.container-maxwidth {
-  max-width: $maxwidth;
 }
 

@@ -9,6 +9,9 @@
     height: auto;
     padding-top: 19px !important;
     z-index: $navigation_z;
+    position: sticky;
+    top:0;
+    max-width: $maxwidth;
   }
 
   position: relative;
