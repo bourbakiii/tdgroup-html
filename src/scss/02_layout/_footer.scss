@@ -1,7 +1,7 @@
 .footer {
-  padding: 0;
   width: 100%;
   height: 166px;
+  max-width: $maxwidth;
   display: flex;
   justify-content: space-between;
   align-items: center;
