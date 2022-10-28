@@ -1,0 +1,58 @@
+<div id="parallax" class="parallax">
+    <div class="parallax__title-outer">
+        <div class="parallax__title">Спасибо за рыбу!</div>
+    </div>
+
+    <div class="parallax__sections">
+        <div class="parallax__section">
+            <div class="parallax__block parallax__block_first">
+                1
+            </div>
+        </div>
+
+        <div class="parallax__section">
+            <div class="parallax__block parallax__block_second">
+                2
+            </div>
+        </div>
+
+        <div class="parallax__section">
+            <div class="parallax__block parallax__block_third">
+                3
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    import ScrollTrigger from "gsap/ScrollTrigger.js";
+
+    // Register ScrollTrigger Plugin (Do not remove!!!)
+    gsap.registerPlugin(ScrollTrigger);
+
+    const parallaxBlock = document.getElementById("parallax");
+    const sections = gsap.utils.toArray(".parallax__section");
+
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: parallaxBlock,
+            start: "top top",
+            // end: () => "+=" + parallaxBlock.offsetHeight,
+            scrub: true,
+            snap: 1 / (sections.length + 1),
+            pin: true,
+            anticipatePin: 1,
+        },
+        defaults: { ease: "none" },
+    });
+
+    sections.forEach((section) => {
+        tl.to(
+            section,
+            {
+                yPercent: 200,
+            },
+            "<50%"
+        );
+    });
+</script>
