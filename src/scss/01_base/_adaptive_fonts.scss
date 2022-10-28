@@ -1,0 +1,191 @@
+@mixin adaptive_12px_mixin {
+  font-size: 12px;
+
+  @media screen and (max-width: $notebook) {
+    font-size: 11px;
+  }
+  @media screen and (max-width: $tablet_start) {
+    font-size: 10.5px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 10px;
+  }
+}
+
+@mixin adaptive_14px_mixin {
+  font-size: 14px;
+
+  @media screen and (max-width: $notebook) {
+    font-size: 13px;
+  }
+  @media screen and (max-width: $tablet_start) {
+    font-size: 13.5px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 12px;
+  }
+}
+
+@mixin adaptive_16px_mixin {
+  font-size: 16px;
+
+  @media screen and (max-width: $notebook) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $tablet_start) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 13px;
+  }
+}
+
+@mixin adaptive_18px_mixin {
+  font-size: 18px;
+
+  @media screen and (max-width: $notebook) {
+    font-size: 17px;
+  }
+  @media screen and (max-width: $tablet_start) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 15px;
+  }
+}
+
+@mixin adaptive_24px_mixin {
+  font-size: 24px;
+
+  @media screen and (max-width: $notebook) {
+    font-size: 22px;
+  }
+  @media screen and (max-width: $tablet_start) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: $phone_start) {
+    font-size: 16.5px;
+  }
+}
+
+@mixin adaptive_20px_mixin {
+  font-size: 20px;
+
+  @media screen and (max-width: $notebook) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: $tablet_start) {
+    font-size: 17.5px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 16.5px;
+  }
+  @media screen and (max-width: $phone_start) {
+    font-size: 15.5px;
+  }
+}
+
+@mixin adaptive_32px_mixin {
+  font-size: 32px;
+
+  @media screen and (max-width: $notebook) {
+    font-size: 29px;
+  }
+  @media screen and (max-width: $tablet_start) {
+    font-size: 26px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 23px;
+  }
+  @media screen and (max-width: $phone_start) {
+    font-size: 20px;
+  }
+}
+
+@mixin adaptive_48px_mixin {
+  font-size: 48px;
+
+  @media screen and (max-width: $notebook) {
+    font-size: 43.5px;
+  }
+  @media screen and (max-width: $tablet_start) {
+    font-size: 39px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 34.5px;
+  }
+  @media screen and (max-width: $phone_start) {
+    font-size: 27px;
+  }
+}
+
+@mixin adaptive_72px_mixin {
+  font-size: 72px;
+
+  @media screen and (max-width: $notebook) {
+    font-size: 65.25px;
+  }
+  @media screen and (max-width: $tablet_start) {
+    font-size: 58.5px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 51.75px;
+  }
+  @media screen and (max-width: $phone_start) {
+    font-size: 40.5px;
+  }
+}
+
+@mixin adaptive_112px_mixin {
+  font-size: 112px;
+  @media screen and (max-width: $notebook_start) {
+    font-size: 8vw;
+  }
+  @media screen and (max-width: $notebook) {
+    font-size: 10vw;
+  }
+}
+
+.adaptive_12px {
+  @include adaptive_12px_mixin;
+}
+
+.adaptive_14px {
+  @include adaptive_14px_mixin;
+}
+
+.adaptive_16px {
+  @include adaptive_16px_mixin;
+}
+
+.adaptive_18px {
+  @include adaptive_18px_mixin;
+}
+
+.adaptive_20px {
+  @include adaptive_18px_mixin;
+}
+
+.adaptive_24px {
+  @include adaptive_24px_mixin;
+}
+
+.adaptive_32px {
+  @include adaptive_32px_mixin;
+}
+
+.adaptive_48px {
+  @include adaptive_48px_mixin;
+}
+
+.adaptive_72px {
+  @include adaptive_72px_mixin;
+}
+
+.adaptive_112px {
+  @include adaptive_112px_mixin;
+}
+

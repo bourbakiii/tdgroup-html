@@ -1,0 +1,98 @@
+//@import '@/assets/scss/adaptive_fonts.scss';
+//@import "@/assets/scss/links.scss";
+.navigation {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-top: 19px !important;
+    z-index: $navigation_z;
+  }
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  @media screen and (max-width: $tablet_end) {
+    justify-content: flex-start;
+  }
+
+  &__menu {
+    width: max-content;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: content-box;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 2px;
+    @media screen and (max-width: $tablet_end) {
+      align-items: flex-start;
+    }
+
+    &__button {
+      color: $GREEN;
+    }
+
+    &__link {
+      color: rgba($IVORY, .60);
+      transition: $TRANSITION;
+
+      &:hover {
+        color: $IVORY;
+      }
+    }
+
+
+    &__links {
+      @media screen and (max-width: $tablet_end) {
+        align-items: flex-start;
+      }
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      grid-gap: 16px;
+      height: 0;
+      box-sizing: content-box;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+}
+
+.link {
+  font-family: 'Stratos LC Bold', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  @extend .adaptive_24px;
+
+  line-height: 125%;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  text-underline-offset: 7px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  @media screen and (max-width: $notebook) {
+  @include adaptive_20px_mixin;
+  line-height: 110%;
+  }
+  @media screen and (max-width: $tablet) {
+  @include adaptive_18px_mixin;
+  }
+}

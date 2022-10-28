@@ -1,0 +1,180 @@
+@import './adaptive_fonts.scss';
+
+@mixin heading_mixin {
+  font-style: normal;
+  font-family: 'Stratos LC Bold', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@mixin heading_1_mixin {
+  @include heading_mixin;
+  font-family: 'Stratos LC Black', sans-serif;
+  font-weight: 1000;
+  font-size: 224px;
+  line-height: 100%;
+}
+
+@mixin heading_2_mixin {
+  @include heading_mixin;
+
+  font-size: 176px;
+  line-height: 100%;
+}
+
+@mixin heading_3_mixin {
+  @include heading_mixin;
+  @include adaptive_72px_mixin;
+  line-height: 100%;
+}
+
+@mixin heading_4_mixin {
+  @include heading_mixin;
+  @include adaptive_48px_mixin;
+  line-height: 100%;
+}
+
+@mixin heading_5_mixin {
+  @include heading_mixin;
+  @include adaptive_32px_mixin;
+  line-height: 100%;
+}
+
+@mixin heading_6_mixin {
+  @include heading_mixin;
+  @include adaptive_24px_mixin;
+  line-height: 100%;
+}
+
+.heading_1 {
+  @include heading_1_mixin;
+}
+
+.heading_2 {
+  @include heading_2_mixin;
+}
+
+.heading_3 {
+  @include heading_3_mixin;
+}
+
+.heading_4 {
+  @include heading_4_mixin;
+}
+
+.heading_5 {
+  @include heading_5_mixin;
+}
+
+.heading_6 {
+  @include heading_6_mixin;
+}
+
+@mixin caption_1_mixin {
+  font-family: 'Stratos LC Bold', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  @include adaptive_16px_mixin;
+}
+
+.caption_1 {
+  @include caption_1_mixin;
+}
+
+@mixin subheader_mixin {
+  font-family: 'Stratos LC Bold', sans-serif;
+}
+
+@mixin subheader_1_mixin {
+  font-family: "Stratos LC Regular", sans-serif;
+  line-height: 110%;
+  text-align: center;
+  @include adaptive_32px_mixin;
+}
+
+@mixin subheader_2_mixin {
+  font-family: 'Stratos LC Bold', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 105%;
+  @include adaptive_16px_mixin;
+}
+
+.subheader_1 {
+  @include subheader_1_mixin;
+}
+
+.subheader_2 {
+  @include subheader_2_mixin;
+}
+
+@mixin lead_mixin {
+  font-family: 'Stratos LC Regular', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  @include adaptive_32px_mixin;
+}
+
+.lead {
+  @include lead_mixin;
+}
+
+@mixin body_mixin {
+  font-family: 'Stratos LC Regular', sans-serif;
+  line-height: 135%;
+  @include adaptive_16px_mixin;
+}
+
+.body {
+  @include body_mixin;
+}
+
+@mixin body_2_mixin {
+  @include body_mixin;
+  @include adaptive_14px_mixin;
+
+}
+
+@mixin body_3_mixin {
+  @include body_mixin;
+  font-weight: 400;
+  @include adaptive_14px_mixin;
+}
+
+.body_2 {
+  @include body_2_mixin;
+}
+
+
+.body_3 {
+  @include body_3_mixin;
+}
+
+
+@mixin lead_1_mixin {
+  font-family: 'Stratos LC Regular', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  @include adaptive_32px_mixin;
+}
+
+.lead_1 {
+  @include lead_1_mixin;
+}
+
+
+@mixin form_italic_header_32px_mixin {
+  font-family: 'Stratos LC Bold', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  @include adaptive_32px_mixin;
+  line-height: 100%;
+}
+
+.form_italic_header_32px {
+  @include form_italic_header_32px_mixin;
+}
+
