@@ -4,32 +4,31 @@
     grid-gap: auto-calculate($notebook_start, $notebook, 20px, 10px);
   }
   @media screen and (max-width: $notebook) {
-    grid-gap: auto-calculate($notebook_start, $notebook, 10px, 5px);
+    grid-gap: auto-calculate($notebook, $tablet, 10px, 5px);
+  }
+  @media screen and (max-width: $tablet) {
+    grid-gap: 5px;
   }
 }
 
 .blog-screen {
   width: 100%;
-  background-color: rgba($IVORY, .95);
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba($IVORY, 0.95);
   &__content {
-    padding: 100px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    background-color: rgba($BLACK, .3);
     max-width: 100%;
     width: 100%;
-    padding: 0 100px;
-
-    @media screen and (max-width: $notebook_start) {
-      padding: 0 auto-calculate($notebook_start, $notebook, 100px, 50px)
-    }
-    @media screen and (max-width: $notebook) {
-      padding: 0 auto-calculate($notebook, $tablet, 50px, 20px);
-    }
-    @media screen and (max-width: $tablet) {
-      padding: 0 20px;
+    max-width: $maxwidth;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @media screen and (max-width: 768px) {
+      background-color: red;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
