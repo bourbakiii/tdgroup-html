@@ -6,7 +6,6 @@
 @@include('./html/layout/_navigation.html')
 <main class="post-page__padding standart-padding-both">
     <div class="page post-page">
-
         <header class="post-page__header">
             <a href="/blog" class="post-page__header__back-button">
                 @@include('./html/buttons/_arrow-button.html', {class: 'post-page__header__back-button__button left'})
@@ -123,47 +122,13 @@
                 </div>
             </div>
         </div>
-
-
+        @@include('./html/screens/_form.html', {class: 'post-page__form', title:'Получите весь дайджест', button_text:'Отправить'})
     </div>
 </main>
 
-<!--    <Form class="post-page__form" @submit="digestSubmit">-->
-<!--        <template #title>-->
-<!--            <h3 class="form__title">Получите весь дайджест</h3>-->
-<!--        </template>-->
-<!--        <template #inputs>-->
-<!--            <div class="form__row">-->
-<!--                <input class="form__input" type="text" placeholder="ФИО" name="name"-->
-<!--                       id="digest-name">-->
-<!--                <input class="form__input" type="text" placeholder="Компания" name="company"-->
-<!--                       id="digest-company">-->
-<!--            </div>-->
-<!--            <div class="form__row">-->
-<!--                <input class="form__input" type="text" placeholder='Номер телефона'-->
-<!--                       name="phone">-->
-<!--                <input class="form__input" type="text" placeholder="E-mail" name="email"-->
-<!--                       id="digest-email">-->
-<!--            </div>-->
-<!--            <textarea class="form__input" placeholder=Сообщение-->
-<!--                      name="phone"></textarea>-->
-<!--        </template>-->
-<!--        <template #button-text>Отправить</template>-->
-<!--    </Form>-->
-
 <!--  <PostsSlider class="post-page__posts-slider"/>-->
-<!--        @@include('./html/layout/_footer.html')-->
 @@include('./html/layout/_footer.html')
 @@include('./html/layout/_scripts.html')
+
 </body>
 </html>
-
-<style>
-    .index-page {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-</style>

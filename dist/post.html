@@ -38,7 +38,6 @@
 
 <main class="post-page__padding standart-padding-both">
     <div class="page post-page">
-
         <header class="post-page__header">
             <a href="/blog" class="post-page__header__back-button">
                     <button type="button" class="arrow-button post-page__header__back-button__button left">
@@ -198,36 +197,32 @@
                 </div>
             </div>
         </div>
+        <div class="form__wrapper post-page__form">
+    <div class="form__container ">
+
+        <h2 class="form__title heading_4">Получите весь дайджест</h2>
+        <form class="form">
+            <div class="form__inputs">
+                <div class="form__row">
+                    <input class="form__input" type="text" placeholder="ФИО" name="name"/>
+                    <input class="form__input" type="text" placeholder="Компания" name="company"/>
+                </div>
+                <div class="form__row">
+                    <input class="form__input" type="text" placeholder='Номер телефона' name="phone"/>
+                    <input class="form__input" type="text" placeholder="E-mail" name="email">
+                </div>
+                <textarea class="form__input" placeholder="Сообщение" name="phone"></textarea>
+            </div>
+            <button type="submit" class="form__button secondary-button">Отправить</button>
+        </form>
+    </div>
+</div>
 
 
     </div>
 </main>
 
-<!--    <Form class="post-page__form" @submit="digestSubmit">-->
-<!--        <template #title>-->
-<!--            <h3 class="form__title">Получите весь дайджест</h3>-->
-<!--        </template>-->
-<!--        <template #inputs>-->
-<!--            <div class="form__row">-->
-<!--                <input class="form__input" type="text" placeholder="ФИО" name="name"-->
-<!--                       id="digest-name">-->
-<!--                <input class="form__input" type="text" placeholder="Компания" name="company"-->
-<!--                       id="digest-company">-->
-<!--            </div>-->
-<!--            <div class="form__row">-->
-<!--                <input class="form__input" type="text" placeholder='Номер телефона'-->
-<!--                       name="phone">-->
-<!--                <input class="form__input" type="text" placeholder="E-mail" name="email"-->
-<!--                       id="digest-email">-->
-<!--            </div>-->
-<!--            <textarea class="form__input" placeholder=Сообщение-->
-<!--                      name="phone"></textarea>-->
-<!--        </template>-->
-<!--        <template #button-text>Отправить</template>-->
-<!--    </Form>-->
-
 <!--  <PostsSlider class="post-page__posts-slider"/>-->
-
 <footer class="footer standart-padding-both">
     <a class="footer__logo" href="/">
         <svg class="footer__logo__icon"
@@ -262,15 +257,6 @@
     </div>
 </footer>
 <script src="js/app.min.js"></script>
+
 </body>
 </html>
-
-<style>
-    .index-page {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-</style>

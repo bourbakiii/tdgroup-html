@@ -671,7 +671,28 @@
         </div>
     </div>
 </div>
-    
+    <div class="form__wrapper index-page__form">
+    <div class="form__container ">
+
+        <h2 class="form__title heading_4">Напишите нам, если вам нужна консультация</h2>
+        <form class="form">
+            <div class="form__inputs">
+                <div class="form__row">
+                    <input class="form__input" type="text" placeholder="ФИО" name="name"/>
+                    <input class="form__input" type="text" placeholder="Компания" name="company"/>
+                </div>
+                <div class="form__row">
+                    <input class="form__input" type="text" placeholder='Номер телефона' name="phone"/>
+                    <input class="form__input" type="text" placeholder="E-mail" name="email">
+                </div>
+                <textarea class="form__input" placeholder="Сообщение" name="phone"></textarea>
+            </div>
+            <button type="submit" class="form__button secondary-button">Отправить</button>
+        </form>
+    </div>
+</div>
+
+
 </main>
 
 <footer class="footer standart-padding-both">
@@ -710,13 +731,3 @@
 <script src="js/app.min.js"></script>
 </body>
 </html>
-
-<style>
-    .index-page {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-</style>

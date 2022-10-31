@@ -7,20 +7,10 @@
 <main class="page index-page">
     <!--    @@include('./html/screens/_main.html')-->
     @@include('./html/screens/_blog.html')
-    <!--    @@include('./html/screens/_form.html', {title:'Напишите нам, если вам нужна консультация', button_text:'Отправить'})-->
+    @@include('./html/screens/_form.html', {class: 'index-page__form', title:'Напишите нам, если вам нужна консультация', button_text:'Отправить'})
 </main>
 <!--        @@include('./html/layout/_footer.html')-->
 @@include('./html/layout/_footer.html')
 @@include('./html/layout/_scripts.html')
 </body>
 </html>
-
-<style>
-    .index-page {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-</style>
