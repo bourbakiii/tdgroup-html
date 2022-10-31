@@ -36,8 +36,6 @@ const openAnimation = () => {
         duration: TRANSITION_TIME,
         ease: 'power3',
     });
-
-
 }
 const closeAnimation = () => {
     gsap.to('.navigation__menu', {
