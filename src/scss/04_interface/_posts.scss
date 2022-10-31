@@ -7,7 +7,7 @@
     grid-gap: auto-calculate($notebook, $phone_start, 25px, 12.5px)
   }
   @media screen and (max-width: $phone_start) {
-    grid-gap:10px;
+    grid-gap: 10px;
   }
 }
 
@@ -64,6 +64,8 @@
     height: auto;
     max-height: 275px;
     @media screen and (max-width: $tablet) {
+      margin: auto 0;
+
       width: 24%;
       height: auto;
       display: flex;
@@ -75,7 +77,6 @@
     }
   }
 }
-
 
 .theme-post {
   background-color: $BLACK;
@@ -104,19 +105,41 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  grid-gap: 32px;
+  grid-gap: 42px;
+  @media screen and (max-width: $notebook_start) {
+    grid-gap: auto-calculate($notebook_start, $notebook, 42px, 21px);
+  }
+  @media screen and (max-width: $notebook) {
+    grid-gap: auto-calculate($notebook, $tablet, 22px, 11px);
+  }
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    grid-gap: 11px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+  }
+
+
+  &__title-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    grid-gap: 16px;
+    @media screen and (max-width: $tablet) {
+      align-items: flex-start;
+    }
+  }
 
   &__pre {
     text-align: center;
     letter-spacing: 0.1em;
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    grid-gap: 42px;
+  &__title {
+    text-align: left;
   }
 
   &__image {
@@ -124,5 +147,18 @@
     object-fit: contain;
     height: auto;
     max-height: 260px;
+    @media screen and (max-width: $tablet) {
+      margin: auto 0;
+      width: 24%;
+      max-height: none;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media screen and (max-width: $phone_start) {
+      width: 28%;
+    }
   }
 }
