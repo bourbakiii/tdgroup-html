@@ -21,7 +21,8 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
-.page{
+
+.page {
   flex-grow: 1;
 }
 
@@ -71,6 +72,19 @@ button, a {
   }
   @media screen and (max-width: $tablet) {
     padding: 0 20px;
+  }
+}
+
+.adaptive-non {
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.adaptive {
+  display: none;
+  @media screen and (max-width: $tablet) {
+    display: initial;
   }
 }
 
