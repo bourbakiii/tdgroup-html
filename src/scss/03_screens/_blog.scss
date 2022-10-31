@@ -18,12 +18,14 @@
   justify-content: flex-start;
   align-items: center;
   background-color: rgba($IVORY, 0.95);
-  &__padding-wrapper{
-  width:100%;
+
+  &__padding-wrapper {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   &__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -32,14 +34,26 @@
     max-width: $maxwidth;
     padding-top: 100px;
     padding-bottom: 100px;
+    @media screen and (max-width: $notebook_start) {
+      padding-top: auto-calculate($notebook_start, $notebook, 100px, 50px);
+      padding-bottom: auto-calculate($notebook_start, $notebook, 100px, 50px);
+    }
+    @media screen and (max-width: $notebook) {
+      padding-top: auto-calculate($notebook, $tablet, 50px, 25px);
+      padding-bottom: auto-calculate($notebook, $tablet, 50px, 25px);
+    }
+    @media screen and (max-width: $tablet) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
     @media screen and (max-width: $tablet) {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
       grid-gap: 10px;
-      width:100%;
-      background-color: red;
+      width: 100%;
       max-width: 100%;
     }
     @extend .blog-screen-gap;
