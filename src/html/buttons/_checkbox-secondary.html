@@ -1,0 +1,13 @@
+<template>
+  <label :for="$props.id" class="primary-checkbox checkbox unselectable"
+         :class="{checked: modelValue, disabled: $attrs.hasOwnProperty('disabled')}">
+    <input v-bind="$attrs" @input="changeFunction($event.target.checked)" :checked="modelValue" type="checkbox"
+           :id="$props.id"
+           :value="value"
+           style="display:none">
+    <svg class="primary-checkbox__icon" width="12" height="9">
+      <use xlink:href="@/assets/sprites.svg#checkbox-galka"></use>
+    </svg>
+  </label>
+</template>
+
