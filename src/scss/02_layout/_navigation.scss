@@ -1,5 +1,3 @@
-//@import '@/assets/scss/adaptive_fonts.scss';
-//@import "@/assets/scss/links.scss";
 .navigation {
   &__wrapper {
     display: flex;
@@ -10,8 +8,7 @@
     padding-top: 19px !important;
     z-index: $navigation_z;
     position: sticky;
-    top:0;
-    max-width: $maxwidth;
+    top: 0;
   }
 
   position: relative;
@@ -21,6 +18,7 @@
   align-items: flex-end;
   height: 100%;
   width: 100%;
+  max-width: $maxwidth;
   @media screen and (max-width: $tablet_end) {
     justify-content: flex-start;
   }
@@ -92,10 +90,10 @@
   background-color: rgba(0, 0, 0, 0);
   border: none;
   @media screen and (max-width: $notebook) {
-  @include adaptive_20px_mixin;
-  line-height: 110%;
+    @include adaptive_20px_mixin;
+    line-height: 110%;
   }
   @media screen and (max-width: $tablet) {
-  @include adaptive_18px_mixin;
+    @include adaptive_18px_mixin;
   }
 }

@@ -1,10 +1,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger.js";
 
-
-document.querySelector('.main-screen').style.height = (window.innerHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height) + 'px';
-
-
+// Register ScrollTrigger Plugin (Do not remove!!!)
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to('h1', {delay: 0.3, transform: 'translateY(0px)', duration: 2, opacity: 1, ease: 'power3', stagger: 0.2})
@@ -24,7 +21,7 @@ const sections = gsap.utils.toArray(".main-screen__section");
 let tl = gsap.timeline({
     scrollTrigger: {
         trigger: parallaxBlock,
-        start: "bottom bottom",
+        start: "top top",
         // end: () => "+=" + parallaxBlock.offsetHeight,
         scrub: true,
         snap: 1 / (sections.length + 1),

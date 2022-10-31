@@ -37,44 +37,36 @@
 
 
 <main class="page index-page">
-    <div id="main-screen__parallax" class="main-screen">
-    <div class="main-screen__logo">
-        <div class="main-screen__row">
-            <h1 class="heading_1 main-screen__training-text">
-                TRAINING
-            </h1>
-            <svg class="main-screen__cross" width="140" height="139">
-                <use xlink:href="assets/svgicons/icons/icons.svg#cross"></use>
-            </svg>
-        </div>
-        <h1 class="heading_1 main-screen__row main-screen__development-text">DEVELOPMENT</h1>
-        <div class="main-screen__row">
-            <h1 class="heading_1 main-screen__row main-screen__group-text">GROUP</h1>
-            <p class="main-screen__additional-text body_1">Корпоративные <br>
-                образовательные {{ logo_height }}
-                <br>
-                программы
-            </p>
-        </div>
-    </div>
-    <div class="main-screen__sections">
-        <div class="main-screen__section">
-            <div class="main-screen__block main-screen__block_first">
-                1
+    
+    
+    <div class="form__container">
+    <h2 class="form__container__title">Напишите нам, если вам нужна консультация</h2>
+    <form class="form">
+        <div class="form__inputs">
+            <div class="form__row">-->
+                <input class="form__input" type="text" placeholder="ФИО" name="name"
+                       id="digest-name">
+                <input class="form__input" type="text" placeholder="Компания" name="company"
+                       id="digest-company">
             </div>
-        </div>
-        <div class="main-screen__section">
-            <div class="main-screen__block main-screen__block_second">
-                2
+            <div class="form__row">
+                <input class="form__input" type="text" placeholder='Номер телефона'
+                       name="phone" id="digest-phone">
+                <input class="form__input" type="text" placeholder="E-mail" name="email"
+                       id="digest-email">
             </div>
+            <textarea class="form__input" placeholder=Сообщение
+                      name="phone" id="digest-phone"/>
         </div>
-        <div class="main-screen__section">
-            <div class="main-screen__block main-screen__block_third">
-                3
-            </div>
+        <div class="form__checks" v-if="is_with_checks">
+            <slot name="checks"></slot>
         </div>
-    </div>
+        <button type="submit" class="form__button secondary-button">Отправить</button>
+    </form>
 </div>
+
+
+
 </main>
 
 <footer class="footer standart-padding-both">
@@ -113,3 +105,13 @@
 <script src="js/app.min.js"></script>
 </body>
 </html>
+
+<style>
+    .index-page {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+</style>
