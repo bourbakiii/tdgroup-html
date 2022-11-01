@@ -31,8 +31,8 @@ const openAnimation = () => {
         height: 'auto', opacity: 1, paddingBottom: 32, duration: TRANSITION_TIME, ease: 'power3',
     });
     gsap.to('.navigation__button', {
-        backgroundColor: 'red',
-        color: 'green',
+        backgroundColor: 'white',
+        color: 'purple',
         duration: TRANSITION_TIME,
         ease: 'power3',
     });
@@ -47,9 +47,9 @@ const closeAnimation = () => {
         ease: 'power3',
     })
     gsap.to('.navigation__menu__button', {
-        color: 'red',
+        color: 'purple',
         ease: 'power3',
-        textDecorationColor: 'red',
+        textDecorationColor: 'white',
         duration: TRANSITION_TIME,
     })
     gsap.to('.navigation__menu__links', {
@@ -61,8 +61,8 @@ const closeAnimation = () => {
         ease: 'power3',
     });
     gsap.to('.navigation__button', {
-        backgroundColor: 'green',
-        color: 'red',
+        backgroundColor: 'purple',
+        color: 'white',
         duration: TRANSITION_TIME,
         ease: 'power3',
     });

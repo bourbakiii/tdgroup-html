@@ -1,5 +1,9 @@
-.formats-page {
+.formats-screen {
   overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 
   &__information {
     display: flex;
@@ -30,6 +34,9 @@
     width: 100%;
     table-layout: fixed;
     min-width: 650px;
+    max-width: $maxwidth;
+
+    padding-bottom: 10px;
 
     &__wrapper {
       display: flex;
@@ -38,11 +45,15 @@
       overflow-x: auto;
       width: 100%;
       margin: 72px 0 32px;
+
       @media screen and (max-width: $notebook) {
         margin: 40px 0 20px;
       }
-
+      @media screen and (max-width: 690px) {
+        padding-bottom: 15px;
+      }
     }
+
 
     &__subheader, &__after-text {
       text-align: left;

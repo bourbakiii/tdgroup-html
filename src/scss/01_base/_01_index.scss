@@ -62,17 +62,36 @@ button, a {
   scrollbar-width: none;
 }
 
-.standart-padding-both {
-  padding: 0 100px;
+.standart-padding-left {
+  padding-left: 100px;
   @media screen and (max-width: $notebook_start) {
-    padding: 0 auto-calculate($notebook_start, $notebook, 100px, 50px);
+    padding-left: auto-calculate($notebook_start, $notebook, 100px, 50px);
   }
   @media screen and (max-width: $notebook) {
-    padding: 0 auto-calculate($notebook_start, $tablet, 50px, 20px);
+    padding-left: auto-calculate($notebook_start, $tablet, 50px, 20px);
   }
   @media screen and (max-width: $tablet) {
-    padding: 0 20px;
+    padding-left: 20px;
   }
+}
+
+.standart-padding-right {
+  padding-right: 100px;
+  @media screen and (max-width: $notebook_start) {
+    padding-right: auto-calculate($notebook_start, $notebook, 100px, 50px);
+  }
+  @media screen and (max-width: $notebook) {
+    padding-right: auto-calculate($notebook_start, $tablet, 50px, 20px);
+  }
+  @media screen and (max-width: $tablet) {
+    padding-right: 20px;
+  }
+}
+
+
+.standart-padding-both {
+@extend .standart-padding-left;
+@extend .standart-padding-right;
 }
 
 .adaptive-non {

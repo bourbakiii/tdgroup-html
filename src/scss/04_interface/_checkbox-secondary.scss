@@ -2,20 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
-  border: 1px solid $GREEN;
+  width: 24px;
+  height: 24px;
   border-radius: 90px;
-  cursor: pointer;
+  background-color: rgba($BLACK, .75);
+
   flex-shrink: 0;
-  transition: .1s;
 
   &__icon {
     fill: $IVORY;
   }
 
   &.checked {
-    background-color: $GREEN;
+    background-color: rgba($BLACK, .30);
   }
 
   &.disabled {
