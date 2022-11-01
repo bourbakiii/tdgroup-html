@@ -6,7 +6,7 @@
   &__item {
     color: $GREEN;
     border: 1px solid black;
-
+    height: 557px;
 
     &__content {
       width: 276px;
@@ -16,20 +16,17 @@
       grid-gap: 12px;
     }
 
-    &__title {
-      transition: $TRANSITION;
-      @extend .heading_5;
-    }
 
     &__button {
       width: 124px;
+
+      &.hidden {
+        display: none;
+      }
     }
 
     &:hover & {
-      &__title {
-        background-color: red;
-        @extend .heading_4;
-      }
+
     }
   }
 }
