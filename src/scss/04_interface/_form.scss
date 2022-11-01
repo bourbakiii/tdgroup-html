@@ -1,0 +1,276 @@
+@mixin grid-gap_mixin {
+  grid-gap: 20px;
+  @media screen and (max-width: $notebook_start) {
+    grid-gap: auto-calculate($notebook_start, $notebook, 20px, 10px);
+  }
+  @media screen and (max-width: $notebook) {
+    grid-gap: 10px;
+  }
+}
+
+@mixin checks-grid-gap_mixin {
+  grid-gap: 40px;
+  @media screen and (max-width: $notebook_start) {
+    grid-gap: auto-calculate($notebook_start, $notebook, 40px, 20px);
+  }
+  @media screen and (max-width: $notebook) {
+    grid-gap: auto-calculate($notebook, $tablet, 40px, 20px);
+  }
+  @media screen and (max-width: $tablet) {
+    grid-gap: 20px;
+  }
+}
+
+@mixin form-columned_mixin {
+  &__container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  max-width: 820px;
+  @media screen and (max-width: $notebook) {
+    max-width: 100%;
+  }
+  &__title {
+    @media screen and (max-width: $notebook) {
+      @include form_italic_header_32px_mixin;
+      margin-bottom: 20px;
+      width: auto !important;
+      max-width: 100%;
+    }
+  }
+}
+
+.form {
+  &__wrapper {
+    width: 100%;
+    margin-bottom: 92px;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: $notebook_start) {
+      margin-bottom: auto-calculate($notebook_start, $notebook, 92px, 46px)
+    }
+    @media screen and (max-width: $notebook) {
+      margin-bottom: auto-calculate($notebook_start, $notebook, 46px, 23px)
+    }
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    max-width: $maxwidth;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    @include grid-gap_mixin;
+    color: $GREEN;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba($GREEN, .60);
+    color: rgba($GREEN, .60);
+    border-radius: 2px;
+    transition: $TRANSITION;
+    outline: none;
+    height: 48px;
+    @extend .body;
+
+    &:is(textarea) {
+      transition: 0s;
+      max-width: 100%;
+      min-width: 100%;
+      resize: vertical;
+      height: 374px;
+      min-height: 120px;
+      @media screen and (max-width: $notebook) {
+        height: 220px;
+      }
+      @media screen and (max-width: $tablet) {
+        height: 150px;
+      }
+    }
+
+    padding: 13px 24px 13px;
+    @media screen and (max-width: $notebook_start) {
+      height: 43px;
+      padding: 7px auto-calculate($notebook_start, $notebook, 24px, 10px) 7px;
+    }
+    @media screen and (max-width: $notebook) {
+      height: 38px;
+      padding: 7px 10px 7px;
+
+    }
+
+    &::placeholder {
+      color: rgba($GREEN, .60);
+    }
+
+    &:disabled {
+      &::placeholder {
+        color: rgba($GREEN, .30);
+      }
+
+      color: rgba($GREEN, .30);
+      border-color: rgba($GREEN, .30);
+    }
+
+    &:not(&:disabled):hover {
+      border-color: rgba($GREEN, .75);
+      color: rgba($GREEN, .75);
+    }
+
+    &:not(&:disabled):focus {
+      border: 1.5px solid $GREEN;
+      color: $GREEN;
+    }
+  }
+
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  @include grid-gap_mixin;
+  @media screen and (max-width: $notebook) {
+    @include form-columned_mixin;
+  }
+
+  &__title {
+    width: 400px;
+    max-width: 400px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    @extend .heading_4;
+
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    @include grid-gap_mixin;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    @include grid-gap_mixin;
+    @media screen and (max-width: $phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__checks {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 8px;
+    grid-gap: 15px;
+
+    &__title {
+      @extend .body;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      @include checks-grid-gap_mixin;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    grid-gap: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+
+    &__name {
+      font-family: 'Stratos LC Regular', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      @extend .adaptive_12px;
+      line-height: 110%;
+      white-space: nowrap;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba($GREEN, .60);
+    color: rgba($GREEN, .60);
+    border-radius: 2px;
+    transition: $TRANSITION;
+    outline: none;
+    height: 48px;
+    @extend .body;
+
+    &:is(textarea) {
+      transition: 0s;
+      max-width: 100%;
+      min-width: 100%;
+      resize: vertical;
+      height: 374px;
+      min-height: 120px;
+      @media screen and (max-width: $notebook) {
+        height: 220px;
+      }
+      @media screen and (max-width: $tablet) {
+        height: 150px;
+      }
+    }
+
+    padding: 13px 24px 13px;
+    @media screen and (max-width: $notebook_start) {
+      height: 43px;
+      padding: 7px auto-calculate($notebook_start, $notebook, 24px, 10px) 7px;
+    }
+    @media screen and (max-width: $notebook) {
+      height: 38px;
+      padding: 7px 10px 7px;
+    }
+
+    &::placeholder {
+      color: rgba($GREEN, .60);
+    }
+
+    &:disabled {
+      &::placeholder {
+        color: rgba($GREEN, .30);
+      }
+
+      color: rgba($GREEN, .30);
+      border-color: rgba($GREEN, .30);
+    }
+
+    &:not(&:disabled):hover {
+      border-color: rgba($GREEN, .75);
+      color: rgba($GREEN, .75);
+    }
+
+    &:not(&:disabled):focus {
+      border: 1.5px solid $GREEN;
+      color: $GREEN;
+    }
+  }
+
+  &__button {
+    align-self: flex-end;
+    margin-top: 20px;
+  }
+}
+

@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 @@include('./html/layout/_head.html', {"title": "Team Development Group"})
-
 <body>
 <!--@@include('./html/layout/_page-transition.html')-->
-
 @@include('./html/layout/_navigation.html')
-
-<div id="scroll-container">
-    <div id="content-wrap">
-        <main>
-        </main>
-
-        <!--        @@include('./html/layout/_footer.html')-->
-    </div>
-</div>
-
-<!--@@include('./html/layout/_scripts.html')-->
+<main class="page index-page">
+    <!--    @@include('./html/screens/_main.html')-->
+    @@include('./html/screens/_blog.html')
+    @@include('./html/screens/_form.html', {class: 'index-page__form', title:'Напишите нам, если вам нужна консультация', button_text:'Отправить'})
+</main>
+<!--        @@include('./html/layout/_footer.html')-->
+@@include('./html/layout/_footer.html')
+@@include('./html/layout/_scripts.html')
 </body>
-
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -19,143 +18,715 @@
 
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
 
-
-<header class="navigation__wrapper wrapper-padding wrapper-maxwidth">
-    <div class="navigation container-maxwidth">
+<header class="navigation__wrapper standart-padding-both">
+    <div class="navigation">
         <div class="navigation__menu">
-            <button class='navigation__menu__button link' onclick="toggle()">Меню</button>
+            <button class='navigation__menu__button link'>Меню</button>
             <nav class="navigation__menu__links">
-                <a href="/" class="navigation__menu__link link"></a>
-
+                <a href="/" class="navigation__menu__link link">Главная</a>
+                <a href="/post.html" class="navigation__menu__link link">Пост</a>
+                <a href="/theme.html" class="navigation__menu__link link">Тема</a>
             </nav>
         </div>
-        <!--            <PrimaryButton class="navigation__button">Связаться с нами</PrimaryButton>-->
+        <button class="navigation__button primary-button">Связаться с нами</button>
     </div>
 </header>
-<script>
-    let is_navigation_menu_open = false;
-    const toggle = () => is_navigation_menu_open ? close() : open();
-    const open = () => {
-        console.log('open');
-        is_navigation_menu_open = true
-    }
-    const close = () => {
-        console.log('close');
-        is_navigation_menu_open = false;
-    }
-</script>
-<!--<script setup>-->
-<!--    import {computed, ref, watch} from 'vue';-->
-<!--    import gsap from 'gsap';-->
-
-<!--    const TRANSITION_TIME = 1.3;-->
-<!--    import COLORS from '@/assets/scss/variables_export.js';-->
-<!--    import {useRoute} from 'vue-router';-->
-<!--    import {routes} from '@/router/router.js';-->
-<!--    import PrimaryButton from "@/components/Buttons/Primary.vue";-->
-
-<!--    const is_navigation_menu_open = ref(false);-->
-<!--    const open = () => is_navigation_menu_open.value = true-->
-<!--    const close = () => is_navigation_menu_open.value = false;-->
-
-<!--    const toggleEmit = () => {-->
-<!--        if (is_navigation_menu_open.value) close(); else open();-->
-<!--    }-->
-<!--    watch(is_navigation_menu_open,-->
-<!--        is_open_now => {-->
-<!--            if (is_open_now) {-->
-<!--                openMenuAnimation();-->
-<!--                openButtonAnimation();-->
-<!--            } else {-->
-<!--                closeMenuAnimation();-->
-<!--                closeButtonAnimation();-->
-<!--            }-->
-<!--        }-->
-<!--    );-->
-<!--    const CURRENT_ROUTE = useRoute();-->
-<!--    watch(() => CURRENT_ROUTE.path, () => close());-->
-<!--    const NAVIGATION_ROUTES = computed(() => routes.map(el => ({name: el.name, path: el.path})))-->
-
-<!--    ///////////////////////////////////////-->
-<!--    const openMenuAnimation = () => {-->
-<!--        gsap.to('.navigation__menu', {-->
-<!--            width: '100%',-->
-<!--            paddingTop: 30,-->
-<!--            marginTop: 0,-->
-<!--            background: '#2DAB49',-->
-<!--            duration: TRANSITION_TIME,-->
-<!--            ease: 'power3',-->
-<!--        })-->
-<!--        gsap.to('.navigation__menu__button', {-->
-<!--            color: COLORS.IVORY_60,-->
-<!--            ease: 'power3',-->
-<!--            textDecorationColor: `${COLORS.GREEN_100}00`,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--        })-->
-<!--        gsap.to('.navigation__menu__links', {-->
-<!--            height: 'auto', opacity: 1, paddingBottom: 32, duration: TRANSITION_TIME, ease: 'power3',-->
-<!--        });-->
-<!--    }-->
-<!--    const closeMenuAnimation = () => {-->
-<!--        gsap.to('.navigation__menu', {-->
-<!--            width: 'auto',-->
-<!--            paddingTop: 0,-->
-<!--            marginTop: 30,-->
-<!--            background: `${COLORS.GREEN_100}00`,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--            ease: 'power3',-->
-<!--        })-->
-<!--        gsap.to('.navigation__menu__button', {-->
-<!--            color: COLORS.GREEN_100,-->
-<!--            ease: 'power3',-->
-<!--            textDecorationColor: COLORS.GREEN_100,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--        })-->
-<!--        gsap.to('.navigation__menu__links', {-->
-<!--            height: 0,-->
-<!--            opacity: 0,-->
-<!--            textDecorationColor: 'rgba(0,0,0,0)',-->
-<!--            paddingBottom: 0,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--            ease: 'power3',-->
-<!--        });-->
-<!--    }-->
-<!--    ///////////////////////////////////////-->
-<!--    const openButtonAnimation = () => {-->
-<!--        gsap.to('.navigation__button', {-->
-<!--            backgroundColor: COLORS.IVORY_100,-->
-<!--            color: COLORS.GREEN_100,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--            ease: 'power3',-->
-<!--        });-->
-<!--    }-->
-<!--    const closeButtonAnimation = () => {-->
-<!--        gsap.to('.navigation__button', {-->
-<!--            backgroundColor: COLORS.GREEN_100,-->
-<!--            color: COLORS.IVORY_100,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--            ease: 'power3',-->
-<!--        });-->
-<!--    }-->
-<!--    ///////////////////////////////////////-->
-<!--</script>-->
 
 
-
-
-<div id="scroll-container">
-    <div id="content-wrap">
-        <main>
-        </main>
-
-        
+<main class="page index-page">
+    
+    <div class="screen blog-screen">
+    <div class="filters__wrapper">
+    <div class="filters">
+        <div class="filters__main">
+            <button class="filters__toggle-button caption_1 adaptive_16px" @click="toggle">Фильтры
+                <!--                <CheckArrowButton class="filters__toggle-button__icon" :class="{rotate: !is_filters_open}"/>-->
+            </button>
+        </div>
+        <div class="filters__content">
+            <div class="filters__content__section">
+                <p class="filters__content__section__name body">Тематики:</p>
+                <div class="filters__content__section__tags">
+                    <button class="filters__content__tag tag">Креативность</button>
+                </div>
+            </div>
+            <div class="filters__content__section">
+                <p class="filters__content__section__name body">Категории:</p>
+                <div class="filters__content__section__tags">
+                    <button class="filters__content__tag tag">Креативность</button>
+                </div>
+            </div>
+        </div>
+        <div class="filters__accept">
+            <button class="filters__accept__button secondary-button">Применить</button>
+        </div>
     </div>
 </div>
 
 
-</body>
+    <div class="blog-screen__padding-wrapper standart-padding-both">
+        <div class="blog-screen__content">
+            <div class="blog-screen__column">
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
 
+
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                </a>
+                
+            </div>
+            <div class="blog-screen__column">
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+            </div>
+            <div class="blog-screen__column">
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="form__wrapper index-page__form">
+    <div class="form__container ">
+
+        <h2 class="form__title heading_4">Напишите нам, если вам нужна консультация</h2>
+        <form class="form">
+            <div class="form__inputs">
+                <div class="form__row">
+                    <input class="form__input" type="text" placeholder="ФИО" name="name"/>
+                    <input class="form__input" type="text" placeholder="Компания" name="company"/>
+                </div>
+                <div class="form__row">
+                    <input class="form__input" type="text" placeholder='Номер телефона' name="phone"/>
+                    <input class="form__input" type="text" placeholder="E-mail" name="email">
+                </div>
+                <textarea class="form__input" placeholder="Сообщение" name="phone"></textarea>
+            </div>
+            <button type="submit" class="form__button secondary-button">Отправить</button>
+        </form>
+    </div>
+</div>
+
+
+</main>
+
+<footer class="footer standart-padding-both">
+    <a class="footer__logo" href="/">
+        <svg class="footer__logo__icon"
+             width="53" height="19">
+            <use xlink:href="assets/svgicons/icons/icons.svg#logo"></use>
+        </svg>
+    </a>
+
+    <div class="footer__socials">
+        <a href="#" class="footer__socials__item">
+            <svg class="footer__socials__item__icon"
+                 width="53" height="19">
+                <use xlink:href="assets/svgicons/icons/icons.svg#vk"></use>
+            </svg>
+        </a>
+        <a href="#" class="footer__socials__item">
+            <svg class="footer__socials__item__icon"
+                 width="25" height="22">
+                <use xlink:href="assets/svgicons/icons/icons.svg#tg"></use>
+            </svg>
+        </a>
+        <a href="#" class="footer__socials__item">
+            <svg width="22" height="22" class="footer__socials__item__icon">
+                <use xlink:href="assets/svgicons/icons/icons.svg#ig"></use>
+            </svg>
+        </a>
+    </div>
+
+    <div class="footer__contacts">
+        <a href="mailto:hello@training.ru" class="footer__contacts__item">hello.training.ru</a>
+        <a href="tel:+74957281877" class="footer__contacts__item">+7 (495) 728-18-77</a>
+    </div>
+</footer>
+<script src="js/app.min.js"></script>
+</body>
 </html>

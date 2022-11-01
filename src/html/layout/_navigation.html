@@ -1,121 +1,14 @@
-<header class="navigation__wrapper wrapper-padding wrapper-maxwidth">
-    <div class="navigation container-maxwidth">
+<header class="navigation__wrapper standart-padding-both">
+    <div class="navigation">
         <div class="navigation__menu">
-            <button class='navigation__menu__button link' onclick="toggle()">Меню</button>
+            <button class='navigation__menu__button link'>Меню</button>
             <nav class="navigation__menu__links">
-                <a href="/" class="navigation__menu__link link"></a>
-
+                <a href="/" class="navigation__menu__link link">Главная</a>
+                <a href="/post.html" class="navigation__menu__link link">Пост</a>
+                <a href="/theme.html" class="navigation__menu__link link">Тема</a>
             </nav>
         </div>
-        <!--            <PrimaryButton class="navigation__button">Связаться с нами</PrimaryButton>-->
+        <button class="navigation__button primary-button">Связаться с нами</button>
     </div>
 </header>
-<script>
-    let is_navigation_menu_open = false;
-    const toggle = () => is_navigation_menu_open ? close() : open();
-    const open = () => {
-        console.log('open');
-        is_navigation_menu_open = true
-    }
-    const close = () => {
-        console.log('close');
-        is_navigation_menu_open = false;
-    }
-</script>
-<!--<script setup>-->
-<!--    import {computed, ref, watch} from 'vue';-->
-<!--    import gsap from 'gsap';-->
-
-<!--    const TRANSITION_TIME = 1.3;-->
-<!--    import COLORS from '@/assets/scss/variables_export.js';-->
-<!--    import {useRoute} from 'vue-router';-->
-<!--    import {routes} from '@/router/router.js';-->
-<!--    import PrimaryButton from "@/components/Buttons/Primary.vue";-->
-
-<!--    const is_navigation_menu_open = ref(false);-->
-<!--    const open = () => is_navigation_menu_open.value = true-->
-<!--    const close = () => is_navigation_menu_open.value = false;-->
-
-<!--    const toggleEmit = () => {-->
-<!--        if (is_navigation_menu_open.value) close(); else open();-->
-<!--    }-->
-<!--    watch(is_navigation_menu_open,-->
-<!--        is_open_now => {-->
-<!--            if (is_open_now) {-->
-<!--                openMenuAnimation();-->
-<!--                openButtonAnimation();-->
-<!--            } else {-->
-<!--                closeMenuAnimation();-->
-<!--                closeButtonAnimation();-->
-<!--            }-->
-<!--        }-->
-<!--    );-->
-<!--    const CURRENT_ROUTE = useRoute();-->
-<!--    watch(() => CURRENT_ROUTE.path, () => close());-->
-<!--    const NAVIGATION_ROUTES = computed(() => routes.map(el => ({name: el.name, path: el.path})))-->
-
-<!--    ///////////////////////////////////////-->
-<!--    const openMenuAnimation = () => {-->
-<!--        gsap.to('.navigation__menu', {-->
-<!--            width: '100%',-->
-<!--            paddingTop: 30,-->
-<!--            marginTop: 0,-->
-<!--            background: '#2DAB49',-->
-<!--            duration: TRANSITION_TIME,-->
-<!--            ease: 'power3',-->
-<!--        })-->
-<!--        gsap.to('.navigation__menu__button', {-->
-<!--            color: COLORS.IVORY_60,-->
-<!--            ease: 'power3',-->
-<!--            textDecorationColor: `${COLORS.GREEN_100}00`,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--        })-->
-<!--        gsap.to('.navigation__menu__links', {-->
-<!--            height: 'auto', opacity: 1, paddingBottom: 32, duration: TRANSITION_TIME, ease: 'power3',-->
-<!--        });-->
-<!--    }-->
-<!--    const closeMenuAnimation = () => {-->
-<!--        gsap.to('.navigation__menu', {-->
-<!--            width: 'auto',-->
-<!--            paddingTop: 0,-->
-<!--            marginTop: 30,-->
-<!--            background: `${COLORS.GREEN_100}00`,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--            ease: 'power3',-->
-<!--        })-->
-<!--        gsap.to('.navigation__menu__button', {-->
-<!--            color: COLORS.GREEN_100,-->
-<!--            ease: 'power3',-->
-<!--            textDecorationColor: COLORS.GREEN_100,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--        })-->
-<!--        gsap.to('.navigation__menu__links', {-->
-<!--            height: 0,-->
-<!--            opacity: 0,-->
-<!--            textDecorationColor: 'rgba(0,0,0,0)',-->
-<!--            paddingBottom: 0,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--            ease: 'power3',-->
-<!--        });-->
-<!--    }-->
-<!--    ///////////////////////////////////////-->
-<!--    const openButtonAnimation = () => {-->
-<!--        gsap.to('.navigation__button', {-->
-<!--            backgroundColor: COLORS.IVORY_100,-->
-<!--            color: COLORS.GREEN_100,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--            ease: 'power3',-->
-<!--        });-->
-<!--    }-->
-<!--    const closeButtonAnimation = () => {-->
-<!--        gsap.to('.navigation__button', {-->
-<!--            backgroundColor: COLORS.GREEN_100,-->
-<!--            color: COLORS.IVORY_100,-->
-<!--            duration: TRANSITION_TIME,-->
-<!--            ease: 'power3',-->
-<!--        });-->
-<!--    }-->
-<!--    ///////////////////////////////////////-->
-<!--</script>-->
-
 

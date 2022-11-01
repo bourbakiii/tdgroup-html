@@ -1,0 +1,23 @@
+.secondary-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 90px;
+  background-color: rgba($BLACK, .75);
+
+  flex-shrink: 0;
+
+  &__icon {
+    fill: $IVORY;
+  }
+
+  &.checked {
+    background-color: rgba($BLACK, .30);
+  }
+
+  &.disabled {
+    cursor: default;
+  }
+}

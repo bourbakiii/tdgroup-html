@@ -1,0 +1,99 @@
+.blog-screen-gap {
+  grid-gap: 20px;
+  @media screen and (max-width: $notebook_start) {
+    grid-gap: auto-calculate($notebook_start, $notebook, 20px, 10px);
+  }
+  @media screen and (max-width: $notebook) {
+    grid-gap: auto-calculate($notebook, $tablet, 10px, 5px);
+  }
+  @media screen and (max-width: $tablet) {
+    grid-gap: 5px;
+  }
+}
+
+.blog-screen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba($IVORY, 0.95);
+
+  &__padding-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    width: 100%;
+    max-width: $maxwidth;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @media screen and (max-width: $notebook_start) {
+      padding-top: auto-calculate($notebook_start, $notebook, 100px, 50px);
+      padding-bottom: auto-calculate($notebook_start, $notebook, 100px, 50px);
+    }
+    @media screen and (max-width: $notebook) {
+      padding-top: auto-calculate($notebook, $tablet, 50px, 25px);
+      padding-bottom: auto-calculate($notebook, $tablet, 50px, 25px);
+    }
+    @media screen and (max-width: $tablet) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    @media screen and (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      grid-gap: 10px;
+      width: 100%;
+      max-width: 100%;
+    }
+    @extend .blog-screen-gap;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 400px;
+    @extend .blog-screen-gap;
+    @media screen and (max-width: $tablet_start) {
+      max-width: 100%;
+    }
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    &__item {
+      flex-grow: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+.post {
+  width: 100%;
+  padding: 20px;
+  border-radius: 2px;
+  @media screen and (max-width: $notebook_start) {
+    padding: auto-calculate($notebook_start, $notebook, 20px, 10px);
+  }
+  @media screen and (max-width: $notebook) {
+    padding: auto-calculate($notebook_start, $phone_start, 14px, 7px);
+  }
+  @media screen and (max-width: $tablet) {
+    padding: 15px;
+  }
+
+  &__wrapper {
+    text-decoration: none;
+  }
+}

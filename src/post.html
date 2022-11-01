@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./html/layout/_head.html', {"title": "Team Development Group"})
+<body>
+<!--@@include('./html/layout/_page-transition.html')-->
+@@include('./html/layout/_navigation.html')
+<main class="post-page__padding standart-padding-both">
+    <div class="page post-page">
+        <header class="post-page__header">
+            <a href="/blog" class="post-page__header__back-button">
+                @@include('./html/buttons/_arrow-button.html', {class: 'post-page__header__back-button__button left'})
+                <p class="post-page__header__back-button__text">Все статьи</p>
+            </a>
+            <div class="post-page__header__main">
+
+                <div class="post-page__header__tags">
+                    <button class="post-page__header__tags__tag tag">Креативность</button>
+                </div>
+                <h1 class="post-page__header__title post-page__title blog-post__header">НЕЙРОФИЗИОЛОГИЯ
+                    КРЕАТИВНОСТИ</h1>
+                <div class="post-page__header__post-info">
+                    <div class="post-page__header__post-info__item">
+                        <svg
+                                class="post-page__header__post-info__item__icon"
+                                width="16" height="15">
+                            <use xlink:href="@svgSprite#author"></use>
+                        </svg>
+                        <p class="post-page__header__post-info__item__text">Альбина Залилова</p>
+                    </div>
+                    <div class="post-page__header__post-info__item">
+                        <svg
+                                class="post-page__header__post-info__item__icon"
+                                width="21" height="10">
+                            <use xlink:href="@svgSprite#two-checks"></use>
+                        </svg>
+                        <p class="post-page__header__post-info__item__text">570 человек</p>
+                    </div>
+                    <div class="post-page__header__post-info__item">
+                        <svg
+                                class="post-page__header__post-info__item__icon"
+                                width="16" height="16"
+                        >
+                            <use xlink:href="@svgSprite#watch"></use>
+                        </svg>
+                        <p class="post-page__header__post-info__item__text">13 минут</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <img src="@img/popup-image.png" alt="Post image" class="post-page__image">
+        <div class="post-page__content">
+            <div class="post-page__content__sidebar">
+                @@for(let i = 0; i<3; i++) {
+                    @@include('./html/posts/_article.html', {class: 'post-page__content__sidebar__article'})
+                }
+            </div>
+            <div class="post-page__content__info">
+                <div class="post-page__content__info__html">
+                    <h2 class="post-page__content__info__title lead_1">Чтобы решить творческую задачу, все системы мозга
+                        должны
+                        работать когерентно – то есть слаженно и согласованно.
+                    </h2>
+                    <p class="post-page__content__info__text body">
+                        Когда мы достигаем состояния инсайта в процессе работы над задачей, наш мозг буквально озаряет
+                        вспышка, а
+                        все области мозга работают ритмично.
+
+                        Как достичь такого состояния? В программах по прокачке креативности вы получите целый набор
+                        инструментов.
+
+                        Почему командам вообще нужна помощь в развитии креативности?
+
+                        Пребывать в креативном процессе — сложно, это дискомфортный и энергозатратный процесс для мозга,
+                        ведь он
+                        представляет из себя хаос. Мы предлагаем методы и подходы, которые помогают преобразовать хаос в
+                        пользу для
+                        бизнеса.
+
+                        Когда мы достигаем состояния инсайта в процессе работы над задачей, наш мозг буквально озаряет
+                        вспышка, а
+                        все области мозга работают ритмично.
+
+                        Как достичь такого состояния? В программах по прокачке креативности вы получите целый набор
+                        инструментов.
+
+                        Почему командам вообще нужна помощь в развитии креативности?
+
+                        Пребывать в креативном процессе — сложно, это дискомфортный и энергозатратный процесс для мозга,
+                        ведь он
+                        представляет из себя хаос. Мы предлагаем методы и подходы, которые помогают преобразовать хаос в
+                        пользу для
+                        бизнеса.
+                    </p>
+                </div>
+                <div class="post-page__share">
+                    <div class="post-page__share__socials">
+                        <button class="post-page__share__button">
+                            <svg class="post-page__share__button__icon"
+                                 width="29" height="18">
+                                <use xlink:href="@svgSprite#vk"></use>
+                            </svg>
+                        </button>
+                        <button class="post-page__share__button">
+                            <svg class="post-page__share__button__icon"
+                                 width="25" height="22">
+                                <use xlink:href="@svgSprite#tg"></use>
+                            </svg>
+                        </button>
+                        <p class="post-page__share__text">Поделиться</p>
+                    </div>
+                    <div class="post-page__share__linked">
+                        <button class="post-page__share__button">
+                            <svg class="post-page__share__button__icon"
+                                 width="31" height="30">
+                                <use xlink:href="@svgSprite#chain"></use>
+                            </svg>
+                        </button>
+                        <p class="post-page__share__text">Скопировать</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @@include('./html/screens/_form.html', {class: 'post-page__form', title:'Получите весь дайджест', button_text:'Отправить'})
+    </div>
+</main>
+
+<!--  <PostsSlider class="post-page__posts-slider"/>-->
+@@include('./html/layout/_footer.html')
+@@include('./html/layout/_scripts.html')
+
+</body>
+</html>
