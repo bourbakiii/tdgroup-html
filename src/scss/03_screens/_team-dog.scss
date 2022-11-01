@@ -1,0 +1,33 @@
+.team-dog-screen {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &__image {
+    display: block;
+    transform: translateX(100%);
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__content {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $GREEN;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $IVORY;
+  }
+
+  &__title {
+    width: max-content;
+    text-align: center;
+    font-size: calc((72 / 1440) * 100vw) !important;
+  }
+}
