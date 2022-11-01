@@ -1,0 +1,35 @@
+.team-screen {
+  max-width: $notebook_start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__item {
+    color: $GREEN;
+    border: 1px solid black;
+
+
+    &__content {
+      width: 276px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 12px;
+    }
+
+    &__title {
+      transition: $TRANSITION;
+      @extend .heading_5;
+    }
+
+    &__button {
+      width: 124px;
+    }
+
+    &:hover & {
+      &__title {
+        background-color: red;
+        @extend .heading_4;
+      }
+    }
+  }
+}
