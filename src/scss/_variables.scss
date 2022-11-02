@@ -1,3 +1,4 @@
+@import 'node_modules/swiper/swiper.scss';
 $IVORY: #F8F8F4;
 $BLACK: #000000;
 $GREEN: rgba(45, 171, 73, 1);
@@ -22,16 +23,3 @@ $modal_z: 200;
 @function auto-calculate($start_width, $end_width, $max_value, $min_value) {
   @return calc((100vw - $end_width) / (($start_width - $end_width) / ($max_value - $min_value)) + ($max_value - $min_value));
 }
-
-//
-//@function current_global_padding() {
-//  @if (100vw > $notebook_start) {
-//    @return 100px;
-//  } @else if (100vw < $notebook_start and 100vw > $notebook) {
-//    @return auto-calculate($notebook_start, $notebook, 100px, 50px)
-//  } @else if (100vw < $notebook and 100vw > $tablet) {
-//    @return auto-calculate($notebook, $tablet, 50px, 20px)
-//  } @else {
-//    @return 20px
-//  }
-//}

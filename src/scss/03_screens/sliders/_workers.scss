@@ -1,0 +1,50 @@
+
+.workers-slider-screen {
+  max-width: $notebook_start;
+  height: 603px;
+  @media screen and (max-width: $notebook_start) {
+    height: auto-calculate($notebook_start, $phone_start, 603px, 301.5px);
+  }
+  @media screen and (max-width: $phone_start) {
+    height: 305px;
+  }
+  width: 100%;
+  background-color: rgba(green, .1);
+
+  &__slider {
+    height: 100%;
+    overflow: visible;
+    padding-right: calc(100% - 402px);
+    @media screen and (max-width: $tablet_start) {
+      padding-right: 0;
+    }
+
+    * {
+      transition: .3s;
+    }
+
+    &__item {
+      width: 402px;
+      border-right: 2px solid $GREEN;
+      padding: 0 20px;
+      @media screen and (max-width: $tablet_start) {
+        width: 100% !important;
+      }
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+      &.swiper-slide-active {
+        width: 820px;
+
+      }
+
+
+    }
+  }
+}

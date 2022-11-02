@@ -1,0 +1,12 @@
+.test-page {
+  width: 100%;
+  max-width: none;
+  background-color: rgba(red, 0.1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-y: overlay;
+}
