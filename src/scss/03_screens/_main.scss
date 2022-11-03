@@ -2,14 +2,11 @@
   overflow: hidden;
   position: relative;
 
-
-
   &__section {
     width: 100%;
     height: 100%;
     position: absolute;
     bottom: 100%;
-    // left: 0;
   }
 
   &__block {
@@ -54,7 +51,7 @@
   &__logo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     position: sticky;
     top: 0;

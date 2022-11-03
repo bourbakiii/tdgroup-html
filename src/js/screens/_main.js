@@ -16,19 +16,19 @@ gsap.to('.main-screen__additional-text', {
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const parallaxBlock = document.getElementById("main-screen__parallax");
-const sections = gsap.utils.toArray(".main-screen__section");
-let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: parallaxBlock,
-        start: "top top",
-        // end: () => "+=" + parallaxBlock.offsetHeight,
-        scrub: true,
-        snap: 1 / (sections.length + 1),
-        pin: true,
-        anticipatePin: 1
-    },
-    defaults: {ease: "none"},
-});
+// const parallaxBlock = document.getElementById("main-screen__parallax");
+// const sections = gsap.utils.toArray(".main-screen__section");
+// let tl = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: parallaxBlock,
+//         start: "top top",
+//         // end: () => "+=" + parallaxBlock.offsetHeight,
+//         scrub: true,
+//         snap: 1 / (sections.length + 1),
+//         pin: true,
+//         anticipatePin: 1
+//     },
+//     defaults: {ease: "none"},
+// });
 
-sections.forEach(section => tl.to(section, {yPercent: 200}, "<50%"));
+// sections.forEach(section => tl.to(section, {yPercent: 200}, "<50%"));
