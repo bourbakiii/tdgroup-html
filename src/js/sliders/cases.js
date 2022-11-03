@@ -16,7 +16,7 @@ const createSwiper = () => {
     // swiper.on('beforeSlideChangeStart', ({activeIndex: current_slide_index}) => animatePreviousSlide(current_slide_index + 1));
 
     swiper.on('slideChange', ({activeIndex: current_slide_index, previousIndex: previous_slide_index}) => {
-        animatePreviousSlide(previous_slide_index+1);
+        animatePreviousSlide(previous_slide_index + 1);
         animateActiveSlide(current_slide_index + 1);
     });
     swiper.init();
@@ -58,10 +58,16 @@ function animatePreviousSlide(index) {
 
 createSwiper();
 
+let timer = null;
 window.onresize = () => {
-    swiper.destroy(true, true);
-    const elementDOM = document.querySelector(".workers-slider-screen__slider");
-    elementDOM.remove();
-    document.querySelector('.workers-slider-screen').append(elementDOM);
-    createSwiper();
+    if (timer != null) return;
+    timer = setTimeout(() => {
+        clearTimeout(timer);
+        timer = null;
+        swiper.destroy(true, true);
+        const elementDOM = document.querySelector(".cases-slider-screen__slider");
+        elementDOM.remove();
+        document.querySelector('.cases-slider-screen').append(elementDOM);
+        createSwiper();
+    }, 1000)
 }
