@@ -1,16 +1,13 @@
 <div class="screen workers-slider-screen standart-padding-both">
     <div class="swiper workers-slider-screen__slider">
         <div class="swiper-wrapper workers-slider-screen__slider__wrapper">
-            <div class="swiper-slide workers-slider-screen__slider__item">Workers slide</div>
-            <div class="swiper-slide workers-slider-screen__slider__item">Workers slide</div>
-            <div class="swiper-slide workers-slider-screen__slider__item">Workers slide</div>
-            <div class="swiper-slide workers-slider-screen__slider__item">Workers slide</div>
-            <div class="swiper-slide workers-slider-screen__slider__item">Workers slide</div>
-            <div class="swiper-slide workers-slider-screen__slider__item">Workers slide</div>
-            <div class="swiper-slide workers-slider-screen__slider__item">Workers slide</div>
-            <div class="swiper-slide workers-slider-screen__slider__item">Workers slide</div>
-            <div class="swiper-slide workers-slider-screen__slider__item">Workers slide</div>
-            <div class="swiper-slide workers-slider-screen__slider__item">Workers slide</div>
+            @@for(let i = 0; i<10; i++){
+            <div class="swiper-slide workers-slider-screen__slider__item">
+                <div class="workers-slider-screen__slider__item__content">
+                    <h2 class="workers-slider-screen__slider__item__title"></h2>
+                </div>
+            </div>
+            }
         </div>
     </div>
 </div>
