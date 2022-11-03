@@ -1,16 +1,29 @@
 <div class="screen cases-slider-screen standart-padding-both">
     <div class="swiper cases-slider-screen__slider">
         <div class="swiper-wrapper cases-slider-screen__slider__wrapper">
-            <div class="swiper-slide cases-slider-screen__slider__item">Cases slide</div>
-            <div class="swiper-slide cases-slider-screen__slider__item">Cases slide</div>
-            <div class="swiper-slide cases-slider-screen__slider__item">Cases slide</div>
-            <div class="swiper-slide cases-slider-screen__slider__item">Cases slide</div>
-            <div class="swiper-slide cases-slider-screen__slider__item">Cases slide</div>
-            <div class="swiper-slide cases-slider-screen__slider__item">Cases slide</div>
-            <div class="swiper-slide cases-slider-screen__slider__item">Cases slide</div>
-            <div class="swiper-slide cases-slider-screen__slider__item">Cases slide</div>
-            <div class="swiper-slide cases-slider-screen__slider__item">Cases slide</div>
-            <div class="swiper-slide cases-slider-screen__slider__item">Cases slide</div>
+            @@for(let i = 0; i<10; i++){
+            <div class="swiper-slide cases-slider-screen__slider__item">
+                <p class="cases-slider-screen__slider__item__pre body">кейс</p>
+                <div class="cases-slider-screen__slider__item__content">
+                    <h2 class="cases-slider-screen__slider__item__title heading_5">ИСПОЛЬЗОВАНИЕ МЕТОДА LEGO SERIOUS
+                        PLAY</h2>
+                    <div class="cases-slider-screen__slider__item__main">
+                        <div class="cases-slider-screen__slider__item__info">
+                            <p class="cases-slider-screen__slider__item__info__text body">
+                                Ежегодно обучение в формате mini-MBA по теме “Управление сервисом” проходят 300 самых
+                                талантливых руководителей Сбербанка.
+                            </p>
+                            <div class="cases-slider-screen__slider__item__info__badges">
+                                <div class="cases-slider-screen__slider__item__info__badges__item badge">
+                                    Сбербанк
+                                </div>
+                            </div>
+                        </div>
+                        <img src="@img/TwoWomans.png" alt="Cases slider item image" class="cases-slider-screen__slider__item__image">
+                    </div>
+                </div>
+            </div>
+            }
         </div>
     </div>
 </div>
