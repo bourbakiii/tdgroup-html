@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger.js";
 
-document.querySelector('.main-screen__logo').style.height = `${window.innerHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
 
 // Register ScrollTrigger Plugin (Do not remove!!!)
 gsap.registerPlugin(ScrollTrigger);

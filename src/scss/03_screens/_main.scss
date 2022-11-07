@@ -6,16 +6,24 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: red;
 
   &__logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    position: sticky;
-    top: 0;
-    left: 0;
+    min-height: max-content;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    &__wrapper {
+      position: sticky;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: rgba(red,.1);
+    }
   }
 
   &__cross {

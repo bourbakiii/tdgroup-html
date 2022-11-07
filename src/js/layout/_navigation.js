@@ -2,6 +2,13 @@ import gsap from 'gsap';
 
 const TRANSITION_TIME = 1.3;
 
+function setTopOfMainLogo() {
+    document.querySelector('.main-screen__logo__wrapper').style.height = (window.innerHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height) + 'px';
+    document.querySelector('.main-screen__logo__wrapper').style.top = document.querySelector('.navigation__wrapper').getBoundingClientRect().height + 'px';
+}
+
+setTopOfMainLogo();
+
 let is_navigation_menu_open = false;
 const toggle = () => is_navigation_menu_open ? close() : open();
 const open = () => {
@@ -14,14 +21,16 @@ const close = () => {
 }
 
 const heightChangeHandler = (type) => {
-    console.log(type);
-    console.log(document.querySelector('.navigation__wrapper').getBoundingClientRect().height)
     let element = null;
     if ((element = document.querySelector('.main-screen__logo')))
         element.style.height = `${window.innerHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
 }
 
-
+// $IVORY: #F8F8F4;
+// $BLACK: #000000;
+// $GREEN: rgba(45, 171, 73, 1);
+// $GREEN_GRADIENT: linear-gradient(180deg, rgba(45, 171, 73, 0) 0%, #2DAB49 100%);
+// $RED: #da1313;
 const openAnimation = () => {
     gsap.to('.navigation__menu', {
         width: '100%',
@@ -29,23 +38,23 @@ const openAnimation = () => {
         marginTop: 0,
         background: '#2DAB49',
         duration: TRANSITION_TIME,
-        ease: 'power3',
+        ease: 'power3'
     })
     gsap.to('.navigation__menu__button', {
-        color: 'white',
+        color: '#F8F8F4',
         ease: 'power3',
-        textDecorationColor: `white`,
-        duration: TRANSITION_TIME,
+        textDecorationColor: `#F8F8F4`,
+        duration: TRANSITION_TIME
     })
     gsap.to('.navigation__menu__links', {
         height: 'auto', opacity: 1, paddingBottom: 32, duration: TRANSITION_TIME, ease: 'power3',
-        onUpdate: () => heightChangeHandler('open')
+        onUpdate: () => setTopOfMainLogo()
     });
     gsap.to('.navigation__button', {
-        backgroundColor: 'white',
-        color: 'purple',
+        backgroundColor: '#F8F8F4',
+        color: '#2DAB49',
         duration: TRANSITION_TIME,
-        ease: 'power3',
+        ease: 'power3'
     });
 }
 const closeAnimation = () => {
@@ -55,13 +64,13 @@ const closeAnimation = () => {
         marginTop: 30,
         background: `transparent`,
         duration: TRANSITION_TIME,
-        ease: 'power3',
+        ease: 'power3'
     })
     gsap.to('.navigation__menu__button', {
-        color: 'purple',
+        color: '#2DAB49',
         ease: 'power3',
-        textDecorationColor: 'white',
-        duration: TRANSITION_TIME,
+        textDecorationColor: '#F8F8F4',
+        duration: TRANSITION_TIME
     })
     gsap.to('.navigation__menu__links', {
         height: 0,
@@ -70,13 +79,13 @@ const closeAnimation = () => {
         paddingBottom: 0,
         duration: TRANSITION_TIME,
         ease: 'power3',
-        onUpdate: () => heightChangeHandler('close')
+        onUpdate: () => setTopOfMainLogo()
     });
     gsap.to('.navigation__button', {
-        backgroundColor: 'purple',
-        color: 'white',
+        backgroundColor: '#2DAB49',
+        color: '#F8F8F4',
         duration: TRANSITION_TIME,
-        ease: 'power3',
+        ease: 'power3'
     });
 }
 /////////////////////////////////////////////////////////////
