@@ -1,10 +1,12 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger.js";
 
+document.querySelector('.main-screen__logo').style.height = `${window.innerHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
+
 // Register ScrollTrigger Plugin (Do not remove!!!)
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to('h1', {delay: 0.3, transform: 'translateY(0px)', duration: 2, opacity: 1, ease: 'power3', stagger: 0.2})
+gsap.to('.heading_1', {delay: 0.3, transform: 'translateY(0px)', duration: 2, opacity: 1, ease: 'power3', stagger: 0.2})
 gsap.to('.main-screen__cross', {delay: 0.5, transform: 'translateY(0px)', duration: 4, opacity: 1, ease: 'power4'})
 gsap.to('.main-screen__additional-text', {
     delay: 1.4,

@@ -12,6 +12,16 @@ const close = () => {
     is_navigation_menu_open = false;
     closeAnimation();
 }
+
+const heightChangeHandler = (type) => {
+    console.log(type);
+    console.log(document.querySelector('.navigation__wrapper').getBoundingClientRect().height)
+    let element = null;
+    if ((element = document.querySelector('.main-screen__logo')))
+        element.style.height = `${window.innerHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
+}
+
+
 const openAnimation = () => {
     gsap.to('.navigation__menu', {
         width: '100%',
@@ -29,6 +39,7 @@ const openAnimation = () => {
     })
     gsap.to('.navigation__menu__links', {
         height: 'auto', opacity: 1, paddingBottom: 32, duration: TRANSITION_TIME, ease: 'power3',
+        onUpdate: () => heightChangeHandler('open')
     });
     gsap.to('.navigation__button', {
         backgroundColor: 'white',
@@ -59,6 +70,7 @@ const closeAnimation = () => {
         paddingBottom: 0,
         duration: TRANSITION_TIME,
         ease: 'power3',
+        onUpdate: () => heightChangeHandler('close')
     });
     gsap.to('.navigation__button', {
         backgroundColor: 'purple',
