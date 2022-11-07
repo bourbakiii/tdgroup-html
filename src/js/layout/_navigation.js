@@ -1,13 +1,21 @@
 import gsap from 'gsap';
 
 const TRANSITION_TIME = 1.3;
+let top_of_main_logo_timer = null;
 
 function setTopOfMainLogo() {
-    document.querySelector('.main-screen__logo__wrapper').style.height = (window.innerHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height) + 'px';
-    document.querySelector('.main-screen__logo__wrapper').style.top = document.querySelector('.navigation__wrapper').getBoundingClientRect().height + 'px';
+    console.log(123);
+    const element = document.querySelector('.main-screen__logo__wrapper');
+    if (!element) return;
+    top_of_main_logo_timer = setTimeout(() => {
+        top_of_main_logo_timer = null;
+        element.style.height = `${window.innerHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
+        element.style.top = `${document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
+    }, 100);
 }
 
-setTopOfMainLogo();
+window.onload = setTopOfMainLogo;
+window.addEventListener('resize', setTopOfMainLogo, {passive: true});
 
 let is_navigation_menu_open = false;
 const toggle = () => is_navigation_menu_open ? close() : open();

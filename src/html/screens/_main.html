@@ -21,9 +21,15 @@
         </h1>
     </div>
     <div class="main-screen__overlay-sections">
-        1
-        2
-        3
-        4
+        <div class="main-screen__overlay-sections__item">
+            @@include('../layout/_card.html', {class: 'main-screen__overlay-sections__card card card_ivory', with_image: null, caption: 'Мероприятие', text: 'Как использовать источники для генерации новых решений?'})
+        </div>
+        <div class="main-screen__overlay-sections__item">
+            @@include('../layout/_card.html', {button_color: 'white',class: 'main-screen__overlay-sections__card card card_black', caption: 'бизнес-завтрак', text: 'Как использовать источники для генерации новых решений?'})
+            @@include('../layout/_card.html', {button_color: 'white', class: 'main-screen__overlay-sections__card card card_green', caption: 'мероприятие', text: 'Коучинг как стиль управления'})
+        </div>
+        <div class="main-screen__overlay-sections__item">
+            @@include('../layout/_card.html', {class: 'main-screen__overlay-sections__card card card__ivory card_with-image',  with_image: true, caption: 'Мероприятие', text: 'Метод морфологического ящика'})
+        </div>
     </div>
 </div>

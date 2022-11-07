@@ -14,15 +14,16 @@
     align-items: flex-start;
     min-height: max-content;
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
+
     &__wrapper {
       position: sticky;
       top: 0;
       left: 0;
       height: 100vh;
       width: 100%;
-      background-color: rgba(red,.1);
+      max-width: $notebook_start;
     }
   }
 
@@ -81,38 +82,49 @@
   &__overlay-sections {
     position: relative;
     width: 100%;
+    max-width: $notebook_start;
     margin-bottom: 100vh;
     z-index: 2;
-    height: 195vh;
 
-    &__card {
-      position: absolute;
+    &__item {
+      height: 100vh;
+      position: relative;
 
       &:nth-of-type(1) {
-        top: 0;
-        left: 5%;
+        .card {
+          top: 0;
+          left: 5%;
+        }
       }
 
       &:nth-of-type(2) {
-        top: calc(80vh);
-        right: 0;
+        .card:nth-child(1) {
+          top: calc((208 / 850) * 100%);
+          right: 5%;
+        }
+
+        .card:nth-child(2) {
+          top: calc((490 / 850) * 100%);
+          left: 5%;
+        }
       }
 
       &:nth-of-type(3) {
-        top: calc(105vh);
-        left: 0;
+        .card {
+          top: calc((482 / 850) * 100%);
+          right: calc((133 / 1440) * 100%);
+        }
       }
+    }
 
-      &:nth-of-type(4) {
-        top: calc(171vh);
-        right: 133px;
-      }
-
+    &__card {
+      position: absolute;
       @media screen and (max-width: $tablet_end) {
-        left: 50%;
-        transform: translateX(-50%);
+        left: 50% !important;
+        transform: translateX(-50%) !important;
         right: auto;
       }
     }
   }
+
 }
