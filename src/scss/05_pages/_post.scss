@@ -319,4 +319,17 @@
       margin: 50px 0;
     }
   }
+
+  &__articles-slider-screen{
+    margin-bottom: 123px;
+    @media screen and (max-width:$notebook_start) {
+      margin-bottom: auto-calculate($notebook_start,$tablet, 123px, 61.5px);
+    }
+    @media screen and (max-width: $tablet) {
+      margin-bottom: auto-calculate($tablet,$phone, 60px, 30px);
+    }
+    @media screen and (max-width: $phone) {
+      margin-bottom: 30px;
+    }
+  }
 }
