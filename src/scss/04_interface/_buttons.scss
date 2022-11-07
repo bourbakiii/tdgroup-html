@@ -145,6 +145,8 @@
   border-radius: 90px;
   height: 34px;
   width: 34px;
+  flex-shrink: 0;
+  flex-grow: 0;
   background-color: transparent;
   display: flex;
   justify-content: center;

@@ -71,6 +71,10 @@
     position: absolute;
     right: 20px;
     top: 20px;
+    @media screen and (max-width: $tablet_end) {
+    right:0;
+
+    }
   }
 }
 

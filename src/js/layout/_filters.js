@@ -34,6 +34,8 @@ const tagSelectHandler = e => e.target.classList.toggle('active')
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-document.querySelector('.filters__toggle-button').onclick = toggle;
-document.querySelectorAll('.filters__content__tag').forEach(el => el.onclick = tagSelectHandler);
-document.querySelector('.filters__accept__button').onclick = acceptFiltersHandler;
+if (document.querySelector('.filters')) {
+    document.querySelector('.filters__toggle-button').onclick = toggle;
+    document.querySelectorAll('.filters__content__tag').forEach(el => el.onclick = tagSelectHandler);
+    document.querySelector('.filters__accept__button').onclick = acceptFiltersHandler;
+}

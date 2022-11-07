@@ -24,8 +24,8 @@
       align-items: flex-start;
       height: 100%;
       grid-gap: 0;
-      @media screen and (max-width: $phone_start) {
-        flex-direction: column;
+      @media screen and (max-width: $tablet_end) {
+        flex-direction: column !important;
       }
 
       &__content {
@@ -36,7 +36,7 @@
         width: 262px;
         transition: width 1s;
         grid-gap: 10px;
-        @media screen and (max-width: $phone) {
+        @media screen and (max-width: $tablet_end) {
           width: 210px;
         }
       }
@@ -55,6 +55,11 @@
         position: absolute;
         bottom: 0;
         right: 0;
+        @media screen and (max-width: $phone) {
+          width: 230px;
+          max-height: 230px;
+
+        }
       }
 
 

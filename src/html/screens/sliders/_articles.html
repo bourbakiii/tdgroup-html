@@ -1,0 +1,18 @@
+<div class="screen articles-slider-screen standart-padding-both">
+    <div class="swiper articles-slider-screen__slider">
+        <div class="swiper-wrapper articles-slider-screen__slider__wrapper">
+            @@for(let i = 0; i<10; i++){
+            <div class="swiper-slide articles-slider-screen__slider__item">
+                @@include('../../buttons/_arrow-button.html', {class:
+                'articles-slider-screen__slider__item__arrow-button green'})
+                <div class="articles-slider-screen__slider__item__content">
+                    <h4 class="articles-slider-screen__slider__item__title heading_4 line-clamp">Наш подход: состояние
+                        игры Наш подход: состояние игры</h4>
+                    <img src="@img/TwoWomen.png" alt="" class="articles-slider-screen__slider__item__image">
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+

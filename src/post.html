@@ -51,7 +51,7 @@
         <div class="post-page__content">
             <div class="post-page__content__sidebar">
                 @@for(let i = 0; i<3; i++) {
-                    @@include('./html/posts/_article.html', {class: 'post-page__content__sidebar__article'})
+                @@include('./html/posts/_article.html', {class: 'post-page__content__sidebar__article'})
                 }
             </div>
             <div class="post-page__content__info">
@@ -120,11 +120,15 @@
                 </div>
             </div>
         </div>
-        @@include('./html/screens/_form.html', {class: 'post-page__form', title:'Получите весь дайджест', button_text:'Отправить'})
+        @@include('./html/screens/_form.html', {class: 'post-page__form', title:'Получите весь дайджест',
+        button_text:'Отправить'})
     </div>
-</main>
 
-<!--  <PostsSlider class="post-page__posts-slider"/>-->
+
+</main>
+<div class="articles-slider-screen__wrapper">
+    @@include('./html/screens/sliders/_articles.html')
+</div>
 @@include('./html/layout/_footer.html')
 @@include('./html/layout/_scripts.html')
 

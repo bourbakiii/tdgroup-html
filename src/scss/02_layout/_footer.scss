@@ -1,11 +1,17 @@
 .footer {
   width: 100%;
-  height: 166px;
-  max-width: $maxwidth;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  &__wrapper{
+    max-width: $notebook_start;
+    width: 100%;
+    height: 166px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   @media screen and (max-width: $notebook) {
     height: 110px;
   }
