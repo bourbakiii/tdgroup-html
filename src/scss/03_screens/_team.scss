@@ -8,65 +8,39 @@
     color: $GREEN;
     border-right: 2px solid $GREEN;
     height: 557px;
+    position: relative;
 
-    &__content {
-      width: 276px;
+
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .35s;
+
+    &.hovered {
+      width: 274px;
+      height: auto;
+      flex-direction: column;
+      grid-gap: 12px;
+      opacity: 0;
+      display: none;
+    }
+
+    &.stock {
+      width: 262px;
       height: auto;
       display: flex;
       flex-direction: column;
       grid-gap: 12px;
+
     }
+  }
 
 
-    &:hover & {
-      &__content {
-        animation: itemHoverAnimation 1s;
-        @keyframes itemHoverAnimation {
-          100% {
-            opacity: 1;
-          }
-          50% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-      }
-
-      &__title {
-        &_big {
-          animation: bigTitleHoverAnimation 1s forwards;
-          @keyframes bigTitleHoverAnimation {
-            50% {
-              display: block;
-            }
-          }
-        }
-
-        &_small {
-          animation: smallTitleHoverAnimation 1s forwards;
-          @keyframes smallTitleHoverAnimation {
-            50% {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-
-    &__title {
-      &_big {
-        display: none;
-      }
-    }
-
-    &__button {
-      width: 124px;
-
-      &.hidden {
-        display: none;
-      }
-    }
+  &__button {
+    margin-top: 16px;
+    width: 124px;
   }
 }

@@ -1,0 +1,103 @@
+.card {
+  width: 462px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  grid-gap: 10px;
+  border-radius: 2px;
+  background-color: $IVORY;
+  max-width: 80%;
+
+  @media screen and (max-width: $notebook_start) {
+    padding: auto-calculate($notebook_start, $notebook, 32px, 16px) auto-calculate($notebook_start, $notebook, 24px, 12px);
+  }
+  @media screen and (max-width: $notebook) {
+    padding: 16px 12px;
+  }
+
+  &_with-image {
+    padding: 24px;
+  }
+
+  &_green, &_black {
+    color: $IVORY;
+  }
+
+  &_green {
+    background-color: $GREEN;
+  }
+
+  &_black {
+    background-color: $BLACK;
+  }
+
+  &__side {
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    &__wrapper {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    height: 100%;
+
+    &__caption {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      margin: 32px 0 12px;
+      @media screen and (max-width: $notebook_start) {
+        margin: auto-calculate($notebook_start, $notebook, 32px, 16px) 0 12px;
+      }
+      @media screen and (max-width: $notebook) {
+        margin: 16px 0 10px;
+      }
+      flex-grow: 1;
+      text-align: center;
+      word-break: break-word;
+      @extend .subheader_1;
+    }
+    &__arrow-button{
+     margin: 0 auto;
+    }
+  }
+
+  &_with-image & {
+    &__image {
+      &__wrapper {
+        display: block;
+      }
+    }
+
+    &__side {
+      display: block;
+      max-width: calc(50% - 5px);
+    }
+
+    &__content {
+      &__text {
+        margin: 50px 0 46px;
+        @extend .subheader_2;
+      }
+    }
+  }
+}

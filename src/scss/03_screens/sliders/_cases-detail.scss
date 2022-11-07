@@ -1,0 +1,115 @@
+.cases-detail-slider-screen {
+  max-width: $notebook_start;
+  height: 603px;
+
+  &__slider {
+    overflow: visible;
+    padding-right:  calc(100% - 335px);
+    height: 100%;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 335px;
+      grid-gap: 7.2%;
+      transition: width 1s;
+      height: 100%;
+
+      &.swiper-slide-active {
+        width: 925px;
+      }
+
+      &.swiper-slide-active & {
+        &__image {
+          height: max-content;
+          max-width: 463px;
+        }
+      }
+
+      &__pre {
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-grow: 1;
+        height: 100%;
+        grid-gap: 10px;
+
+      }
+
+      &__image {
+        display: block;
+        width: 100%;
+        max-width: 210px;
+        object-fit: contain;
+        transition: 1s;
+      }
+
+      &__info {
+        transition: 1s;
+        width: 0;
+        max-width: 0;
+        z-index: 2;
+        display: none;
+      }
+
+      &__main {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        grid-gap: 20px;
+
+      }
+
+      &__title {
+        width: 100%;
+        overflow: hidden;
+        line-clamp: 3;
+        -webkit-line-clamp: 3;
+        background-color: red;
+        max-width: 100%;
+        height: 3em;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        &.heading_4 {
+          max-width: 560px;
+          line-clamp: 2;
+          -webkit-line-clamp: 2;
+          height: 2em;
+
+          @media screen and (max-width: $tablet_start) {
+            max-width: 100%;
+          }
+
+        }
+
+        &.heading_5 {
+          max-width: 100%;
+        }
+      }
+
+
+      border-right: 2px solid $GREEN;
+      padding: 0 20px;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+    }
+  }
+}
