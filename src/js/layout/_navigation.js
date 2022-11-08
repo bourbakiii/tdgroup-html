@@ -4,7 +4,6 @@ const TRANSITION_TIME = 1.3;
 let top_of_main_logo_timer = null;
 
 function setTopOfMainLogo() {
-    console.log(123);
     const element = document.querySelector('.main-screen__logo__wrapper');
     if (!element) return;
     top_of_main_logo_timer = setTimeout(() => {
@@ -14,7 +13,10 @@ function setTopOfMainLogo() {
     }, 100);
 }
 
-window.onload = setTopOfMainLogo;
+window.onload = () => {
+    setTopOfMainLogo();
+    setTimeout(setTopOfMainLogo, 1000);
+}
 window.addEventListener('resize', setTopOfMainLogo, {passive: true});
 
 let is_navigation_menu_open = false;
@@ -56,7 +58,9 @@ const openAnimation = () => {
     })
     gsap.to('.navigation__menu__links', {
         height: 'auto', opacity: 1, paddingBottom: 32, duration: TRANSITION_TIME, ease: 'power3',
-        onUpdate: () => setTopOfMainLogo()
+        onUpdate: () => setTopOfMainLogo(),
+        // onStart: () => setTopOfMainLogo(),
+        // onComplete: () => setTopOfMainLogo()
     });
     gsap.to('.navigation__button', {
         backgroundColor: '#F8F8F4',
@@ -87,7 +91,9 @@ const closeAnimation = () => {
         paddingBottom: 0,
         duration: TRANSITION_TIME,
         ease: 'power3',
-        onUpdate: () => setTopOfMainLogo()
+        onUpdate: () => setTopOfMainLogo(),
+        // onStart: () => setTopOfMainLogo(),
+        // onComplete: () => setTopOfMainLogo()
     });
     gsap.to('.navigation__button', {
         backgroundColor: '#2DAB49',
