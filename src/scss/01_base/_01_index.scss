@@ -110,5 +110,9 @@ button, a {
 {
   width:100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 

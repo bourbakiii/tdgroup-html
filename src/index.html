@@ -5,14 +5,11 @@
 @@include('./html/layout/_navigation.html')
 <main class="page index-page">
     @@include('./html/screens/_main.html')
-    <div class="overflow-full-width-container">
-        @@include('./html/screens/sliders/_cases.html')
-    </div>
+    @@include('./html/screens/sliders/_cases.html')
     @@include('./html/screens/_blog.html')
-    <div class="overflow-full-width-container">
-        @@include('./html/screens/sliders/_workers.html')
-    </div>
-    @@include('./html/screens/_form.html', {class: 'index-page__form', title:'Напишите нам, если вам нужна консультация', button_text:'Отправить'})
+    @@include('./html/screens/sliders/_workers.html')
+    @@include('./html/screens/_form.html', {class: 'index-page__form', title:'Напишите нам, если вам нужна
+    консультация', button_text:'Отправить'})
 </main>
 @@include('./html/layout/_footer.html')
 @@include('./html/layout/_scripts.html')

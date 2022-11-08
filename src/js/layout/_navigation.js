@@ -6,17 +6,14 @@ let top_of_main_logo_timer = null;
 function setTopOfMainLogo() {
     const element = document.querySelector('.main-screen__logo__wrapper');
     if (!element) return;
-    top_of_main_logo_timer = setTimeout(() => {
+
         top_of_main_logo_timer = null;
         element.style.height = `${window.innerHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
         element.style.top = `${document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
-    }, 100);
+
 }
 
-window.onload = () => {
-    setTopOfMainLogo();
-    setTimeout(setTopOfMainLogo, 1000);
-}
+window.onload = setTopOfMainLogo;
 window.addEventListener('resize', setTopOfMainLogo, {passive: true});
 
 let is_navigation_menu_open = false;
