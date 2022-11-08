@@ -20,14 +20,12 @@ const createSwiper = () => {
         animateActiveSlide(current_slide_index + 1);
     });
     swiper.init();
-    console.log(swiper)
 }
 
 function animateActiveSlide(index) {
     console.log('Active, ', index);
 
     const timeline = gsap.timeline();
-
     timeline.to(`.cases-detail-slider-screen__slider__item:nth-child(${index}) .cases-detail-slider-screen__slider__item__title`, {
         opacity: 0, duration: .2, onComplete: () => {
             document.querySelector(`.cases-detail-slider-screen__slider__item:nth-child(${index}) .cases-detail-slider-screen__slider__item__title`).classList.remove('heading_5')
@@ -53,7 +51,6 @@ function animatePreviousSlide(index) {
         opacity: 1, duration: .2,
     });
 }
-
 
 createSwiper();
 
