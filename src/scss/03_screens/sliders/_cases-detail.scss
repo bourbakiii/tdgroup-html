@@ -5,9 +5,14 @@
   &__slider {
     overflow: visible;
     padding-right: calc(100% - 335px);
-    height: 530px;
+    height: 603px;
     @media screen and (max-width: $tablet_start) {
       padding-right: 0;
+      height: 530px;
+    }
+    @media screen and (max-width: $tablet_end) {
+      padding-right: 0;
+      height: 480px;
     }
 
     &__item {
@@ -45,6 +50,15 @@
           margin-left: 20px;
           opacity: 1;
           visibility: visible;
+          @media screen and (max-width: $tablet_start) {
+            margin-left: 10px;
+          }
+          @media screen and (max-width: $tablet_end) {
+            min-width: auto;
+            max-width:100%;
+            margin-left: 0;
+            margin-bottom: 10px;
+          }
         }
       }
 
@@ -73,6 +87,9 @@
           max-width: none;
           width: 25%;
         }
+        @media screen and (max-width: $tablet_end) {
+          align-self: flex-end;
+        }
       }
 
       &__info {
@@ -80,7 +97,7 @@
         width: 0;
         min-width: 0;
         z-index: 2;
-        margin-left: 0;
+        margin: 0;
         opacity: 0;
         visibility: hidden;
         @media screen and (max-width: $tablet_start) {
@@ -89,6 +106,11 @@
           width: 298px;
           min-width: 298px;
         }
+        @media screen and (max-width: $tablet_end) {
+          margin-left: 0;
+          margin-bottom: 10px;
+        }
+
 
         &__text {
           margin-bottom: 10px;
@@ -109,6 +131,10 @@
         flex: 0 0 auto;
         @media screen and (max-width: $tablet_start) {
           justify-content: flex-start;
+        }
+        @media screen and (max-width: $tablet_end) {
+          flex-direction: column-reverse;
+          align-items: flex-start;
         }
       }
 
