@@ -6,14 +6,18 @@ let top_of_main_logo_timer = null;
 function setTopOfMainLogo() {
     const element = document.querySelector('.main-screen__logo__wrapper');
     if (!element) return;
+    top_of_main_logo_timer = null;
+    element.style.height = `${document.documentElement.clientHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
+    element.style.top = `${document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
 
-        top_of_main_logo_timer = null;
-        element.style.height = `${window.innerHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
-        element.style.top = `${document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
 
+    console.log("the height is:");
+    console.log(document.documentElement.clientHeight);
+    console.log(document.querySelector('.navigation__wrapper').getBoundingClientRect().height);
+    console.log(element.style.height);
 }
 
-window.onload = setTopOfMainLogo;
+window.onload = () => setTimeout(setTopOfMainLogo, 0);
 window.addEventListener('resize', setTopOfMainLogo, {passive: true});
 
 let is_navigation_menu_open = false;
@@ -30,7 +34,7 @@ const close = () => {
 const heightChangeHandler = (type) => {
     let element = null;
     if ((element = document.querySelector('.main-screen__logo')))
-        element.style.height = `${window.innerHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
+        element.style.height = `${document.documentElement.clientHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
 }
 
 // $IVORY: #F8F8F4;

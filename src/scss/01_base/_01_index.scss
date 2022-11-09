@@ -134,6 +134,7 @@ button, a {
   cursor: pointer;
   transition: .2s;
   z-index: $modal_z;
+  outline: none;
 
   .modal {
     cursor: default;

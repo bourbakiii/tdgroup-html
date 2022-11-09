@@ -1,16 +1,15 @@
 <div class="modal-wrapper post-modal__wrapper">
-    <div class="modal post-modal">
-        @@include('../buttons/_close.html', {class:'post-modal__close-button @@close_button_class'})
-
-        <header class="post-modal__header @@header_image_class">
+    <div class="modal post-modal post-modal_@@type">
+        @@include('../buttons/_close.html', {class:'post-modal__close-button'})
+        <header class="post-modal__header">
             <img src="@img/TwoDogs.png"
                  alt="Post modal image" class="post-modal__header__image">
             <div class="post-modal__header__info">
                 <p class="post-modal__header__info__pre body">
-                    мероприятие
+                    @@caption
                 </p>
                 <div class="post-modal__header__info__content">
-                    <p class="post-modal__header__info__date body @@show_date_class">2 сентября 11:00–11:45</p>
+                    <p class="post-modal__header__info__date body">2 сентября 11:00–11:45</p>
                     <h2 class="post-modal__header__info__title heading_4">Нейрофизиология креативности</h2>
                 </div>
             </div>
@@ -33,48 +32,22 @@
                             }
                         </div>
                     </div>
-                    <!--                    <div class="post-modal__block post-modal__detail-block">-->
-                    <!--                        <h3 class="post-modal__detail-block__title subheader_2 uppercase">Задачи</h3>-->
-                    <!--                        <p class="post-modal__detail-block__content body">-->
-                    <!--                            Обмен знаниями и опытом между участниками программы обучения из различных подразделений-->
-                    <!--                            и-->
-                    <!--                            регионов-->
-                    <!--                            Осмысление полученных на программе знаний и навыков, роли руководителя в процессе-->
-                    <!--                            Моделирование процесса управления сервисом: “как есть сейчас” и “как должно быть”-->
-                    <!--                            Знакомство и общение участников программы в неформальной обстановке-->
-                    <!--                        </p>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-                    <!--            </div>-->
+                    <div class="post-modal__block post-modal__detail-block">
+                        <h3 class="post-modal__detail-block__title subheader_2 uppercase">Задачи</h3>
+                        <p class="post-modal__detail-block__content body">
+                            Обмен знаниями и опытом между участниками программы обучения из различных подразделений
+                            и
+                            регионов
+                            Осмысление полученных на программе знаний и навыков, роли руководителя в процессе
+                            Моделирование процесса управления сервисом: “как есть сейчас” и “как должно быть”
+                            Знакомство и общение участников программы в неформальной обстановке
+                        </p>
+                    </div>
                 </div>
-                <!--        <Form class="post-modal__form" @submit="digestSubmit">-->
-                <!--            <template #title>-->
-                <!--                <h3 class="form__title">Ваши контакты для cвязи</h3>-->
-                <!--            </template>-->
-                <!--            <template #inputs>-->
-                <!--                <div class="form__row">-->
-                <!--                    <input class="form__input" type="text" placeholder="ФИО" name="name"-->
-                <!--                           id="post-modal-name">-->
-                <!--                    <input class="form__input" type="text" placeholder="Компания" name="company"-->
-                <!--                           id="post-modal-company">-->
-                <!--                </div>-->
-                <!--                <div class="form__row">-->
-                <!--                    <input class="form__input" type="text" placeholder='Номер телефона'-->
-                <!--                           name="phone" id="post-modal-phone">-->
-                <!--                    <input class="form__input" type="text" placeholder="E-mail" name="email"-->
-                <!--                           id="post-modal-email">-->
-                <!--                </div>-->
-                <!--                <textarea class="form__input" placeholder=Сообщение-->
-                <!--                          name="phone" id="digest-phone"/>-->
-                <!--            </template>-->
-                <!--            <template #button-text>Отправить</template>-->
-                <!--        </Form>-->
             </div>
         </div>
+    @@include('../screens/_form.html', {class:'post-modal__form without-textarea',title:'ваши контакты для связи'});
+    </div>
+</div>
 
-        <!--<script setup>-->
-        <!--    import CloseButton from '@/components/Buttons/Close.vue';-->
-        <!--    import Form from '@/components/Form.vue';-->
 
-        <!--    const post_type = 'event';-->
-        <!--</script>-->

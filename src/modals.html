@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 @@include('./html/layout/_head.html', {"title": "Team Development Group"})
-
 <body>
 @@include('./html/layout/_navigation.html')
 <main class="test-page page">
@@ -15,13 +13,10 @@
     </button>
     @@include('./html/modals/_success.html')
     <button class="open-post-modal-button secondary-button">
-        Post Modal
+        Post Modal |||
     </button>
 
-    <!--    Если тема, то cbs - green, иначе white-->
-    <!--    Если не тема, то header_image -> post-modal__header_large-->
-    <!--    Если не ивент, то show_date_class = dn -->
-    @@include('./html/modals/_post.html', {close_button_class:'green', header_image_class: 'post-modal__header_large', show_date_class: 'dn'})
+    @@include('./html/modals/_post.html', {caption:'мероприятие', type:'theme'})
 </main>
 @@include('./html/layout/_scripts.html')
 </body>

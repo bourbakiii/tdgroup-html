@@ -5,12 +5,25 @@
 @@include('./html/layout/_navigation.html')
 <main class="page index-page">
     @@include('./html/screens/_main.html')
-    @@include('./html/screens/sliders/_cases.html')
+    <div class="slider-container">
+        @@include('./html/screens/sliders/_cases.html')
+    </div>
     @@include('./html/screens/_blog.html')
-    @@include('./html/screens/sliders/_workers.html')
+    <div class="slider-container">
+        @@include('./html/screens/sliders/_workers.html')
+    </div>
     @@include('./html/screens/_form.html', {class: 'index-page__form', title:'Напишите нам, если вам нужна консультация', button_text:'Отправить'})
 </main>
 @@include('./html/layout/_footer.html')
 @@include('./html/layout/_scripts.html')
 </body>
 </html>
+
+<style>
+    .slider-container {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+</style>
