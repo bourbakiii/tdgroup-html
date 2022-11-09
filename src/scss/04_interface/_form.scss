@@ -43,17 +43,30 @@
 .form {
   &__wrapper {
     width: 100%;
-    margin-bottom: 92px;
     display: flex;
     justify-content: center;
-    @media screen and (max-width: $notebook_start) {
-      margin-bottom: auto-calculate($notebook_start, $notebook, 92px, 46px)
+    
+    //margin-bottom: 92px;
+    //@media screen and (max-width: $notebook_start) {
+    //  margin-bottom: auto-calculate($notebook_start, $notebook, 92px, 46px)
+    //}
+    //@media screen and (max-width: $notebook) {
+    //  margin-bottom: auto-calculate($notebook_start, $notebook, 46px, 23px)
+    //}
+    //@media screen and (max-width: $tablet) {
+    //  margin-bottom: 25px;
+    //}
+
+    &.without-title {
+      h2 {
+        display: none;
+      }
     }
-    @media screen and (max-width: $notebook) {
-      margin-bottom: auto-calculate($notebook_start, $notebook, 46px, 23px)
-    }
-    @media screen and (max-width: $tablet) {
-      margin-bottom: 25px;
+
+    &.without-textarea {
+      textarea {
+        display: none;
+      }
     }
   }
 

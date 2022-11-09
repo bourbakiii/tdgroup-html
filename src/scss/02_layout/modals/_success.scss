@@ -1,0 +1,29 @@
+.success-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 24px;
+  background-color: white;
+  width: 100%;
+  max-width: 980px;
+  padding: 58px 20px 64px;
+  border-radius: 2px;
+  color: $GREEN;
+  &__icon {
+    fill: $IVORY;
+
+    &__wrapper {
+      width: 64px;
+      height: 64px;
+      background-color: $GREEN;
+      border-radius: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__text{
+    text-align: center;
+  }
+}

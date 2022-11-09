@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./html/layout/_head.html', {"title": "Team Development Group"})
+
+<body>
+@@include('./html/layout/_navigation.html')
+<main class="test-page page">
+    <button class="open-form-modal-button secondary-button">
+        Form Modal
+    </button>
+    @@include('./html/modals/_form.html')
+    <button class="open-success-modal-button secondary-button">
+        Success Modal
+    </button>
+    @@include('./html/modals/_success.html')
+</main>
+@@include('./html/layout/_scripts.html')
+</body>
+</html>

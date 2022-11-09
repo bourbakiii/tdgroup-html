@@ -1,0 +1,30 @@
+
+
+.form-modal {
+  padding: 40px 40px 64px;
+  background-color: $IVORY;
+  max-width: 900px;
+  width: 100%;
+  color: $GREEN;
+  border-radius: 2px;
+  @media screen and (max-width: $notebook_start) {
+    padding: auto-calculate($notebook_start, $tablet_end, 40px, 20px) auto-calculate($notebook_start, $tablet_end, 40px, 20px) auto-calculate($notebook_start, $tablet_end, 64px, 32px);
+  }
+  @media screen and (max-width: $tablet_end) {
+    padding: 20px 20px 32px;
+  }
+
+  &__pre-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  &__selected-count {
+    &__opacity {
+      opacity: .6;
+    }
+  }
+}
