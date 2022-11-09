@@ -132,14 +132,14 @@ button, a {
   opacity: 0;
   visibility: hidden;
   cursor: pointer;
-  transition: .2s;
+  transition: .5s;
   z-index: $modal_z;
   outline: none;
 
   .modal {
     cursor: default;
-    transition: .2s;
-    transform: translateY(20%);
+    transition: .3s;
+    transform: translateY(20vh);
   }
 
   &.show {

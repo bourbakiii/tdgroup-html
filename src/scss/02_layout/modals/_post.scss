@@ -69,17 +69,6 @@
     @media screen and (max-width: $tablet) {
       min-height: auto;
     }
-    //padding-top: 172px;
-    //padding-bottom: 137px;
-    //@media screen and (max-width: $notebook_start) {
-    //  padding-top: auto-calculate($notebook_start, $notebook, 172px, 86px);
-    //  padding-bottom: auto-calculate($notebook_start, $notebook, 137px, 73.5px);
-    //}
-    //@media screen and (max-width: $notebook) {
-    //  padding-top: auto-calculate($notebook, $tablet, 86px, 43px);
-    //  padding-bottom: auto-calculate($notebook, $tablet, 70px, 35px);
-    //}
-
 
     &__image {
       display: block;
@@ -253,7 +242,7 @@
 
   &_theme & {
     &__close-button {
-      @extend .white;
+      @extend .green;
     }
 
     &__header {
@@ -284,10 +273,6 @@
   }
 
   &_event & {
-    &__close-button {
-      @extend .white;
-    }
-
     &__header {
       &__info {
         &__date {
@@ -304,5 +289,4 @@
       }
     }
   }
-
 }
