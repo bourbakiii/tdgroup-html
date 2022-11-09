@@ -5,39 +5,57 @@
   grid-gap: 80px 20px;
 
   &__item {
+    position: relative;
     color: $GREEN;
     border-right: 2px solid $GREEN;
     height: 557px;
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 20px;
+    &:hover & {
+      &__content {
+        &.hovered {
+          opacity: 1;
+          visibility: visible;
+        }
 
-
-  }
-
-  &__content {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: .35s;
-
-    &.hovered {
-      width: 274px;
-      height: auto;
-      flex-direction: column;
-      grid-gap: 12px;
-      opacity: 0;
-      display: none;
+        &.stock {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
     }
 
-    &.stock {
-      width: 262px;
+    &__content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      grid-gap: 12px;
       height: auto;
+      transition: .5s;
       display: flex;
-      flex-direction: column;
-      grid-gap: 12px;
 
+      &.hovered {
+        width: 274px;
+        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &.stock {
+        width: 262px;
+        flex-direction: column;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__image {
+      height: 291px;
+      max-width: 100%;
     }
   }
-
 
   &__button {
     margin-top: 16px;
