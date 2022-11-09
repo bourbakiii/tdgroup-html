@@ -14,6 +14,14 @@
         Success Modal
     </button>
     @@include('./html/modals/_success.html')
+    <button class="open-post-modal-button secondary-button">
+        Post Modal
+    </button>
+
+    <!--    Если тема, то cbs - green, иначе white-->
+    <!--    Если не тема, то header_image -> post-modal__header_large-->
+    <!--    Если не ивент, то show_date_class = dn -->
+    @@include('./html/modals/_post.html', {close_button_class:'green', header_image_class: 'post-modal__header_large', show_date_class: 'dn'})
 </main>
 @@include('./html/layout/_scripts.html')
 </body>
