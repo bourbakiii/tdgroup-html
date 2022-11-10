@@ -6,6 +6,7 @@ import './sliders/_articles.js'
 import './sliders/_workers.js'
 import './sliders/_cases.js'
 import './sliders/_cases-detail.js'
+import './sliders/_vertical.js'
 
 document.querySelector('.open-form-modal-button').onclick = () => document.querySelector('.form-modal__wrapper').classList.toggle('show');
 document.querySelector('.open-post-modal-button').onclick = () => document.querySelector('.post-modal__wrapper').classList.toggle('show');

@@ -45,29 +45,119 @@
     gap: 30px;
 
     &__slider {
-      position: relative;
       height: 346px;
-      background-color: rgba(0, 0, 0, .5);
+      overflow: auto;
+      padding: 30px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      scroll-behavior: smooth;
 
+      &__wrapper {
+        position: relative;
 
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 30px;
-        background: linear-gradient(180deg, $GREEN, rgba($GREEN, 0));
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 30px;
+          background: linear-gradient(180deg, $GREEN, rgba($GREEN, 0));
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 30px;
+          background: linear-gradient(0deg, $GREEN, rgba($GREEN, 0));
+        }
       }
 
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 30px;
-        background: linear-gradient(0deg, $GREEN, rgba($GREEN, 0));
+      &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        border-bottom: 2px solid $IVORY;
+
+        &:first-of-type {
+          border-top: 2px solid $IVORY;
+        }
+
+        &__face {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 16px;
+          padding: 24px 0;
+          @media screen and (max-width: $phone_start) {
+            flex-direction: column;
+          }
+          &__main{
+            grid-gap: 16px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+          }
+          &__title {
+            width: 550px;
+            text-align: left;
+            @media screen and (max-width: $tablet) {
+              width: auto;
+              flex-grow: 1;
+            }
+          }
+
+          &__button {
+            width: 24px;
+            height: 24px;
+            border: 2px solid $IVORY;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+
+            &__icon {
+              fill: $IVORY;
+            }
+          }
+
+          &__add-button {
+            margin-left: auto;
+            @include adaptive_20px_mixin;
+            color: inherit;
+            background-color: transparent;
+            outline:none;
+            font-family: 'Stratos LC Regular', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%;
+            text-align: right;
+            border:none;
+            border-bottom: 2px solid $IVORY;
+            opacity: 0.8;
+padding:0;
+            transition: $TRANSITION;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+
+        &__content {
+          visibility: hidden;
+          overflow: hidden;
+          height: 0;
+          opacity: 0;
+        }
       }
     }
 
@@ -76,7 +166,7 @@
       justify-content: space-between;
       align-items: center;
       @media screen and (max-width: $phone_start) {
-        grid-gap:10px;
+        gap: 10px;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
