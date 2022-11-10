@@ -99,13 +99,15 @@
           @media screen and (max-width: $phone_start) {
             flex-direction: column;
           }
-          &__main{
+
+          &__main {
             grid-gap: 16px;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
           }
+
           &__title {
             width: 550px;
             text-align: left;
@@ -135,17 +137,18 @@
             @include adaptive_20px_mixin;
             color: inherit;
             background-color: transparent;
-            outline:none;
+            outline: none;
             font-family: 'Stratos LC Regular', sans-serif;
             font-style: normal;
             font-weight: 400;
             line-height: 110%;
             text-align: right;
-            border:none;
+            border: none;
             border-bottom: 2px solid $IVORY;
             opacity: 0.8;
-padding:0;
+            padding: 0;
             transition: $TRANSITION;
+
             &:hover {
               opacity: 1;
             }
