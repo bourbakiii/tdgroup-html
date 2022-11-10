@@ -23,7 +23,7 @@
       justify-content: space-between;
       align-items: flex-start;
       height: 100%;
-      grid-gap: 0;
+      gap: 0;
       @media screen and (max-width: $tablet_end) {
         flex-direction: column !important;
       }
@@ -35,7 +35,7 @@
         justify-content: flex-start;
         width: 262px;
         transition: width 1s;
-        grid-gap: 10px;
+        gap: 10px;
         @media screen and (max-width: $tablet_end) {
           width: 210px;
         }

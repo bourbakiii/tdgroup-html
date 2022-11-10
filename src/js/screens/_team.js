@@ -1,4 +1,6 @@
 document.querySelectorAll('.team-screen__item')
-    .forEach(el => el.onmouseenter = () =>
-        el.querySelector('.team-screen__item__video').play()
+    .forEach(el => {
+            el.onmouseenter = () => el.querySelector('.team-screen__item__video').play();
+            el.onmouseleave = () => el.querySelector('.team-screen__item__video').pause();
+        }
     );

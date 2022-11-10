@@ -65,12 +65,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    grid-gap: 48px;
+    gap: 48px;
     box-sizing: content-box;
     overflow: hidden;
     height: 0;
     @media screen and (max-width: $notebook) {
-      grid-gap: 35px;
+      gap: 35px;
     }
     @media screen and (max-width: $tablet_start) {
       height: 27px;
@@ -84,7 +84,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: stretch;
-      grid-gap: 16px;
+      gap: 16px;
 
       &__tags {
         display: flex;
@@ -92,7 +92,7 @@
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
-        grid-gap: 8px;
+        gap: 8px;
       }
     }
   }

@@ -3,6 +3,18 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 80px 20px;
+  @media screen and (max-width: $notebook_start) {
+    grid-gap: auto-calculate($notebook_start, $notebook, 80px, 40px) auto-calculate($notebook_start, $notebook, 40px, 20px);
+  }
+  @media screen and (max-width: $notebook) {
+    grid-gap: auto-calculate($notebook_start, $notebook, 40px, 20px) 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: $phone_start) {
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
 
   &__item {
     position: relative;
@@ -12,18 +24,43 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding: 0 20px;
+    padding-right: 20px;
+    @media screen and (max-width: $notebook_start) {
+      padding-right: auto-calculate($notebook_start, $notebook, 20px, 10px);
+    }
+    @media screen and (max-width: $notebook) {
+      padding-right: 10px;
+    }
+    @media screen and (max-width: $tablet) {
+      height: 470px;
+    }
+    overflow: hidden;
+
     &:hover & {
       &__content {
         &.hovered {
           opacity: 1;
           visibility: visible;
+          transform: translateY(0px);
         }
 
         &.stock {
           opacity: 0;
           visibility: hidden;
+          transform: translateY(-100%);
         }
+      }
+
+      &__image {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+      }
+
+      &__video {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
       }
     }
 
@@ -31,16 +68,27 @@
       position: absolute;
       left: 0;
       top: 0;
-      grid-gap: 12px;
+      gap: 12px;
       height: auto;
+      transition-delay: .5s;
       transition: .5s;
       display: flex;
+      max-width: calc(100% - 20px);
+
+      @media screen and (max-width: $notebook_start) {
+        max-width: calc(100% - auto-calculate($notebook_start, $notebook, 20px, 10px));
+      }
+      @media screen and (max-width: $notebook) {
+        max-width: calc(100% - 10px);
+      }
 
       &.hovered {
         width: 274px;
+        transition: .3s;
         flex-direction: column;
         opacity: 0;
         visibility: hidden;
+        transform: translateY(100%);
       }
 
       &.stock {
@@ -51,9 +99,35 @@
       }
     }
 
+    &__media-block {
+      position: relative;
+      width: 100%;
+      max-height: 291px;
+    }
+
     &__image {
-      height: 291px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-height: 291px;
       max-width: 100%;
+      opacity: 1;
+      visibility: visible;
+      transition-delay: .5s;
+      transition: 0.5s;
+    }
+
+    &__video {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-height: 291px;
+      max-width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transition-delay: .5s;
+      transition: 0.5s;
+      transform: translateY(100%);
     }
   }
 
@@ -61,4 +135,5 @@
     margin-top: 16px;
     width: 124px;
   }
+
 }

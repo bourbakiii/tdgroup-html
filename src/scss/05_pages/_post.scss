@@ -15,10 +15,10 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    grid-gap: 86px;
+    gap: 86px;
     @media screen and (max-width: $notebook) {
       flex-direction: column;
-      grid-gap: 32px;
+      gap: 32px;
     }
 
     &__back-button {
@@ -26,7 +26,7 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      grid-gap: 8px;
+      gap: 8px;
       text-decoration: none;
       color: $BLACK;
       flex-shrink: 0;
@@ -64,7 +64,7 @@
       justify-content: flex-start;
       align-items: center;
       flex-wrap: wrap;
-      grid-gap: 8px;
+      gap: 8px;
     }
 
     &__title {
@@ -86,12 +86,12 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      grid-gap: 29px;
+      gap: 29px;
       @media screen and (max-width: $notebook_start) {
-        grid-gap: auto-calculate($notebook_start, $notebook, 29px, 14.5px);
+        gap: auto-calculate($notebook_start, $notebook, 29px, 14.5px);
       }
       @media screen and (max-width: $notebook) {
-        grid-gap: 10px;
+        gap: 10px;
       }
       @media screen and (max-width: $phone_start) {
         flex-direction: column;
@@ -104,7 +104,7 @@
         align-items: center;
         justify-content: flex-start;
         flex-wrap: nowrap;
-        grid-gap: 5px;
+        gap: 5px;
         white-space: nowrap;
 
         font-family: 'Stratos LC Medium', sans-serif;
@@ -144,16 +144,16 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    grid-gap: 125px;
+    gap: 125px;
     max-width: 100%;
     @media screen and (max-width: $notebook_start) {
-      grid-gap: auto-calculate($notebook_start, $notebook, 125px, 62px);
+      gap: auto-calculate($notebook_start, $notebook, 125px, 62px);
     }
     @media screen and (max-width: $notebook) {
-      grid-gap: auto-calculate($notebook, $tablet, 50px, 20px);
+      gap: auto-calculate($notebook, $tablet, 50px, 20px);
     }
     @media screen and (max-width: $tablet) {
-      grid-gap: 60px;
+      gap: 60px;
       flex-direction: column-reverse;
     }
 
@@ -164,15 +164,15 @@
       justify-content: flex-start;
       flex-shrink: 0;
       width: 295px;
-      grid-gap: 45px;
+      gap: 45px;
 
       @media screen and (max-width: $notebook_start) {
-        grid-gap: auto-calculate($notebook_start, $notebook, 45px, 22.5px);
+        gap: auto-calculate($notebook_start, $notebook, 45px, 22.5px);
         width: auto-calculate($notebook_start, $notebook, 295px, 110px);
       }
       @media screen and (max-width: $notebook) {
         width: 200px;
-        grid-gap: auto-calculate($notebook, $tablet, 22.5px, 15px);
+        gap: auto-calculate($notebook, $tablet, 22.5px, 15px);
       }
       @media screen and (max-width: $tablet) {
         width: 100%;
@@ -198,15 +198,15 @@
     align-items: center;
     justify-content: flex-start;
     margin-top: 75px;
-    grid-gap: 100px;
+    gap: 100px;
     @media screen and (max-width: $notebook_start) {
-      grid-gap: auto-calculate($notebook_start, $notebook, 100px, 50px);
+      gap: auto-calculate($notebook_start, $notebook, 100px, 50px);
     }
     @media screen and (max-width: $notebook) {
-      grid-gap: auto-calculate($notebook, $tablet, 50px, 25px);
+      gap: auto-calculate($notebook, $tablet, 50px, 25px);
     }
     @media screen and (max-width: $tablet) {
-      grid-gap: 25px;
+      gap: 25px;
 
     }
     @media screen and (max-width: $phone) {

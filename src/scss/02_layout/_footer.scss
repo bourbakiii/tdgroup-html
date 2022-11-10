@@ -18,7 +18,7 @@
   @media screen and (max-width: $phone_start) {
     height: 150px;
 
-    grid-gap: 27px;
+    gap: 27px;
     flex-wrap: wrap;
   }
 
@@ -29,9 +29,9 @@
 
   &__socials {
     display: flex;
-    grid-gap: 16px;
+    gap: 16px;
     @media screen and (max-width: $notebook) {
-      grid-gap: 10px;
+      gap: 10px;
     }
 
     &__item {
@@ -70,7 +70,7 @@
   &__contacts {
     display: flex;
     flex-direction: column;
-    grid-gap: 6px;
+    gap: 6px;
 
     &__item {
       font-family: 'Stratos LC Bold', sans-serif;

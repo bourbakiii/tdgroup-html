@@ -1,23 +1,23 @@
-@mixin grid-gap_mixin {
-  grid-gap: 20px;
+@mixin gap_mixin {
+  gap: 20px;
   @media screen and (max-width: $notebook_start) {
-    grid-gap: auto-calculate($notebook_start, $notebook, 20px, 10px);
+    gap: auto-calculate($notebook_start, $notebook, 20px, 10px);
   }
   @media screen and (max-width: $notebook) {
-    grid-gap: 10px;
+    gap: 10px;
   }
 }
 
-@mixin checks-grid-gap_mixin {
-  grid-gap: 40px;
+@mixin checks-gap_mixin {
+  gap: 40px;
   @media screen and (max-width: $notebook_start) {
-    grid-gap: auto-calculate($notebook_start, $notebook, 40px, 20px);
+    gap: auto-calculate($notebook_start, $notebook, 40px, 20px);
   }
   @media screen and (max-width: $notebook) {
-    grid-gap: auto-calculate($notebook, $tablet, 40px, 20px);
+    gap: auto-calculate($notebook, $tablet, 40px, 20px);
   }
   @media screen and (max-width: $tablet) {
-    grid-gap: 20px;
+    gap: 20px;
   }
 }
 
@@ -77,7 +77,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    @include grid-gap_mixin;
+    @include gap_mixin;
     color: $GREEN;
   }
 
@@ -149,7 +149,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  @include grid-gap_mixin;
+  @include gap_mixin;
   @media screen and (max-width: $notebook) {
     @include form-columned_mixin;
   }
@@ -169,13 +169,13 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    @include grid-gap_mixin;
+    @include gap_mixin;
   }
 
   &__row {
     display: flex;
     width: 100%;
-    @include grid-gap_mixin;
+    @include gap_mixin;
     @media screen and (max-width: $phone) {
       flex-direction: column;
     }
@@ -188,7 +188,7 @@
     align-items: flex-start;
     flex-direction: column;
     margin-top: 8px;
-    grid-gap: 15px;
+    gap: 15px;
 
     &__title {
       @extend .body;
@@ -199,14 +199,14 @@
       justify-content: flex-start;
       align-items: flex-start;
       flex-wrap: wrap;
-      @include checks-grid-gap_mixin;
+      @include checks-gap_mixin;
     }
   }
 
   &__checkbox {
     display: flex;
     align-items: center;
-    grid-gap: 6px;
+    gap: 6px;
     cursor: pointer;
     flex-wrap: nowrap;
 

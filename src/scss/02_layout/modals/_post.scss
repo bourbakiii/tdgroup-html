@@ -98,7 +98,7 @@
 
       @media screen and (max-width: $tablet) {
         flex-direction: column;
-        grid-gap: 10px;
+        gap: 10px;
       }
 
       &__pre {
@@ -137,7 +137,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    grid-gap: 235px;
+    gap: 235px;
     margin-top: 100px;
     margin-left: 305px;
     @include post-modal-paddinged;
@@ -146,18 +146,18 @@
     @media screen and (max-width: $notebook_start) {
       margin-left: auto-calculate($notebook_start, $notebook, 305px, 152.5px);
       margin-top: auto-calculate($notebook_start, $notebook, 100px, 50px);
-      grid-gap: auto-calculate($notebook_start, $notebook, 235px, 117.5px);
+      gap: auto-calculate($notebook_start, $notebook, 235px, 117.5px);
     }
     @media screen and (max-width: $notebook) {
       margin-top: auto-calculate($notebook, $tablet, 50px, 25px);
-      grid-gap: auto-calculate($notebook, $tablet, 117.5px, 60px);
+      gap: auto-calculate($notebook, $tablet, 117.5px, 60px);
       margin-left: auto-calculate($notebook, $tablet, 200px, 100px);
     }
     @media screen and (max-width: $tablet) {
       margin-left: 0;
       margin-top: 25px;
       flex-direction: column;
-      grid-gap: 40px;
+      gap: 40px;
     }
   }
 
@@ -166,14 +166,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    grid-gap: 56px;
+    gap: 56px;
   }
 
   &__main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    grid-gap: 56px;
+    gap: 56px;
   }
 
   &__grid-block {
@@ -181,11 +181,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    grid-gap: 32px;
+    gap: 32px;
     width: 100%;
     max-width: 818px;
     @media screen and (max-width: $notebook_start) {
-      grid-gap: auto-calculate($notebook_start, $tablet, 32px, 16px);
+      gap: auto-calculate($notebook_start, $tablet, 32px, 16px);
     }
 
     &__title {
@@ -203,7 +203,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: stretch;
-      grid-gap: 4px;
+      gap: 4px;
     }
   }
 
@@ -212,11 +212,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    grid-gap: 32px;
+    gap: 32px;
     width: 100%;
     max-width: 750px;
     @media screen and (max-width: $notebook_start) {
-      grid-gap: auto-calculate($notebook_start, $tablet, 32px, 16px);
+      gap: auto-calculate($notebook_start, $tablet, 32px, 16px);
     }
 
     &__title {
