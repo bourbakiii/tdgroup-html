@@ -11,6 +11,20 @@
   }
 }
 
+@mixin pres_mixin {
+  width: 80px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  @media screen and (max-width: $notebook_start) {
+    width: auto-calculate($notebook_start,$notebook, 80px, 40px);
+  }
+  @media screen and (max-width: $notebook) {
+    width:40px;
+  }
+
+  }
+
+
 .case-post {
   background-color: white;
   color: $BLACK;
@@ -18,8 +32,11 @@
   align-items: flex-start;
   justify-content: center;
 
-  @include gap_case-post;
+  gap: 3px;
 
+  &__pre {
+    @include pres_mixin;
+  }
 
   @media screen and (max-width: $tablet) {
     width: 100%;
@@ -84,15 +101,16 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 22px;
+  gap: 3px;
 
   &.green {
     background-color: $GREEN;
   }
 
-  @media screen and (max-width: $notebook_start) {
-    gap: auto-calculate($notebook_start, $tablet, 22px, 11px);
+  &__pre {
+    @include pres_mixin;
   }
+
   @media screen and (max-width: $tablet) {
     flex-direction: column;
     gap: 11px;
