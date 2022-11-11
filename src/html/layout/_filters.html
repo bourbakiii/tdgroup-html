@@ -1,8 +1,8 @@
 <div class="filters__wrapper">
     <div class="filters">
         <div class="filters__main">
-            <button class="filters__toggle-button caption_1 adaptive_16px" @click="toggle">Фильтры
-                <!--                <CheckArrowButton class="filters__toggle-button__icon" :class="{rotate: !is_filters_open}"/>-->
+            <button class="filters__toggle-button caption_1 adaptive_16px">Фильтры
+                @@include('../buttons/_check-arrow.html', {class:'filters__toggle-button__check'})
             </button>
         </div>
         <div class="filters__content">

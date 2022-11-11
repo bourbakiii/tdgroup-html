@@ -256,3 +256,40 @@
     }
   }
 }
+
+.check-arrow {
+  transition: $TRANSITION;
+  background-color: transparent;
+  border: none;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: .75;
+  fill: $BLACK;
+  * {
+    transition: $TRANSITION;
+  }
+
+  &.rotate &__icon {
+    transform: rotate(180deg);
+  }
+
+  &:disabled {
+    opacity: .3;
+  }
+
+  &:hover:not(&:disabled) {
+    opacity: 1;
+  }
+
+  &.green {
+    fill: $GREEN;
+  }
+
+  &.white {
+    fill: $IVORY;
+  }
+}

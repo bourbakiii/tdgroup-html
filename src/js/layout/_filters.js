@@ -5,6 +5,7 @@ const toggle = () => (is_filters_open = !is_filters_open) ? openFiltersAnimation
 
 
 function openFiltersAnimation() {
+    document.querySelector('.filters__toggle-button__check').classList.add('rotate');
     gsap.to('.filters__content', {
         paddingTop: '40px',
         paddingBottom: '40px',
@@ -24,6 +25,7 @@ function openFiltersAnimation() {
 }
 
 function closeFiltersAnimation() {
+    document.querySelector('.filters__toggle-button__check').classList.remove('rotate');
     gsap.to('.filters__content', {padding: '0', height: 0, duration: 1, borderTopWidth: 0, ease: 'power3'})
     gsap.to('.filters__accept', {padding: '0', height: 0, duration: 1, borderTopWidth: 0, ease: 'power3'})
 }

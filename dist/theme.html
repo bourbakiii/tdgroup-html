@@ -1198,8 +1198,16 @@
     <div class="filters__wrapper">
     <div class="filters">
         <div class="filters__main">
-            <button class="filters__toggle-button caption_1 adaptive_16px" @click="toggle">Фильтры
-                <!--                <CheckArrowButton class="filters__toggle-button__icon" :class="{rotate: !is_filters_open}"/>-->
+            <button class="filters__toggle-button caption_1 adaptive_16px">Фильтры
+                <span class="check-arrow filters__toggle-button__check">
+    <svg class="check-arrow__icon"
+         width="16"
+         height="9">
+      <use xlink:href="assets/svgicons/icons/icons.svg#check-arrow"></use>
+    </svg>
+  </span>
+
+
             </button>
         </div>
         <div class="filters__content">
@@ -1226,89 +1234,7 @@
     <div class="blog-screen__padding-wrapper standart-padding-both">
         <div class="blog-screen__content">
             <div class="blog-screen__column">
-                
-                <a href="#" class="post__wrapper">
-                    <article class="post event-post">
-    <div class="event-post__title-block">
-        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
-        <h3 class="event-post__title subheader_1">
-            Коучинг как стиль управления
-        </h3>
-    </div>
-    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
-</article>
-
-
-                </a>
-                
-                <a href="#" class="post__wrapper">
-                    <article class="post event-post">
-    <div class="event-post__title-block">
-        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
-        <h3 class="event-post__title subheader_1">
-            Коучинг как стиль управления
-        </h3>
-    </div>
-    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
-</article>
-
-
-                </a>
-                
-            </div>
-            <div class="blog-screen__column">
-                
-                <a href="#" class="post__wrapper">
-                    <article class="post case-post blog-screen__column__item">
-    <p class="case-post__pre body adaptive-non">кейс</p>
-    <div class="case-post__content">
-        <div class="case-post__title-block">
-            <p class="case-post__pre body adaptive">кейс</p>
-            <h3 class="case-post__title heading_6 line-clamp">
-                Навыки
-                ведения
-                переговоров
-                Навыки
-                ведения
-                переговоров
-                Навыки
-                ведения
-                переговоров
-            </h3>
-        </div>
-        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
-    </div>
-</article>
-                </a>
-                
-                <a href="#" class="post__wrapper">
-                    <article class="post case-post blog-screen__column__item">
-    <p class="case-post__pre body adaptive-non">кейс</p>
-    <div class="case-post__content">
-        <div class="case-post__title-block">
-            <p class="case-post__pre body adaptive">кейс</p>
-            <h3 class="case-post__title heading_6 line-clamp">
-                Навыки
-                ведения
-                переговоров
-                Навыки
-                ведения
-                переговоров
-                Навыки
-                ведения
-                переговоров
-            </h3>
-        </div>
-        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
-    </div>
-</article>
-                </a>
-                
-            </div>
-            <div class="blog-screen__column">
-                
-                <a href="#" class="post__wrapper">
-                    <article class="post theme-post theme-post_green">
+                <article class="post theme-post @@class">
     <p class="theme-post__pre body">тема</p>
     <div class="theme-post__content">
         <h3 class="theme-post__title heading_5">
@@ -1327,10 +1253,21 @@
 
     </div>
 </article>
-                </a>
-                
-                <a href="#" class="post__wrapper">
-                    <article class="post theme-post theme-post_green">
+                <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Метод
+                морфологического
+                ящика
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                <article class="post theme-post @@class">
     <p class="theme-post__pre body">тема</p>
     <div class="theme-post__content">
         <h3 class="theme-post__title heading_5">
@@ -1349,8 +1286,111 @@
 
     </div>
 </article>
-                </a>
+
+                <!--                -->
+                <!--                <a href="#" class="post__wrapper">-->
                 
+                <!--                </a>-->
+                <!--                -->
+                <!--                <a href="#" class="post__wrapper">-->
+                
+                <!--                </a>-->
+                <!--                -->
+            </div>
+            <div class="blog-screen__column">
+                <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <button disabled class="event-post__tag tag @@tag_class">Завершено</button>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                <article class="post theme-post green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Метод
+                морфологического
+                ящика
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+
+                <!--                -->
+                <!--                <a href="#" class="post__wrapper">-->
+                
+                <!--                </a>-->
+                <!--                -->
+                <!--                <a href="#" class="post__wrapper">-->
+                
+                <!--                </a>-->
+                <!--                -->
+            </div>
+            <div class="blog-screen__column">
+                <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Метод
+                морфологического
+                ящика
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <button @@tag_attributes class="event-post__tag tag active">Регистрация</button>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+
+                <!--                -->
+                <!--                <a href="#" class="post__wrapper">-->
+                
+                <!--                </a>-->
+                <!--                -->
+                <!--                <a href="#" class="post__wrapper">-->
+                
+                <!--                </a>-->
+                <!--                -->
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 import './layout/_navigation.js';
 // import './screens/_team.js'
-// import './layout/_filters.js'
+import './layout/_filters.js'
 // import './screens/_main.js'
 // import './sliders/_articles.js'
 // import './sliders/_workers.js'
@@ -24,10 +24,5 @@ import './layout/_navigation.js';
 const where_navigation_is_fixed = ['/theme.html', '/team.html'];
 
 window.onload = () => {
-    console.log(document.location);
-    console.log(where_navigation_is_fixed.includes(document.location.pathname))
-    if (where_navigation_is_fixed.includes(document.location.pathname)) {
-        console.log("%cNAVIGATION SETTING FIXED POSITION BY JAVASCRIPT", 'background-color: lightred');
-        document.querySelector('.navigation__wrapper').style.position = 'fixed';
-    }
+    if (where_navigation_is_fixed.includes(document.location.pathname)) document.querySelector('.navigation__wrapper').style.position = 'fixed';
 }

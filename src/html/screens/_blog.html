@@ -3,25 +3,36 @@
     <div class="blog-screen__padding-wrapper standart-padding-both">
         <div class="blog-screen__content">
             <div class="blog-screen__column">
-                @@for(let i = 0; i<2; i++){
-                <a href="#" class="post__wrapper">
-                    @@include('../posts/_event.html')
-                </a>
-                }
+                @@include('../posts/_theme.html')
+                @@include('../posts/_case.html')
+                @@include('../posts/_theme.html')
+
+                <!--                @@for(let i = 0; i<2; i++){-->
+                <!--                <a href="#" class="post__wrapper">-->
+                <!--                    @@include('../posts/_event.html')-->
+                <!--                </a>-->
+                <!--                }-->
             </div>
             <div class="blog-screen__column">
-                @@for(let i = 0; i<2; i++){
-                <a href="#" class="post__wrapper">
-                    @@include('../posts/_case.html')
-                </a>
-                }
+                @@include('../posts/_event.html', { tag_attributes: 'disabled', tag_text: 'Завершено' })
+                @@include('../posts/_theme.html', { class: 'green'})
+                @@include('../posts/_case.html')
+
+                <!--                @@for(let i = 0; i<2; i++){-->
+                <!--                <a href="#" class="post__wrapper">-->
+                <!--                    @@include('../posts/_case.html')-->
+                <!--                </a>-->
+                <!--                }-->
             </div>
             <div class="blog-screen__column">
-                @@for(let i = 0; i<2; i++){
-                <a href="#" class="post__wrapper">
-                    @@include('../posts/_theme.html')
-                </a>
-                }
+                @@include('../posts/_case.html')
+                @@include('../posts/_event.html', { tag_class: 'active', tag_text: 'Регистрация' })
+
+                <!--                @@for(let i = 0; i<2; i++){-->
+                <!--                <a href="#" class="post__wrapper">-->
+                <!--                    @@include('../posts/_theme.html')-->
+                <!--                </a>-->
+                <!--                }-->
             </div>
         </div>
     </div>
