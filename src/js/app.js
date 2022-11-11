@@ -7,6 +7,11 @@ import './sliders/_workers.js'
 import './sliders/_cases.js'
 import './sliders/_cases-detail.js'
 import './sliders/_vertical.js'
+import HeaderTrigger from "./components/_headerTrigger.js";
+
+document.addEventListener('DOMContentLoaded', () => {
+    HeaderTrigger();
+})
 
 if (document.querySelector('.open-form-modal-button')) document.querySelector('.open-form-modal-button').onclick = () => document.querySelector('.form-modal__wrapper').classList.toggle('show');
 if (document.querySelector('.open-post-modal-button')) document.querySelector('.open-post-modal-button').onclick = () => document.querySelector('.post-modal__wrapper').classList.toggle('show');
