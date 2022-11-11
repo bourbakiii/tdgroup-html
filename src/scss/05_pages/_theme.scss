@@ -46,7 +46,7 @@
     }
   }
 
-  &__form__wrapper {
+  &__form {
     margin: 152px 0 92px;
     @media screen and (max-width: $notebook_start) {
       margin: auto-calculate($notebook_start, $tablet, 152px, 76px) 0 auto-calculate($notebook_start, $tablet, 92px, 48px);

@@ -1,0 +1,31 @@
+.team-page {
+  width: 100%;
+  max-width: $notebook_start;
+
+  &__team-screen {
+    &__title {
+      color: $GREEN;
+      text-align: center;
+      margin: 164px 0 100px;
+      @media screen and (max-width: $notebook_start) {
+        margin: auto-calculate($notebook_start, $tablet, 164px, 82px) 0 auto-calculate($notebook_start, $tablet, 100px, 50px);
+      }
+      @media screen and (max-width: $tablet) {
+        margin: auto-calculate($tablet, $phone_start, 82px, 41px) 0 auto-calculate($tablet, $phone_start, 50px, 25px);
+      }
+      @media screen and (max-width: $phone_start) {
+        margin: 41px 25px;
+      }
+    }
+  }
+
+  &__form {
+    margin-top: 219px;
+    @media screen and (max-width: $notebook_start) {
+      margin-top: auto-calculate($notebook_start, $tablet, 220px, 110px);
+    }
+    @media screen and (max-width: $tablet) {
+      margin-top: auto-calculate($notebook_start, $tablet, 110px, 55px);
+    }
+  }
+}
