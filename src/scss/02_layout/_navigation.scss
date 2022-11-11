@@ -9,6 +9,21 @@
     z-index: $navigation_z;
     position: sticky;
     top: 0;
+
+    &.fixed {
+      position: fixed;
+    }
+  }
+
+  &__wrapper.white & {
+    &__menu {
+      &__link {
+        color: $GREEN;
+      }
+      &__button {
+        color:$IVORY;
+      }
+    }
   }
 
   position: relative;
@@ -72,7 +87,7 @@
     right: 20px;
     top: 20px;
     @media screen and (max-width: $tablet_end) {
-    right:0;
+      right: 0;
 
     }
   }

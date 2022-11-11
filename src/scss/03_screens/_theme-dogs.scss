@@ -2,7 +2,8 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-
+  max-width: $notebook_start;
+margin: 0 auto;
   &__image {
     display: block;
     width: 100%;
