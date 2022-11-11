@@ -1,21 +1,27 @@
 .text-with-slider-screen {
-  &__wrapper{
-    //display: flex;
-    //flex-direction: column;
-    //align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  gap: 94px;
   color: $GREEN;
-  max-width: $notebook_start;
+  margin: 129px 0 107px;
+  @media screen and (max-width: $notebook_start) {
+    gap: auto-calculate($notebook_start, $tablet, 94px, 47px);
+    margin: auto-calculate($notebook_start, $tablet, 129px, 64.5px) 0 auto-calculate($notebook_start, $tablet, 107px, 53.5px);
+  }
+  @media screen and (max-width: $tablet) {
+    gap: auto-calculate($tablet, $phone_start, 46px, 23px);
+    margin: auto-calculate($notebook_start, $tablet, 62px, 32px) 0 auto-calculate($notebook_start, $tablet, 54px, 27px);
+  }
+  @media screen and (max-width: $phone_start) {
+    gap: 23px;
+    margin: 35px 0;
+  }
+
+
   &__text {
-    margin-bottom: 94px;
-    @media screen and (max-width: $notebook_start) {
-      margin-bottom: auto-calculate($notebook_start, $tablet, 94px, 47px);
-    }
-    @media screen and (max-width: $tablet) {
-      margin-bottom: auto-calculate($tablet, $phone, 46px, 23px);
-    }
-    @media screen and (max-width: $phone) {
-      margin-bottom: 20px;
-    }
+    max-width: $notebook_start;
+
   }
 }
