@@ -4,6 +4,7 @@ const TRANSITION_TIME = 1.3;
 let top_of_main_logo_timer = null;
 
 function setTopOfMainLogo() {
+    console.log("аддлл")
     const element = document.querySelector('.main-screen__logo__wrapper');
     if (!element) return;
     top_of_main_logo_timer = null;
@@ -11,13 +12,9 @@ function setTopOfMainLogo() {
     element.style.top = `${document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
 
 
-    console.log("the height is:");
-    console.log(document.documentElement.clientHeight);
-    console.log(document.querySelector('.navigation__wrapper').getBoundingClientRect().height);
-    console.log(element.style.height);
 }
 
-window.onload = () => setTimeout(setTopOfMainLogo, 0);
+window.addEventListener('load', () => setTimeout(() => setTopOfMainLogo(), 0))
 window.addEventListener('resize', setTopOfMainLogo, {passive: true});
 
 let is_navigation_menu_open = false;
