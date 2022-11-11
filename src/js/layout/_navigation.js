@@ -39,22 +39,19 @@ const heightChangeHandler = (type) => {
 // $GREEN: rgba(45, 171, 73, 1);
 // $GREEN_GRADIENT: linear-gradient(180deg, rgba(45, 171, 73, 0) 0%, #2DAB49 100%);
 // $RED: #da1313;
-const GREEN = '#2DAB49',
-    IVORY = '#F8F8F4',
-    NAVIGATION_ELEMENT = document.querySelector('.navigation__wrapper');
 const openAnimation = () => {
     gsap.to('.navigation__menu', {
         width: '100%',
         paddingTop: 30,
         marginTop: 0,
-        background: NAVIGATION_ELEMENT.classList.contains('white') ? IVORY : GREEN,
+        background: '#2DAB49',
         duration: TRANSITION_TIME,
         ease: 'power3'
     })
     gsap.to('.navigation__menu__button', {
-        color: NAVIGATION_ELEMENT.classList.contains('white') ? GREEN : IVORY,
+        color: '#F8F8F4',
         ease: 'power3',
-        textDecorationColor: 'rgba(0,0,0,0)',
+        textDecorationColor: `#F8F8F4`,
         duration: TRANSITION_TIME
     })
     gsap.to('.navigation__menu__links', {
@@ -64,8 +61,8 @@ const openAnimation = () => {
         // onComplete: () => setTopOfMainLogo()
     });
     gsap.to('.navigation__button', {
-        backgroundColor: NAVIGATION_ELEMENT.classList.contains('white') ? GREEN : IVORY,
-        color: NAVIGATION_ELEMENT.classList.contains('white') ? IVORY : GREEN,
+        backgroundColor: '#F8F8F4',
+        color: '#2DAB49',
         duration: TRANSITION_TIME,
         ease: 'power3'
     });
@@ -80,9 +77,9 @@ const closeAnimation = () => {
         ease: 'power3'
     })
     gsap.to('.navigation__menu__button', {
-        color: NAVIGATION_ELEMENT.classList.contains('white') ? IVORY : GREEN,
+        color: '#2DAB49',
         ease: 'power3',
-        textDecorationColor: NAVIGATION_ELEMENT.classList.contains('white') ? IVORY : GREEN,
+        textDecorationColor: document.querySelector('.navigation__wrapper').classList.contains('white') ? '#2DAB49' : '#F8F8F4',
         duration: TRANSITION_TIME
     })
     gsap.to('.navigation__menu__links', {
@@ -97,8 +94,8 @@ const closeAnimation = () => {
         // onComplete: () => setTopOfMainLogo()
     });
     gsap.to('.navigation__button', {
-        backgroundColor: NAVIGATION_ELEMENT.classList.contains('white') ? IVORY : GREEN,
-        color: NAVIGATION_ELEMENT.classList.contains('white') ? GREEN : IVORY,
+        backgroundColor: '#2DAB49',
+        color: '#F8F8F4',
         duration: TRANSITION_TIME,
         ease: 'power3'
     });

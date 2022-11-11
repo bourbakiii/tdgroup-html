@@ -20,3 +20,22 @@ if (document.querySelector('.open-success-modal-button')) document.querySelector
     document.querySelector('.success-modal__wrapper').classList.add('show');
     setTimeout(() => document.querySelector('.success-modal__wrapper').classList.remove('show'), 3000)
 }
+console.log(document.location);
+if (document.location.pathname === '/theme.html') {
+    document.addEventListener('scroll', (event) => {
+        const element_classes = ['.theme-dogs-screen', '.vertical-slider-screen__wrapper'];
+        const middle_of_navigation = Math.abs(document.body.getBoundingClientRect().top + document.querySelector('.navigation__wrapper').getBoundingClientRect().height / 2);
+        const coordinates_of_elements = Array.from(document.querySelectorAll(element_classes.join(','))).map(el => ({
+            top: el.offsetTop,
+            height: el.getBoundingClientRect().height
+        }));
+        document.querySelector('.navigation__wrapper').classList.remove('white');
+        for (let {top, height} of coordinates_of_elements) {
+            console.log(middle_of_navigation > top, middle_of_navigation < top + height)
+            if (middle_of_navigation > top && middle_of_navigation < top + height) {
+                document.querySelector('.navigation__wrapper').classList.add('white');
+                break;
+            }
+        }
+    });
+}
