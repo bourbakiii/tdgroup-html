@@ -110,8 +110,14 @@
           align-items: center;
           gap: 16px;
           padding: 24px 0;
+          @media screen and (max-width: $notebook_start) {
+            padding: auto-calculate($notebook_start,$phone, 24px, 12px) 0;
+          }
           @media screen and (max-width: $phone_start) {
             flex-direction: column;
+          }
+          @media screen and (max-width: $phone) {
+            padding: 12px 0;
           }
 
           &__main {

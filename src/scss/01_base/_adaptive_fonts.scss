@@ -10,6 +10,10 @@
   @media screen and (max-width: $tablet) {
     font-size: 10px;
   }
+  @media screen and (max-width: $phone) {
+    font-size: 9px;
+  }
+
 }
 
 @mixin adaptive_14px_mixin {
@@ -24,7 +28,12 @@
   @media screen and (max-width: $tablet) {
     font-size: 12px;
   }
+  @media screen and (max-width: $phone) {
+    font-size: 10.5px;
+  }
+
 }
+
 
 @mixin adaptive_16px_mixin {
   font-size: 16px;
@@ -37,6 +46,9 @@
   }
   @media screen and (max-width: $tablet) {
     font-size: 13px;
+  }
+  @media screen and (max-width: $phone) {
+    font-size: 12px;
   }
 }
 
@@ -51,6 +63,9 @@
   }
   @media screen and (max-width: $tablet) {
     font-size: 15px;
+  }
+  @media screen and (max-width: $phone) {
+    font-size: 13.5px;
   }
 }
 
@@ -69,6 +84,9 @@
   @media screen and (max-width: $phone_start) {
     font-size: 16.5px;
   }
+  @media screen and (max-width: $phone) {
+    font-size: 15px;
+  }
 }
 
 @mixin adaptive_20px_mixin {
@@ -85,6 +103,9 @@
   }
   @media screen and (max-width: $phone_start) {
     font-size: 15.5px;
+  }
+  @media screen and (max-width: $phone) {
+    font-size: 14px;
   }
 }
 
@@ -103,6 +124,9 @@
   @media screen and (max-width: $phone_start) {
     font-size: 20px;
   }
+  @media screen and (max-width: $phone) {
+    font-size: 17.5px;
+  }
 }
 
 @mixin adaptive_48px_mixin {
@@ -120,6 +144,9 @@
   @media screen and (max-width: $phone_start) {
     font-size: 27px;
   }
+  @media screen and (max-width: $phone) {
+    font-size: 22px;
+  }
 }
 
 @mixin adaptive_176px_mixin {
@@ -136,6 +163,9 @@
   }
   @media screen and (max-width: $phone_start) {
     font-size: 80px;
+  }
+  @media screen and (max-width: $phone) {
+    font-size: 70px;
   }
 }
 

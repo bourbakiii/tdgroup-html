@@ -29,5 +29,9 @@
     width: max-content;
     text-align: center;
     font-size: calc((72 / 1440) * 100vw) !important;
+    @media screen and (max-width: $tablet) {
+      font-size: calc((90 / 1440) * 100vw) !important;
+
+    }
   }
 }
