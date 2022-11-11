@@ -178,3 +178,14 @@
   @include form_italic_header_32px_mixin;
 }
 
+@mixin tag-heading_mixin {
+  font-family: 'Stratos LC Bold', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  @include adaptive_16px_mixin;
+  line-height: 100%;
+}
+
+.tag-heading {
+  @include tag-heading_mixin;
+}

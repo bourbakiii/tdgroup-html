@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./html/layout/_head.html', {"title": "Team Development Group"})
+<body>
+@@include('./html/layout/_navigation.html')
+<main class="resume-page page standart-padding-both">
+    <a href="#" class="resume-page__back-button">
+        @@include('./html/buttons/_arrow-button.html', {class: 'resume-page__back-button__button left green'})
+
+        <p class="resume-page__back-button__text">Назад</p>
+    </a>
+    <div class="resume-page__sides">
+        <div class="resume-page__about">
+            <img class="resume-page__about__image" src="@img/TwoWomans.png" alt="Worker image"/>
+            <div class="resume-page__about__personal-information">
+                <a href="#" class="resume-page__about__personal-information__video link">Видеовизитка
+                </a>
+                <h1 class="resume-page__about__personal-information__name heading_3">Анна <br> Симакова</h1>
+                <p class="resume-page__about__personal-information__job-level body_1">Тренер-методолог</p>
+            </div>
+        </div>
+        <div class="resume-page__portfolio">
+            <p class="resume-page__portfolio__main lead_1">
+                Тренер-методолог, фасилитатор, член Российской Ассоциации фасилитаторов, дипломированный игротехник.
+                Ведущий фасилитационных сессий и бизнес-игр, сессий в формате LEGO Serious Play.
+            </p>
+            <div class="resume-page__portfolio__block resume-page__portfolio__experience">
+                <h3 class="resume-page__portfolio__block__label tag-heading">Опыт</h3>
+                <div class="resume-page__portfolio__block__content resume-page__portfolio__block__content_experience">
+                    @@for(let i =0; i<6; i++){
+                    <div class="resume-page__portfolio__block__content__item">
+                        <p class="resume-page__portfolio__block__content__item__label body">Training × Development
+                            Group</p>
+                        <p class="resume-page__portfolio__block__content__item__value body">Тренер-методолог</p>
+                    </div>
+                    }
+                </div>
+            </div>
+            <div class="resume-page__portfolio__block resume-page__portfolio__education">
+                <h3 class="resume-page__portfolio__block__label tag-heading">Образование</h3>
+                <div class="resume-page__portfolio__block__content resume-page__portfolio__block__content_education">
+                    <div class="resume-page__portfolio__block__content__item">
+                        <p class="resume-page__portfolio__block__content__item__label body">Институт практической
+                            психологии, Национальный исследовательский университет
+                            «Высшая школа экономики»
+
+                        </p>
+                        <p class="resume-page__portfolio__block__content__item__value body">Руководитель направления
+                            Бизнес-тренинг: новые возможности развития организации (2013 –2014 гг.)
+                            <br>
+                            Технология Ассессмент Центра (2014 г.)
+                            <br>
+                            Мастер организации групповой работы (фасилитатор, модератор, медиатор) (2016 г.)
+                            <br>
+                            «Игровые технологии в развитии и обучении персонала» (2017-2018 гг.)
+                        </p>
+                    </div>
+                    @@for(let i =0; i<2; i++){
+                    <div class="resume-page__portfolio__block__content__item">
+                        <p class="resume-page__portfolio__block__content__item__label body">Universal University, School
+                            of education
+                        </p>
+                        <p class="resume-page__portfolio__block__content__item__value body">Руководитель направления
+                            обучения и развития
+                            Ideas4retail
+                            ­Ведущий тренинг-менеджер</p>
+                    </div>
+                    }
+                </div>
+            </div>
+            <div class="resume-page__portfolio__block resume-page__portfolio__publications">
+                <h3 class="resume-page__portfolio__block__label tag-heading">Публикации</h3>
+                <div class="resume-page__portfolio__block__content resume-page__portfolio__block__content_publications">
+                    @@for(let i =0; i<2; i++){
+                    <div class="resume-page__portfolio__block__content__item">
+                        <p class="resume-page__portfolio__block__content__item__label body">Управление персоналом</p>
+                        <p class="resume-page__portfolio__block__content__item__value body">Об идеях книги «Метод
+                            Помидора» Франческо Черилло</p>
+                    </div>
+                    }
+                </div>
+            </div>
+            <p class="resume-page__portfolio__after body">
+                Хотите увидеть описание проектов?
+                <br>
+                <span class="resume-page__portfolio__after_bold">Скачайте полное резюме</span>
+            </p>
+        </div>
+    </div>
+</main>
+
+@@include('./html/layout/_footer.html')
+@@include('./html/layout/_scripts.html')
+</body>
+</html>

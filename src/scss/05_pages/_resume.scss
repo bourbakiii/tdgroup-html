@@ -1,0 +1,188 @@
+.resume-page {
+  width: 100%;
+  max-width: $notebook_start;
+  gap: 44px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  &__back-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Stratos LC Regular', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    @extend .adaptive_16px;
+    line-height: 135%;
+    color: $GREEN;
+    text-decoration: none;
+  }
+
+  &__sides {
+    width: 100%;
+    max-width: $maxwidth;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 85px;
+    @media screen and (max-width: $notebook_start) {
+      gap: auto-calculate($notebook_start, $tablet, 85px, 42.5px);
+    }
+    @media screen and (max-width: $tablet) {
+      gap: auto-calculate($tablet, $phone_start, 42px, 21px);
+      flex-direction: column;
+    }
+    @media screen and (max-width: $phone_start) {
+      gap: 21px;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: $GREEN;
+    gap: 60px;
+    @media screen and (max-width: $notebook_start) {
+      gap: auto-calculate($notebook_start, $tablet, 60px, 30px);
+    }
+    @media screen and (max-width: $tablet) {
+      gap: auto-calculate($tablet, $phone_start, 30px, 15px);
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 100%;
+    }
+    @media screen and (max-width: $phone_start) {
+      gap: 30px;
+      flex-direction: column;
+    }
+
+    &__image {
+      width: 315px;
+      height: 315px;
+      border-radius: 50%;
+      object-fit: cover;
+
+      @media screen and (max-width: $notebook_start) {
+        width: auto-calculate($notebook_start, $phone_start, 315px, 157.5px);
+        height: auto-calculate($notebook_start, $phone_start, 315px, 157.5px);
+      }
+      @media screen and (max-width: $phone_start) {
+        width: 180px;
+        height: 180px;
+        align-self: center;
+      }
+    }
+
+    &__personal-information {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 30px;
+
+      @media screen and (max-width: $tablet) {
+        gap: 20px;
+      }
+
+      &__video {
+        font-family: 'Stratos LC Bold', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        @extend .adaptive_18px;
+        line-height: 100%;
+        letter-spacing: 0.1em;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+        color: $GREEN
+      }
+    }
+  }
+
+
+  &__portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 56px;
+    @media screen and (max-width: $notebook_start) {
+      gap: auto-calculate($notebook_start, $tablet, 56px, 28px);
+    }
+    @media screen and (max-width: $tablet) {
+      gap: auto-calculate($tablet, $phone_start, 28px, 14px);
+    }
+    @media screen and (max-width: $phone_start) {
+      gap: 14px;
+    }
+
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 32px;
+      @media screen and (max-width: $notebook_start) {
+        gap: auto-calculate($notebook_start, $tablet, 32px, 16px);
+      }
+
+      @media screen and (max-width: $tablet) {
+        gap: 16px;
+      }
+
+      &__label {
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      &__content {
+        gap: 20px;
+        @media screen and (max-width: $notebook_start) {
+          gap: auto-calculate($notebook_start, $phone_start, 20px, 10px);
+        }
+        @media screen and (max-width: $phone_start) {
+          gap: 10px;
+        }
+
+
+        &_experience, &_publications, &_education {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          @media screen and (max-width: $phone_start) {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: stretch;
+          gap: 4px;
+
+          &__label {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    &__after {
+      color: $GREEN;
+
+      &_bold {
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline
+        }
+      }
+    }
+  }
+
+
+}
