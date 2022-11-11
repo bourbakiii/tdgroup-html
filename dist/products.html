@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Team Development Group</title>
+    <!-- Fonts -->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">-->
+
+
+    <!--     Swiper -->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.css"-->
+    <!--          integrity="sha512-pJrGHWDVOeiy4UkMtHu0fpD8oLLssFcaW0fsVXUkA1/jDLopa554Z1AZo5SKtekHnnmyat0ipiP0snKDrt0GNg=="-->
+    <!--          crossorigin="anonymous" referrerpolicy="no-referrer"/>-->
+
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<header class="navigation__wrapper standart-padding-both">
+    <div class="navigation">
+        <div class="navigation__menu">
+            <button class='navigation__menu__button link'>Меню</button>
+            <nav class="navigation__menu__links">
+                <a href="/" class="navigation__menu__link link">Главная</a>
+                <a href="/post.html" class="navigation__menu__link link">Пост</a>
+                <a href="/theme.html" class="navigation__menu__link link">Тема</a>
+                <a href="/team.html" class="navigation__menu__link link">Команда</a>
+                <a href="/resume.html" class="navigation__menu__link link">Резюме</a>
+                <a href="/products.html" class="navigation__menu__link link">Продукты</a>
+            </nav>
+        </div>
+        <button class="navigation__button primary-button">Связаться с нами</button>
+    </div>
+</header>
+
+
+<main class="products-page page">
+    <div class="products-page__blog-screen__wrapper">
+        <h2 class="products-page__blog-screen__title heading_2">Продукты</h2>
+        <div class="screen blog-screen">
+    <div class="filters__wrapper">
+    <div class="filters">
+        <div class="filters__main">
+            <button class="filters__toggle-button caption_1 adaptive_16px" @click="toggle">Фильтры
+                <!--                <CheckArrowButton class="filters__toggle-button__icon" :class="{rotate: !is_filters_open}"/>-->
+            </button>
+        </div>
+        <div class="filters__content">
+            <div class="filters__content__section">
+                <p class="filters__content__section__name body">Тематики:</p>
+                <div class="filters__content__section__tags">
+                    <button class="filters__content__tag tag">Креативность</button>
+                </div>
+            </div>
+            <div class="filters__content__section">
+                <p class="filters__content__section__name body">Категории:</p>
+                <div class="filters__content__section__tags">
+                    <button class="filters__content__tag tag">Креативность</button>
+                </div>
+            </div>
+        </div>
+        <div class="filters__accept">
+            <button class="filters__accept__button secondary-button">Применить</button>
+        </div>
+    </div>
+</div>
+
+
+    <div class="blog-screen__padding-wrapper standart-padding-both">
+        <div class="blog-screen__content">
+            <div class="blog-screen__column">
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post event-post">
+    <div class="event-post__title-block">
+        <p class="event-post__pre caption_1 uppercase">мероприятие</p>
+        <h3 class="event-post__title subheader_1">
+            Коучинг как стиль управления
+        </h3>
+    </div>
+    <img src="assets/images/EventPlaceholder.png" alt="Case post image" class="event-post__image">
+</article>
+
+
+                </a>
+                
+            </div>
+            <div class="blog-screen__column">
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post case-post blog-screen__column__item">
+    <p class="case-post__pre body adaptive-non">кейс</p>
+    <div class="case-post__content">
+        <div class="case-post__title-block">
+            <p class="case-post__pre body adaptive">кейс</p>
+            <h3 class="case-post__title heading_6 line-clamp">
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+                Навыки
+                ведения
+                переговоров
+            </h3>
+        </div>
+        <img src="assets/images/TwoWomans.png" alt="Case post image" class="case-post__image">
+    </div>
+</article>
+                </a>
+                
+            </div>
+            <div class="blog-screen__column">
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+                <a href="#" class="post__wrapper">
+                    <article class="post theme-post theme-post_green">
+    <p class="theme-post__pre body">тема</p>
+    <div class="theme-post__content">
+        <h3 class="theme-post__title heading_5">
+            Навыки
+            ведения
+            переговоров
+        </h3>
+            <button type="button" class="arrow-button white">
+        <svg class="arrow-button__icon"
+             width="16"
+             height="16">
+            <use xlink:href="assets/svgicons/icons/icons.svg#arrow-for-button"></use>
+        </svg>
+    </button>
+
+
+    </div>
+</article>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</main>
+
+<div class="footer__wrapper standart-padding-both">
+<footer class="footer">
+    <a class="footer__logo" href="/">
+        <svg class="footer__logo__icon"
+             width="53" height="19">
+            <use xlink:href="assets/svgicons/icons/icons.svg#logo"></use>
+        </svg>
+    </a>
+
+    <div class="footer__socials">
+        <a href="#" class="footer__socials__item">
+            <svg class="footer__socials__item__icon"
+                 width="53" height="19">
+                <use xlink:href="assets/svgicons/icons/icons.svg#vk"></use>
+            </svg>
+        </a>
+        <a href="#" class="footer__socials__item">
+            <svg class="footer__socials__item__icon"
+                 width="25" height="22">
+                <use xlink:href="assets/svgicons/icons/icons.svg#tg"></use>
+            </svg>
+        </a>
+        <a href="#" class="footer__socials__item">
+            <svg width="22" height="22" class="footer__socials__item__icon">
+                <use xlink:href="assets/svgicons/icons/icons.svg#ig"></use>
+            </svg>
+        </a>
+    </div>
+
+    <div class="footer__contacts">
+        <a href="mailto:hello@training.ru" class="footer__contacts__item">hello.training.ru</a>
+        <a href="tel:+74957281877" class="footer__contacts__item">+7 (495) 728-18-77</a>
+    </div>
+</footer>
+</div>
+<script src="js/app.min.js"></script>
+
+</body>
+</html>
