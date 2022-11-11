@@ -1,8 +1,14 @@
 .team-page {
   width: 100%;
-  max-width: $notebook_start;
+
 
   &__team-screen {
+    &__wrapper {
+      width: 100%;
+      max-width: $notebook_start;
+      margin: 0 auto;
+    }
+
     &__title {
       color: $GREEN;
       text-align: center;

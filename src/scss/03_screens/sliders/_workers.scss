@@ -16,10 +16,10 @@
       width: 402px;
       border-right: 2px solid $GREEN;
       color: $GREEN;
-      padding: 0 20px;
-      transition: width 1s;
+      padding: 0 0 0 20px;
+      transition: width .5s;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
       height: 100%;
@@ -34,8 +34,10 @@
         align-items: flex-start;
         justify-content: flex-start;
         width: 262px;
-        transition: width 1s;
+        transition: width $TRANSITION_SLIDERS;
         gap: 10px;
+        flex-grow: 0;
+        flex-shrink: 0;
         @media screen and (max-width: $tablet_end) {
           width: 210px;
         }
@@ -47,18 +49,23 @@
       }
 
       &__image {
+        &__wrapper {
+          flex-grow: 1;
+          height: 100%;
+          background-color: rgba(0, 0, 0, .1);
+        }
+
         display: block;
         align-self: flex-end;
-        width: 290px;
         max-height: 290px;
         object-fit: contain;
+        transition: $TRANSITION_SLIDERS;
         position: absolute;
         bottom: 0;
         right: 0;
         @media screen and (max-width: $phone) {
           width: 230px;
           max-height: 230px;
-
         }
       }
 
@@ -81,6 +88,13 @@
           @media screen and (max-width: $phone) {
             width: 240px;
           }
+        }
+
+        &__image {
+
+          max-height: 100%;
+          height:auto;
+          max-width: 100% !important;
         }
       }
     }

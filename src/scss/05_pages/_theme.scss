@@ -2,24 +2,36 @@
 .theme-page {
   width: 100%;
 
-  &__cases-detail-swiper-screen {
+  &__formats-screen {
+    &__wrapper {
+      width: 100%;
+      max-width: $notebook_start;
+      margin: 0 auto;
+    }
+  }
+
+  &__cases-detail-slider-screen {
     &__wrapper {
       width: 100%;
       color: $GREEN;
       overflow: hidden;
     }
 
+    max-width: $notebook_start;
+    margin: 0 auto;
+
     &__title {
       text-align: center;
-      margin: 164px 0 55px;
+      margin: 0 0 55px;
+      padding-top: 20px;
       @media screen and (max-width: $notebook_start) {
-        margin: auto-calculate($notebook_start, $tablet, 164px, 82px) 0 auto-calculate($notebook_start, $tablet, 55px, 27.5px);
+        margin: 0 0 auto-calculate($notebook_start, $tablet, 55px, 27.5px);
       }
       @media screen and (max-width: $tablet) {
-        margin: auto-calculate($tablet, $phone_start, 82px, 41px) 0 auto-calculate($tablet, $phone_start, 27.5px, 15px);
+        margin: 0 0 auto-calculate($tablet, $phone_start, 27.5px, 15px);
       }
       @media screen and (max-width: $phone_start) {
-        margin: 41px 15px;
+        margin: 0 0 15px;
       }
     }
   }

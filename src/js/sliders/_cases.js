@@ -2,6 +2,7 @@ import {Swiper} from 'swiper';
 import {gsap} from 'gsap';
 
 let swiper = null;
+const TRANSITION_SWIPER = .5;
 const createSwiper = () => {
     swiper = new Swiper(".cases-slider-screen__slider", {
         slidesPerView: 1,
@@ -28,14 +29,14 @@ function animateActiveSlide(index) {
     const timeline = gsap.timeline();
 
     timeline.to(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`, {
-        opacity: 0, duration: 0.2, onComplete: () => {
+        opacity: 0, duration: TRANSITION_SWIPER/2, onComplete: () => {
             document.querySelector(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`).classList.remove('heading_5')
             document.querySelector(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`).classList.add('heading_4');
         }
     });
     timeline.to(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`, {
         delay: .8,
-        opacity: 1, duration: 0.2,
+        opacity: 1, duration: TRANSITION_SWIPER/2,
 
     });
 }
@@ -44,14 +45,13 @@ function animatePreviousSlide(index) {
     console.log('Previous, ', index);
     const timeline = gsap.timeline();
     timeline.to(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`, {
-        opacity: 0, duration: 0.2, onComplete: () => {
+        opacity: 0, duration: TRANSITION_SWIPER/2, onComplete: () => {
             document.querySelector(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`).classList.remove('heading_4');
             document.querySelector(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`).classList.add('heading_5')
         }
     });
     timeline.to(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`, {
-        delay: 0.8,
-        opacity: 1, duration: 0.2,
+        opacity: 1, duration: TRANSITION_SWIPER/2,
     });
 }
 
