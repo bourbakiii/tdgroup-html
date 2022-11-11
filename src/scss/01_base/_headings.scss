@@ -14,13 +14,11 @@
   font-size: 224px;
   line-height: 100%;
   letter-spacing: calc(100vw * (-4.82 / 1440));
-
 }
 
 @mixin heading_2_mixin {
   @include heading_mixin;
-
-  font-size: 176px;
+  @include adaptive_176px_mixin;
   line-height: 100%;
 }
 

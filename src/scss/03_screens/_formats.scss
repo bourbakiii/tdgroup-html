@@ -4,6 +4,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  margin: 131px 0 76px;
+  @media screen and (max-width: $notebook_start) {
+    margin: auto-calculate($notebook_start, $tablet, 131px, 65px) 0 auto-calculate($notebook_start, $tablet, 76px, 38px);
+  }
+  @media screen and (max-width: $tablet) {
+    margin: auto-calculate($tablet, $phone_start, 65px, 30px) 0 auto-calculate($tablet, $phone_start, 38px, 19px);
+  }
+  @media screen and (max-width: $phone_start) {
+    margin: 30px 0 19px;
+  }
 
   &__information {
     display: flex;

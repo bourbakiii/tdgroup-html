@@ -1,5 +1,61 @@
 
-.theme-page{
-width:100%;
+.theme-page {
+  width: 100%;
 
+  &__cases-detail-swiper-screen {
+    &__wrapper {
+      width: 100%;
+      color: $GREEN;
+      overflow: hidden;
+    }
+
+    &__title {
+      text-align: center;
+      margin: 164px 0 55px;
+      @media screen and (max-width: $notebook_start) {
+        margin: auto-calculate($notebook_start, $tablet, 164px, 82px) 0 auto-calculate($notebook_start, $tablet, 55px, 27.5px);
+      }
+      @media screen and (max-width: $tablet) {
+        margin: auto-calculate($tablet, $phone_start, 82px, 41px) 0 auto-calculate($tablet, $phone_start, 27.5px, 15px);
+      }
+      @media screen and (max-width: $phone_start) {
+        margin: 41px 15px;
+      }
+    }
+  }
+
+  &__blog-screen {
+    &__wrapper {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &__title {
+      text-align: center;
+      margin: 100px 0 10px;
+      color: $GREEN;
+      @media screen and (max-width: $notebook_start) {
+        margin: auto-calculate($notebook_start, $tablet, 100px, 50px) 0 10px;
+      }
+      @media screen and (max-width: $tablet) {
+        margin: auto-calculate($tablet, $phone_start, 50px, 25px) 0 10px;
+      }
+      @media screen and (max-width: $phone_start) {
+        margin: 25px 15px;
+      }
+    }
+  }
+
+  &__form__wrapper {
+    margin: 152px 0 92px;
+    @media screen and (max-width: $notebook_start) {
+      margin: auto-calculate($notebook_start, $tablet, 152px, 76px) 0 auto-calculate($notebook_start, $tablet, 92px, 48px);
+    }
+    @media screen and (max-width: $tablet) {
+      margin: auto-calculate($tablet, $phone_start, 76px, 38px) 0 auto-calculate($notebook_start, $tablet, 48px, 24px);
+    }
+    @media screen and (max-width: $phone_start) {
+      margin: 38px 0 25px;
+    }
+  }
 }

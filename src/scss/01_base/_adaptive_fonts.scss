@@ -122,6 +122,23 @@
   }
 }
 
+@mixin adaptive_176px_mixin {
+  font-size: 176px;
+
+  @media screen and (max-width: $notebook) {
+    font-size: 145px;
+  }
+  @media screen and (max-width: $tablet_start) {
+    font-size: 120px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 100px;
+  }
+  @media screen and (max-width: $phone_start) {
+    font-size: 80px;
+  }
+}
+
 @mixin adaptive_72px_mixin {
   font-size: 72px;
 

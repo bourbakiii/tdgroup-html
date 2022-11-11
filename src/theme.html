@@ -4,12 +4,25 @@
 <body>
 @@include('./html/layout/_navigation.html')
 <main class="theme-page page">
-            @@include('./html/screens/_theme-dogs.html')
+    @@include('./html/screens/_theme-dogs.html')
     @@include('./html/screens/_text-with-slider.html')
     @@include('./html/screens/sliders/_vertical.html')
 
     <!--        @@include('./html/screens/_team-dog.html')-->
-    <!--        @@include('./html/screens/_formats.html')-->
+    @@include('./html/screens/_formats.html')
+    <div class="theme-page__cases-detail-swiper-screen__wrapper">
+        <h2 class="theme-page__cases-detail-swiper-screen__title heading_2">Кейсы</h2>
+        @@include('./html/screens/sliders/_cases-detail.html')
+    </div>
+
+    <div class="theme-page__blog-screen__wrapper">
+        <h2 class="theme-page__blog-screen__title heading_2">Блог</h2>
+        @@include('./html/screens/_blog.html')
+    </div>
+    <div class="theme-page__form__wrapper standart-padding-both">
+        @@include('./html/screens/_form.html', {title:'Напишите нам, если вам нужна консультация', class:'theme-page__form'})
+    </div>
+
     <!--        @@include('./html/screens/_team.html')-->
 </main>
 
