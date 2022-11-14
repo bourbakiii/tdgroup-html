@@ -154,12 +154,12 @@
   }
 
   &__tag {
-    margin: 16px 0 42px;
+    margin: 0 0 42px;
     @media screen and (max-width: $notebook_start) {
-      margin: 16px 0 auto-calculate($notebook_start, $tablet, 42px, 21px);
+      margin: 0 0 auto-calculate($notebook_start, $tablet, 42px, 21px);
     }
     @media screen and (max-width: $tablet) {
-      margin: 16px 0;
+      margin: 0;
     }
   }
 
