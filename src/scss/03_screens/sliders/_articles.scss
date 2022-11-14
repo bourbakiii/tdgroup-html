@@ -4,8 +4,7 @@
 
   &__wrapper {
     width: 100%;
-
-    //overflow: hidden;
+    overflow: hidden;
   }
 
   &__slider {
@@ -21,6 +20,8 @@
       width: 582px;
       color: $GREEN;
       gap: 48px;
+      cursor: pointer;
+      text-decoration: none;
 
       &:first-of-type {
         border-left: 2px solid $GREEN;
@@ -47,6 +48,9 @@
       &__title {
         line-clamp: 2;
         -webkit-line-clamp: 2;
+        &:hover{
+          text-decoration: underline;
+        }
       }
 
       &__image {

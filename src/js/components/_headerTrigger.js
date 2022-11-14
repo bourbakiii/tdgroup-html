@@ -8,7 +8,7 @@ export default function HeaderTrigger() {
     document.querySelectorAll('*[data-header-trigger]').forEach(el => {
         ScrollTrigger.create({
             trigger: el,
-            start: "top top",
+            start: "top 45px",
             end: "bottom 60px",
             scrub: true,
             markers: false,

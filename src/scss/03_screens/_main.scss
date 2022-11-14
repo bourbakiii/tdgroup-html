@@ -90,7 +90,9 @@
     &__item {
       height: 100vh;
       position: relative;
-
+      .card{
+        cursor:pointer;
+      }
       &:nth-of-type(1) {
         .card {
           top: 0;
