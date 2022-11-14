@@ -186,8 +186,87 @@
     &__info {
       flex-grow: 0;
 
-      &__title {
-        margin-bottom: 32px;
+      &__html {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 56px;
+        @media screen and (max-width: $notebook_start) {
+          gap: auto-calculate($notebook_start, $phone_end, 56px, 28px);
+        }
+        @media screen and (max-width: $phone_end) {
+          gap: 28px;
+        }
+      }
+
+      &__self-block {
+        width:100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 32px;
+        @media screen and (max-width: $notebook_start) {
+          gap: auto-calculate($notebook_start, $phone_end, 32px, 16px);
+        }
+        @media screen and (max-width: $phone_end) {
+          gap: 16px;
+        }
+
+        &__item {
+          &__title {
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      &__green-title-block {
+        width:100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        color: $GREEN;
+        @media screen and (max-width: $notebook_start) {
+          gap: auto-calculate($notebook_start, $phone_end, 24px, 12px);
+        }
+        @media screen and (max-width: $phone_end) {
+          gap: 12px;
+        }
+      }
+
+      &__self-micro-block {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      &__two-columns-block {
+        width:100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        @media screen and (max-width: $notebook_start) {
+          gap: auto-calculate($notebook_start, $phone_start, 20px, 10px);
+        }
+        @media screen and (max-width: $phone_start) {
+          grid-template-columns: 1fr;
+
+          gap: 10px;
+        }
+      }
+
+      &__many-labels-block{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 12px;
       }
     }
   }
@@ -320,13 +399,13 @@
     }
   }
 
-  &__articles-slider-screen{
+  &__articles-slider-screen {
     margin-bottom: 123px;
-    @media screen and (max-width:$notebook_start) {
-      margin-bottom: auto-calculate($notebook_start,$tablet, 123px, 61.5px);
+    @media screen and (max-width: $notebook_start) {
+      margin-bottom: auto-calculate($notebook_start, $tablet, 123px, 61.5px);
     }
     @media screen and (max-width: $tablet) {
-      margin-bottom: auto-calculate($tablet,$phone, 60px, 30px);
+      margin-bottom: auto-calculate($tablet, $phone, 60px, 30px);
     }
     @media screen and (max-width: $phone) {
       margin-bottom: 30px;
