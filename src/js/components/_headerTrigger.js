@@ -6,12 +6,13 @@ export default function HeaderTrigger() {
     gsap.registerPlugin(ScrollTrigger);
 
     document.querySelectorAll('*[data-header-trigger]').forEach(el => {
+        const bounds_of_navigation_button = document.querySelector('.navigation__menu__button').getBoundingClientRect();
         ScrollTrigger.create({
             trigger: el,
-            start: "top 45px",
-            end: "bottom 60px",
+            start: `top ${bounds_of_navigation_button.y + bounds_of_navigation_button.height/2}`,
+            end: `bottom ${bounds_of_navigation_button.y + bounds_of_navigation_button.height/2}`,
             scrub: true,
-            markers: false,
+            markers: true,
 
             onLeave: () => pfVisibleLeaveClass(),
             onEnter: () => pfVisibleEnterClass(),
