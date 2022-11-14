@@ -1,0 +1,513 @@
+.post3-page {
+  width: 100%;
+  margin-top: 140px;
+  padding-bottom: 140px;
+  max-width: $maxwidth;
+  @media screen and (max-width: $notebook_start) {
+    margin-top: auto-calculate($notebook_start, $notebook, 140px, 70px);
+  }
+  @media screen and (max-width: $notebook) {
+    margin-top: 70px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 86px;
+    @media screen and (max-width: $notebook) {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__back-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: $BLACK;
+      flex-shrink: 0;
+
+      &__button {
+        flex-shrink: 0;
+        border-radius: 90px;
+        border: 2px solid rgba($BLACK, .75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__text {
+        font-family: 'Stratos LC Medium', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        @extend .adaptive_16px;
+
+        line-height: 135%;
+      }
+    }
+
+    &__main {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+    }
+
+    &__tags {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    &__title {
+      font-family: 'Stratos LC Bold', sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      @extend .adaptive_112px;
+
+      line-height: 100%;
+      text-transform: uppercase;
+      margin: 60px 0 30px;
+      @media screen and (max-width: $notebook) {
+        margin: 40px 0;
+      }
+    }
+
+    &__post-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 29px;
+      @media screen and (max-width: $notebook_start) {
+        gap: auto-calculate($notebook_start, $notebook, 29px, 14.5px);
+      }
+      @media screen and (max-width: $notebook) {
+        gap: 10px;
+      }
+      @media screen and (max-width: $phone_start) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 5px;
+        white-space: nowrap;
+
+        font-family: 'Stratos LC Medium', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        fill: $BLACK;
+        @extend .adaptive_16px;
+        line-height: 135%;
+        opacity: 0.75;
+        transition: $TRANSITION;
+
+        &:hover {
+          opacity: 1;
+        }
+
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 80px 0;
+    border-radius: 4px;
+    @media screen and (max-width: $notebook_start) {
+      margin: auto-calculate($notebook_start, $notebook, 80px, 40px) 0;
+    }
+    @media screen and (max-width: $notebook_start) {
+      margin: 40px 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 125px;
+    max-width: 100%;
+    @media screen and (max-width: $notebook_start) {
+      gap: auto-calculate($notebook_start, $notebook, 125px, 62px);
+    }
+    @media screen and (max-width: $notebook) {
+      gap: auto-calculate($notebook, $tablet, 50px, 20px);
+    }
+    @media screen and (max-width: $tablet) {
+      gap: 60px;
+      flex-direction: column-reverse;
+    }
+
+    &__sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 295px;
+      gap: 45px;
+
+      @media screen and (max-width: $notebook_start) {
+        gap: auto-calculate($notebook_start, $notebook, 45px, 22.5px);
+        width: auto-calculate($notebook_start, $notebook, 295px, 110px);
+      }
+      @media screen and (max-width: $notebook) {
+        width: 200px;
+        gap: auto-calculate($notebook, $tablet, 22.5px, 15px);
+      }
+      @media screen and (max-width: $tablet) {
+        width: 100%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      }
+
+    }
+
+    &__info {
+      flex-grow: 0;
+
+      &__html {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 56px;
+        @media screen and (max-width: $notebook_start) {
+          gap: auto-calculate($notebook_start, $phone_end, 56px, 28px);
+        }
+        @media screen and (max-width: $phone_end) {
+          gap: 28px;
+        }
+      }
+
+      &__self-block {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 32px;
+        @media screen and (max-width: $notebook_start) {
+          gap: auto-calculate($notebook_start, $phone_end, 32px, 16px);
+        }
+        @media screen and (max-width: $phone_end) {
+          gap: 16px;
+        }
+
+        &__item {
+          &__title {
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      &__green-title-block {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        color: $GREEN;
+        @media screen and (max-width: $notebook_start) {
+          gap: auto-calculate($notebook_start, $phone_end, 24px, 12px);
+        }
+        @media screen and (max-width: $phone_end) {
+          gap: 12px;
+        }
+      }
+
+      &__self-micro-block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      &__two-columns-block {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+      &__many-labels-block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+  }
+
+  &__share {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 75px;
+    gap: 100px;
+    @media screen and (max-width: $notebook_start) {
+      gap: auto-calculate($notebook_start, $notebook, 100px, 50px);
+    }
+    @media screen and (max-width: $notebook) {
+      gap: auto-calculate($notebook, $tablet, 50px, 25px);
+    }
+    @media screen and (max-width: $tablet) {
+      gap: 25px;
+
+    }
+    @media screen and (max-width: $phone) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+    }
+
+
+    &__socials {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      @media screen and (max-width: $phone) {
+        flex-direction: row-reverse;
+      }
+
+      button:first-of-type {
+        margin-right: 8px;
+        @media screen and (max-width: $phone) {
+          margin: 0;
+        }
+      }
+
+      button:last-of-type {
+        margin-right: 20px;
+        @media screen and (max-width: $phone) {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    &__linked {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      @media screen and (max-width: $phone) {
+        flex-direction: row-reverse;
+      }
+
+      button {
+        fill: none;
+        stroke: $IVORY;
+      }
+    }
+
+    &__button {
+      width: 48px;
+      height: 48px;
+      background-color: rgba($BLACK, .60);
+      border: none;
+      outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      fill: $IVORY;
+      border-radius: 2px;
+      @media screen and (max-width: $tablet) {
+        width: 40px;
+        height: 40px;
+        &__icon {
+          transform: scale(0.8);
+        }
+      }
+    }
+
+    &__text {
+      font-family: 'Stratos LC Medium', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      @extend .adaptive_16px;
+
+      line-height: 135%;
+      color: rgba($BLACK, .30);
+    }
+  }
+
+  &__digest {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 280px 0 180px;
+
+    &__title {
+      width: 399px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      color: $GREEN;
+    }
+
+    &__form {
+      width: 820px;
+    }
+  }
+
+  &__form {
+    margin: 280px 0 296px;
+    @media screen and (max-width: $notebook_start) {
+      margin: auto-calculate($notebook_start, $notebook, 280px, 140px) 0 auto-calculate($notebook_start, $notebook, 296px, 148px);
+    }
+    @media screen and (max-width: $notebook) {
+      margin: auto-calculate($notebook, $tablet, 140px, 70px) 0;
+    }
+    @media screen and (max-width: $tablet) {
+      margin: 50px 0;
+    }
+  }
+
+  &__articles-slider-screen {
+    margin-bottom: 123px;
+    @media screen and (max-width: $notebook_start) {
+      margin-bottom: auto-calculate($notebook_start, $tablet, 123px, 61.5px);
+    }
+    @media screen and (max-width: $tablet) {
+      margin-bottom: auto-calculate($tablet, $phone, 60px, 30px);
+    }
+    @media screen and (max-width: $phone) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.grid-2-col {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.gap-20 {
+  gap: 20px;
+  @media screen and (max-width: $notebook_start) {
+    gap: auto-calculate($notebook_start, $phone_start, 20px, 10px);
+  }
+  @media screen and (max-width: $phone_start) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.gap-32 {
+  gap: 32px;
+  @media screen and (max-width: $notebook_start) {
+    gap: auto-calculate($notebook_start, $phone_start, 32px, 16px);
+  }
+  @media screen and (max-width: $phone_start) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.gap-56 {
+  gap: 56px;
+  @media screen and (max-width: $notebook_start) {
+    gap: auto-calculate($notebook_start, $phone_start, 56px, 28px);
+  }
+  @media screen and (max-width: $phone_start) {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+
+.gap-24 {
+  gap: 24px;
+  @media screen and (max-width: $notebook_start) {
+    gap: auto-calculate($notebook_start, $phone_start, 24px, 12px);
+  }
+  @media screen and (max-width: $phone_start) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.gap-4 {
+  gap: 4px;
+}
+
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.jc-fs {
+  justify-content: flex-start;
+}
+
+.ai-fs {
+  align-items: flex-start;
+}
+
+.green-color {
+  color: $GREEN;
+}
+
+.circles-row {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid $GREEN;
+    background-color: white;
+    z-index: 2;
+
+    &:nth-of-type(3) {
+      width: 74px;
+      height: 74px;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+    background-color: $GREEN;
+  }
+
+}
