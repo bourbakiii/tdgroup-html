@@ -1,4 +1,4 @@
-.post2-page {
+.post-page {
   width: 100%;
   margin-top: 140px;
   padding-bottom: 140px;
@@ -110,17 +110,16 @@
         font-family: 'Stratos LC Medium', sans-serif;
         font-style: normal;
         font-weight: 500;
+        fill: $BLACK;
         @extend .adaptive_16px;
         line-height: 135%;
+        opacity: 0.75;
+        transition: $TRANSITION;
 
-        &:nth-child(1) {
-          fill: $BLACK;
+        &:hover {
+          opacity: 1;
         }
 
-        &:nth-child(2), &:nth-child(3) {
-          fill: transparent;
-          stroke: rgba($BLACK, .75);
-        }
       }
     }
   }
@@ -321,13 +320,13 @@
     }
   }
 
-  &__articles-slider-screen{
+  &__articles-slider-screen {
     margin-bottom: 123px;
-    @media screen and (max-width:$notebook_start) {
-      margin-bottom: auto-calculate($notebook_start,$tablet, 123px, 61.5px);
+    @media screen and (max-width: $notebook_start) {
+      margin-bottom: auto-calculate($notebook_start, $tablet, 123px, 61.5px);
     }
     @media screen and (max-width: $tablet) {
-      margin-bottom: auto-calculate($tablet,$phone, 60px, 30px);
+      margin-bottom: auto-calculate($tablet, $phone, 60px, 30px);
     }
     @media screen and (max-width: $phone) {
       margin-bottom: 30px;

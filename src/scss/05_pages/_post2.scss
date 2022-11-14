@@ -110,17 +110,16 @@
         font-family: 'Stratos LC Medium', sans-serif;
         font-style: normal;
         font-weight: 500;
+        fill: $BLACK;
         @extend .adaptive_16px;
         line-height: 135%;
+        opacity: 0.75;
+        transition: $TRANSITION;
 
-        &:nth-child(1) {
-          fill: $BLACK;
+        &:hover {
+          opacity: 1;
         }
 
-        &:nth-child(2), &:nth-child(3) {
-          fill: transparent;
-          stroke: rgba($BLACK, .75);
-        }
       }
     }
   }
