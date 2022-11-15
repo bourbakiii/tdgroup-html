@@ -1,4 +1,4 @@
-.post-page, .product-page {
+.product-page, .post-page {
   width: 100%;
   margin-top: 140px;
   max-width: $maxwidth;
@@ -357,11 +357,6 @@
   &__cases-slider-screen {
     overflow: hidden;
     width: 100%;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     margin-top: 265px;
     margin-bottom: 118px;
     @media screen and (max-width: $notebook_start) {
@@ -376,9 +371,25 @@
       margin-bottom: 59px;
     }
 
-    &.non-margin-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.on-post-page-based {
+      display: block;
+
       margin-top: 0 !important;
     }
+
+    &.on-post-page-based & {
+
+      &__container {
+        margin: 0 auto;
+        max-width: $notebook_start;
+      }
+    }
+
+
   }
 
 
