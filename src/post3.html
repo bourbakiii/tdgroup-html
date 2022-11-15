@@ -338,8 +338,10 @@
         @@include('./html/screens/_form.html', {class: 'post-page__form', title:'Получите весь дайджест', button_text:'Отправить'})
     </div>
 </main>
-<div class="articles-slider-screen__wrapper post-page__articles-slider-screen">
-    @@include('./html/screens/sliders/_cases.html')
+<div class="cases-slider-screen__wrapper product-page__cases-slider-screen non-margin-top">
+    <div class="product-page__cases-slider-screen__container">
+        @@include('./html/screens/sliders/_cases.html')
+    </div>
 </div>
 @@include('./html/layout/_footer.html')
 @@include('./html/layout/_scripts.html')

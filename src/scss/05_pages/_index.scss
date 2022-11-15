@@ -8,4 +8,17 @@
   &__form {
     @extend .standart-padding-both;
   }
+
+  &__cases-slider__wrapper {
+    margin: 124px 0 115px;
+    @media screen and (max-width: $notebook_start) {
+      margin: auto-calculate($notebook_start, $tablet, 124px, 62px) 0  auto-calculate($notebook_start, $tablet, 115px, 67.5px);
+    }
+    @media screen and (max-width: $tablet) {
+      margin: auto-calculate($tablet, $phone_end, 62px, 31px) 0  auto-calculate($notebook_start, $tablet, 66px, 33px);
+    }
+    @media screen and (max-width: $phone_end) {
+      margin: 31px 0 33px;
+    }
+  }
 }
