@@ -21,7 +21,7 @@ document.querySelectorAll('.modal-wrapper:not(.success-modal__wrapper)').forEach
 
 if (document.querySelector('.form-modal__close-button')) document.querySelector('.form-modal__close-button').onclick = () => document.querySelector('.form-modal__wrapper').classList.remove('show');
 if (document.querySelector('.post-modal__close-button')) document.querySelector('.post-modal__close-button').onclick = () => document.querySelector('.post-modal__wrapper').classList.remove('show');
-if (document.querySelector('.open-success-modal-button')) document.querySelector('.open-success-modal-button').onclick = () => {
+if (document.querySelector('.form-modal-open-button')) document.querySelector('.form-modal-open-button').onclick = () => {
     document.querySelector('.success-modal__wrapper').classList.add('show');
     setTimeout(() => document.querySelector('.success-modal__wrapper').classList.remove('show'), 3000)
 }
