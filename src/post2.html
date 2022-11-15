@@ -3,210 +3,220 @@
 @@include('./html/layout/_head.html', {"title": "Team Development Group"})
 <body>
 @@include('./html/layout/_navigation.html')
-<main class="post2-page__padding standart-padding-both">
-    <div class="page post2-page">
-        <header class="post2-page__header">
-            <a href="/products.html" class="post2-page__header__back-button">
-                @@include('./html/buttons/_arrow-button.html', {class: 'post2-page__header__back-button__button left'})
-                <p class="post2-page__header__back-button__text">Все статьи</p>
+<main class="post-page__padding standart-padding-both">
+    <div class="page post-page">
+        <header class="post-page__header">
+            <a href="/products.html" class="post-page__header__back-button">
+                @@include('./html/buttons/_arrow-button.html', {class: 'post-page__header__back-button__button left'})
+                <p class="post-page__header__back-button__text">Все статьи</p>
             </a>
-            <div class="post2-page__header__main">
+            <div class="post-page__header__main">
 
-                <div class="post2-page__header__tags">
-                    <button class="post2-page__header__tags__tag tag">Креативность</button>
+                <div class="post-page__header__tags">
+                    <button class="post-page__header__tags__tag tag">Креативность</button>
                 </div>
-                <h1 class="post2-page__header__title post2-page__title blog-post__header">поддерживающие эфиры
+                <h1 class="post-page__header__title post-page__title blog-post__header">поддерживающие эфиры
                     радио</h1>
-                <div class="post2-page__header__post-info">
-                    <div class="post2-page__header__post-info__item">
+                <div class="post-page__header__post-info">
+                    <div class="post-page__header__post-info__item">
                         <svg
-                                class="post2-page__header__post-info__item__icon"
+                                class="post-page__header__post-info__item__icon"
                                 width="16" height="15">
                             <use xlink:href="@svgSprite#author"></use>
                         </svg>
-                        <p class="post2-page__header__post-info__item__text">Альбина Залилова</p>
+                        <p class="post-page__header__post-info__item__text">Альбина Залилова</p>
                     </div>
-                    <div class="post2-page__header__post-info__item">
+                    <div class="post-page__header__post-info__item">
                         <svg
-                                class="post2-page__header__post-info__item__icon"
-                                width="21" height="10">
-                            <use xlink:href="@svgSprite#two-checks"></use>
+                                class="post-page__header__post-info__item__icon"
+                                width="19" height="18">
+                            <use xlink:href="@svgSprite#message"></use>
                         </svg>
-                        <p class="post2-page__header__post-info__item__text">570 человек</p>
+                        <p class="post-page__header__post-info__item__text">570 человек</p>
                     </div>
-                    <div class="post2-page__header__post-info__item">
+                    <div class="post-page__header__post-info__item green">
                         <svg
-                                class="post2-page__header__post-info__item__icon"
-                                width="16" height="16"
+                                class="post-page__header__post-info__item__icon"
+                                width="14" height="10"
                         >
-                            <use xlink:href="@svgSprite#watch"></use>
+                            <use xlink:href="@svgSprite#middle-check"></use>
                         </svg>
-                        <p class="post2-page__header__post-info__item__text">13 минут</p>
+                        <p class="post-page__header__post-info__item__text">13 минут</p>
                     </div>
                 </div>
             </div>
         </header>
-        <img src="@img/TwoDogs.png" alt="Post image" class="post2-page__image">
-        <div class="post2-page__content">
-            <div class="post2-page__content__sidebar"></div>
-            <div class="post2-page__content__info">
-                <div class="post2-page__content__info__html">
-                    <h2 class="post2-page__content__info__title lead_1">Как найти в себе силы двигаться вперед,
-                        справиться с чувством тревоги и продолжать действовать в ситуации турбулентности? За это время
-                        мы максимально емко разбираем востребованную тему и делимся конкретными шагами и практиками.
-                    </h2>
-                    <div class="post2-page__content__info__self-block">
-                        <h3 class="post2-page__content__info__self-block__title tag-heading">Чем будут полезны
-                            эфиры</h3>
-                        <p class=" body">Узнаете, как вернуться в
-                            конструктивное русло и как справиться с ситуацией неопределенности
-                            <br><br>
-                            Получите полезные digital-материалы после эфира
-                            <br><br>
-                            Получите запись трансляции и сможете поделиться ей с коллегами</p>
-                    </div>
-                    <div class="post2-page__content__info__self-block">
-                        <h3 class="post2-page__content__info__self-block__title tag-heading">Чем будут полезны
-                            эфиры</h3>
-                        <p class=" body">Узнаете, как вернуться в
-                            конструктивное русло и как справиться с ситуацией неопределенности
-                            <br><br>
-                            Получите полезные digital-материалы после эфира
-                            <br><br>
-                            Получите запись трансляции и сможете поделиться ей с коллегами</p>
-                    </div>
-                    <div class="post2-page__content__info__green-title-block">
-                        <p class="body post2-page__content__info__green-title-block__date">2 сентября 10:00 — 10:45</p>
-                        <h2 class="heading_4 post2-page__content__info__green-title-block__title">Как вернуть контроль
-                            над ситуацией в период неопределенности</h2>
-                    </div>
-
-                    <div class="post2-page__content__info__two-columns-block">
-                        <div class="post2-page__content__info__self-block post2-page__content__info__two-columns-block__item">
-                            <h3 class="post2-page__content__info__self-block__item__title tag-heading">Спикеры</h3>
-                            <div class="post2-page__content__info__self-micro-block  post2-page__content__info__self-block__item__content">
-                                <h5 class="post2-page__content__info__self-micro-block__title subheader_2">Анна
-                                    Симакова</h5>
-                                <p class="post2-page__content__info__self-micro-block__content body">Ведущий
-                                    тренер-консультант</p>
-                            </div>
+        <img src="@img/TwoDogs.png" alt="Post image" class="post-page__image">
+        <div class="post-page__content">
+            <div class="post-page__content__sidebar"></div>
+            <div class="post-page__content__info">
+                <div class="post-page__content__info__html column gap-100">
+                    <div class="column gap-56">
+                        <h2 class="lead_1">Как найти в себе силы двигаться вперед,
+                            справиться с чувством тревоги и продолжать действовать в ситуации турбулентности? За это
+                            время
+                            мы максимально емко разбираем востребованную тему и делимся конкретными шагами и практиками.
+                        </h2>
+                        <div class="column gap-32">
+                            <h3 class="tag-heading uppercase">Чем будут полезны
+                                эфиры</h3>
+                            <p class=" body">Узнаете, как вернуться в
+                                конструктивное русло и как справиться с ситуацией неопределенности
+                                <br><br>
+                                Получите полезные digital-материалы после эфира
+                                <br><br>
+                                Получите запись трансляции и сможете поделиться ей с коллегами</p>
                         </div>
-                        <div class="post2-page__content__info__self-block post2-page__content__info__two-columns-block__item">
-                            <h3 class="post2-page__content__info__self-block__item__title tag-heading">Бонус</h3>
-                            <div class="post2-page__content__info__self-micro-block  post2-page__content__info__self-block__item__content">
-                                <h5 class="post2-page__content__info__self-micro-block__title subheader_2">Контроль над
-                                    повседневностью</h5>
-                                <p class="post2-page__content__info__self-micro-block__content body">Памятка в формате
-                                    pdf</p>
-                            </div>
+                        <div class="column gap-32">
+
+                            <h3 class="tag-heading uppercase">Чем будут полезны
+                                эфиры</h3>
+                            <p class=" body">Узнаете, как вернуться в
+                                конструктивное русло и как справиться с ситуацией неопределенности
+                                <br><br>
+                                Получите полезные digital-материалы после эфира
+                                <br><br>
+                                Получите запись трансляции и сможете поделиться ей с коллегами</p>
                         </div>
                     </div>
+                    <div class="column gap-56">
 
-                    <div class="post2-page__content__info__self-block ">
-                        <h3 class="post2-page__content__info__self-block__item__title tag-heading">По итогу эфира
-                            вы</h3>
-                        <p class=" post2-page__content__info__self-block__item__content body">
-                            Определите, какие события/явления находятся сейчас в зоне вашего влияния
-                            Узнаете, как с помощью ежедневных дел вернуть себе спокойствие и начать двигаться/что-то
-                            делать.
-                        </p>
-                    </div>
+                        <div class="column gap-24 green-color">
+                            <p class="body">сентября 10:00 — 10:45</p>
+                            <h3 class="heading_4">Как вернуть контроль
+                                над ситуацией в период неопределенности</h3>
+                        </div>
 
-                    <div class="post2-page__content__info__green-title-block">
-                        <p class="body post2-page__content__info__green-title-block__date">2 сентября 11:00–11:45</p>
-                        <h2 class="heading_4 post2-page__content__info__green-title-block__title">Работа с
-                            иррациональными убеждениями</h2>
-                    </div>
+                        <div class="column gap-32">
+                            <div class="grid-2-col gap-20">
 
-                    <div class="post2-page__content__info__two-columns-block">
-                        <div class="post2-page__content__info__self-block post2-page__content__info__two-columns-block__item">
-                            <h3 class="post2-page__content__info__self-block__item__title tag-heading">Спикеры</h3>
-                            <div class="post2-page__content__info__self-micro-block  post2-page__content__info__self-block__item__content">
-                                <h5 class="post2-page__content__info__self-micro-block__title subheader_2">Евгений
-                                    Яров</h5>
-                                <p class="post2-page__content__info__self-micro-block__content body">Ведущий
-                                    тренер-консультант</p>
+                                <div class="column gap-32">
+                                    <h3 class="tag-heading uppercase">Спикеры</h3>
+                                    <div class="column gap-4">
+                                        <h5 class="post-page__content__info__self-micro-block__title subheader_2">Анна
+                                            Симакова</h5>
+                                        <p class="post-page__content__info__self-micro-block__content body">Ведущий
+                                            тренер-консультант</p>
+                                    </div>
+                                </div>
+                                <div class="column gap-32">
+
+                                    <h3 class="tag-heading uppercase">Спикеры</h3>
+                                    <div class="column gap-4">
+                                        <h5 class="post-page__content__info__self-micro-block__title subheader_2">Анна
+                                            Симакова</h5>
+                                        <p class="post-page__content__info__self-micro-block__content body">Ведущий
+                                            тренер-консультант</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="post2-page__content__info__self-block post2-page__content__info__two-columns-block__item">
-                            <h3 class="post2-page__content__info__self-block__item__title tag-heading">Бонус</h3>
-                            <div class="post2-page__content__info__self-micro-block  post2-page__content__info__self-block__item__content">
-                                <h5 class="post2-page__content__info__self-micro-block__title subheader_2">Контроль над
-                                    повседневностью</h5>
-                                <p class="post2-page__content__info__self-micro-block__content body">Памятка в формате
-                                    pdf</p>
-                            </div>
+                        <div class="column gap-32">
+                            <h3 class="tag-heading uppercase">По итогу эфира вы</h3>
+                            <p class="body">
+                                Определите, какие события/явления находятся сейчас в зоне вашего влияния
+                                <br>
+                                <br>
+                                Узнаете, как с помощью ежедневных дел вернуть себе спокойствие и начать двигаться/что-то
+                                делать.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="post2-page__content__info__self-block ">
-                        <h3 class="post2-page__content__info__self-block__item__title tag-heading">По итогу эфира
-                            вы</h3>
-                        <p class=" post2-page__content__info__self-block__item__content body">
-                            Определите, какие события/явления находятся сейчас в зоне вашего влияния
-                            Узнаете, как с помощью ежедневных дел вернуть себе спокойствие и начать двигаться/что-то
-                            делать.
-                        </p>
-                    </div>
+                    <div class="column gap-56">
 
+                        <div class="column gap-24 green-color">
+                            <p class="body">2 сентября 11:00–11:45</p>
+                            <h3 class="heading_4">Работа с иррациональными убеждениями</h3>
+                        </div>
 
-                    <div class="post2-page__content__info__self-block ">
-                        <h3 class="post2-page__content__info__self-block__item__title tag-heading">Как
-                            зарегистрироваться</h3>
-                        <div class="post2-page__content__info__many-labels-block post2-page__content__info__self-block__item__content">
-                            <p class="post2-page__content__info__many-labels-block__item body">Вы можете выбрать участие
-                                только в одном из эфиров, а можете выбрать участие в обоих, количество мест не
-                                ограничено.</p>
-                            <div class="post2-page__content__info__many-labels-block__item post2-page__content__info__self-micro-block  post2-page__content__info__self-block__item__content">
-                                <h5 class="post2-page__content__info__self-micro-block__title subheader_2">Регистрация
-                                    на один эфир</h5>
-                                <p class="post2-page__content__info__self-micro-block__content body">Выберите
-                                    интересующее вас время и тему и заполните небольшую анкету.</p>
+                        <div class="column gap-32">
+                            <div class="grid-2-col gap-20">
+
+                                <div class="column gap-32">
+                                    <h3 class="tag-heading uppercase">Спикеры</h3>
+                                    <div class="column gap-4">
+                                        <h5 class="post-page__content__info__self-micro-block__title subheader_2">
+                                            Евгений Яров</h5>
+                                        <p class="post-page__content__info__self-micro-block__content body">Ведущий
+                                            тренер-консультант</p>
+                                    </div>
+                                </div>
+                                <div class="column gap-32">
+
+                                    <h3 class="tag-heading uppercase">Спикеры</h3>
+                                    <div class="column gap-4">
+                                        <h5 class="post-page__content__info__self-micro-block__title subheader_2">
+                                            Контроль над повседневностью</h5>
+                                        <p class="post-page__content__info__self-micro-block__content body">Памятка в
+                                            формате pdf</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="post2-page__content__info__many-labels-block__item post2-page__content__info__self-micro-block  post2-page__content__info__self-block__item__content">
-                                <h5 class="post2-page__content__info__self-micro-block__title subheader_2">Регистрация
-                                    на два эфира</h5>
-                                <p class="post2-page__content__info__self-micro-block__content body">Выберите каждый из
-                                    сеансов, заполните небольшую анкету, затем обновите страницу и внесите ваши данные
-                                    еще раз. Таким образом вам придут напоминания и ссылки на оба эфира. </p>
-                            </div>
+                        </div>
+                        <div class="column gap-32">
+                            <h3 class="tag-heading uppercase">По итогу эфира вы</h3>
+                            <p class="body">
+                                Определите, какие события/явления находятся сейчас в зоне вашего влияния
+                                <br>
+                                <br>
+                                Узнаете, как с помощью ежедневных дел вернуть себе спокойствие и начать двигаться/что-то
+                                делать.
+                            </p>
                         </div>
                     </div>
 
+                    <div class="column gap-32">
+                        <h3 class="tag-heading uppercase">как зарегистрироваться</h3>
+                        <div class="column gap-12">
+                            <p class="body">Вы можете выбрать участие только в одном из эфиров, а можете выбрать участие
+                                в обоих, количество мест не ограничено.</p>
+                            <div class="column gap-4">
+                                <p class="subheader_2">Регистрация на один эфир</p>
+                                <p class="body">Выберите интересующее вас время и тему и заполните небольшую анкету.</p>
+                            </div>
+                            <div class="column gap-4">
+                                <p class="subheader_2">Регистрация на два эфира</p>
+                                <p class="body">Выберите каждый из сеансов, заполните небольшую анкету, затем обновите
+                                    страницу и внесите ваши данные еще раз. Таким образом вам придут напоминания и
+                                    ссылки на оба эфира. </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="post2-page__share">
-                    <div class="post2-page__share__socials">
-                        <button class="post2-page__share__button">
-                            <svg class="post2-page__share__button__icon"
+                <div class="post-page__share">
+                    <div class="post-page__share__socials">
+                        <button class="post-page__share__button">
+                            <svg class="post-page__share__button__icon"
                                  width="29" height="18">
                                 <use xlink:href="@svgSprite#vk"></use>
                             </svg>
                         </button>
-                        <button class="post2-page__share__button">
-                            <svg class="post2-page__share__button__icon"
+                        <button class="post-page__share__button">
+                            <svg class="post-page__share__button__icon"
                                  width="25" height="22">
                                 <use xlink:href="@svgSprite#tg"></use>
                             </svg>
                         </button>
-                        <p class="post2-page__share__text">Поделиться</p>
+                        <p class="post-page__share__text">Поделиться</p>
                     </div>
-                    <div class="post2-page__share__linked">
-                        <button class="post2-page__share__button">
-                            <svg class="post2-page__share__button__icon"
+                    <div class="post-page__share__linked">
+                        <button class="post-page__share__button">
+                            <svg class="post-page__share__button__icon"
                                  width="31" height="30">
                                 <use xlink:href="@svgSprite#chain"></use>
                             </svg>
                         </button>
-                        <p class="post2-page__share__text">Скопировать</p>
+                        <p class="post-page__share__text">Скопировать</p>
                     </div>
                 </div>
+
             </div>
         </div>
-        @@include('./html/screens/_form.html', {class: 'post2-page__form', title:'Получите весь дайджест',
-        button_text:'Отправить'})
+        @@include('./html/screens/_form.html', {class: 'post-page__form post-2__form', title:'Получите весь дайджест', button_text:'Отправить'})
     </div>
 </main>
-<div class="articles-slider-screen__wrapper post2-page__articles-slider-screen">
+<div class="articles-slider-screen__wrapper post-page__articles-slider-screen">
     @@include('./html/screens/sliders/_articles.html')
 </div>
 @@include('./html/layout/_footer.html')

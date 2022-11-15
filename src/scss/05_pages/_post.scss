@@ -1,7 +1,6 @@
 .post-page {
   width: 100%;
   margin-top: 140px;
-  padding-bottom: 140px;
   max-width: $maxwidth;
   @media screen and (max-width: $notebook_start) {
     margin-top: auto-calculate($notebook_start, $notebook, 140px, 70px);
@@ -120,6 +119,11 @@
           opacity: 1;
         }
 
+        &.green {
+          color: $GREEN;
+          fill: $GREEN;
+          opacity: 1;
+        }
       }
     }
   }
@@ -308,15 +312,29 @@
   }
 
   &__form {
-    margin: 280px 0 296px;
+    margin: 280px 0 180px;
     @media screen and (max-width: $notebook_start) {
-      margin: auto-calculate($notebook_start, $notebook, 280px, 140px) 0 auto-calculate($notebook_start, $notebook, 296px, 148px);
+      margin: auto-calculate($notebook_start, $notebook, 280px, 140px) 0 auto-calculate($notebook_start, $notebook, 180px, 90px);
     }
     @media screen and (max-width: $notebook) {
       margin: auto-calculate($notebook, $tablet, 140px, 70px) 0;
     }
     @media screen and (max-width: $tablet) {
       margin: 50px 0;
+    }
+
+
+    &.post-2__form {
+      margin-bottom: 160px;
+      @media screen and (max-width: $notebook_start) {
+        margin: auto-calculate($notebook_start, $notebook, 160px, 80px);
+      }
+      @media screen and (max-width: $notebook) {
+        margin: 0;
+      }
+      @media screen and (max-width: $tablet) {
+        margin: 0;
+      }
     }
   }
 
@@ -386,6 +404,29 @@
   }
 }
 
+.gap-80 {
+  gap: 80px;
+  @media screen and (max-width: $notebook_start) {
+    gap: auto-calculate($notebook_start, $phone_start, 80px, 40px);
+  }
+  @media screen and (max-width: $phone_start) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.gap-48 {
+  gap: 48px;
+  @media screen and (max-width: $notebook_start) {
+    gap: auto-calculate($notebook_start, $phone_start, 48px, 24px);
+  }
+  @media screen and (max-width: $phone_start) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+
 .gap-56 {
   gap: 56px;
   @media screen and (max-width: $notebook_start) {
@@ -405,6 +446,17 @@
   @media screen and (max-width: $phone_start) {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+}
+
+.gap-12 {
+  gap: 12px;
+  @media screen and (max-width: $notebook_start) {
+    gap: auto-calculate($notebook_start, $phone_start, 12px, 6px);
+  }
+  @media screen and (max-width: $phone_start) {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }
 
@@ -463,7 +515,7 @@
 
 }
 
-.content-image{
+.content-image {
   object-fit: contain;
-  max-width:100%;
+  max-width: 100%;
 }

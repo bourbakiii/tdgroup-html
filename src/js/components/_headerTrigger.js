@@ -12,7 +12,7 @@ export default function HeaderTrigger() {
             start: `top ${bounds_of_navigation_button.y + bounds_of_navigation_button.height/2}`,
             end: `bottom ${bounds_of_navigation_button.y + bounds_of_navigation_button.height/2}`,
             scrub: true,
-            markers: true,
+            markers: false,
 
             onLeave: () => pfVisibleLeaveClass(),
             onEnter: () => pfVisibleEnterClass(),
