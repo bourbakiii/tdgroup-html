@@ -87,9 +87,8 @@
     position: absolute;
     right: 20px;
     top: 20px;
-    @media screen and (max-width: $tablet_end) {
+    @media screen and (max-width: $tablet_start) {
       right: 0;
-
     }
   }
 }

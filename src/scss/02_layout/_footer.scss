@@ -35,6 +35,19 @@
   &__logo {
     display: flex;
     fill: $GREEN;
+
+    &__icon {
+      width: 100px;
+      height: 36px;
+      @media screen and (max-width: $notebook_start) {
+        width: auto-calculate($notebook_start, $phone_start, 100px, 50px);
+        height: auto-calculate($notebook_start, $phone_start, 36px, 18px);
+      }
+      @media screen and (max-width: $phone_start) {
+        width: 50px;
+        height: 18px;
+      }
+    }
   }
 
   &__socials {
