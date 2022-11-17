@@ -14,7 +14,7 @@
                 <!--                }-->
             </div>
             <div class="blog-screen__column">
-                @@include('../posts/_event.html', { tag_attributes: 'disabled', tag_text: 'Завершено' })
+                @@include('../posts/_event.html', { tag_class: 'unhoverable', tag_text: 'Завершено' })
                 @@include('../posts/_theme.html', { class: 'green'})
                 @@include('../posts/_case.html')
 
@@ -26,7 +26,7 @@
             </div>
             <div class="blog-screen__column">
                 @@include('../posts/_case.html')
-                @@include('../posts/_event.html', { tag_class: 'active', tag_text: 'Регистрация' })
+                @@include('../posts/_event.html', { tag_class: 'active unhoverable', tag_text: 'Регистрация' })
 
                 <!--                @@for(let i = 0; i<2; i++){-->
                 <!--                <a href="#" class="post__wrapper">-->

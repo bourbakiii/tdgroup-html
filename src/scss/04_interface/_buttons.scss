@@ -105,17 +105,17 @@
     opacity: 0.8;
   }
 
-  &:not(&:disabled):hover {
+  &:not(&:disabled, &.unhoverable):hover {
     background-color: rgba($IVORY, .80);
     color: rgba($BLACK, .60);
   }
 
-  &:not(&:disabled, &.active):active, &.active {
+  &:not(&:disabled, &.active, &.unhoverable):active, &.active {
     background-color: rgba($BLACK, .30);
     color: $IVORY;
   }
 
-  &.active:not(&:disabled):active {
+  &.active:not(&:disabled, &.unhoverable):active {
     background-color: rgba($IVORY, .95);
     color: rgba($BLACK, .60);
   }
@@ -124,17 +124,17 @@
     background-color: rgba($IVORY, .30);
     color: $IVORY;
 
-    &:not(&:disabled):hover {
+    &:not(&:disabled, &.unhoverable):hover {
       background-color: rgba($IVORY, .50);
       color: $IVORY;
     }
 
-    &:not(&:disabled):active, &.active {
+    &:not(&:disabled, &.unhoverable):active, &.active {
       background-color: rgba($BLACK, .30);
       color: $IVORY;
     }
 
-    &.active:not(&:disabled):active {
+    &.active:not(&:disabled, &.unhoverable):active {
       background-color: rgba($IVORY, .30);
       color: $IVORY;
     }
@@ -271,9 +271,11 @@
   * {
     transition: $TRANSITION;
   }
-  &__icon{
+
+  &__icon {
     transform: rotate(180deg);
   }
+
   &.rotate &__icon {
     transform: rotate(0deg);
   }
