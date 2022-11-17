@@ -45,7 +45,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    
+
     //margin-bottom: 92px;
     //@media screen and (max-width: $notebook_start) {
     //  margin-bottom: auto-calculate($notebook_start, $notebook, 92px, 46px)
@@ -137,7 +137,7 @@
       color: rgba($GREEN, .75);
     }
 
-    &:not(&:disabled):focus {
+    &:not(&:placeholder-shown), &:not(&:disabled):focus {
       border: 1.5px solid $GREEN;
       color: $GREEN;
     }
