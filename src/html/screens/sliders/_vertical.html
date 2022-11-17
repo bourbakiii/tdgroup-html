@@ -9,7 +9,7 @@
         <div class="vertical-slider-screen__content">
             <div class="vertical-slider-screen__content__slider__wrapper">
                 <div class="vertical-slider-screen__content__slider non-scrollbar">
-                    @@for(let i = 0; i< 10;i++){
+                    @@for(let i = 0; i< 100;i++){
                     <div class="vertical-slider-screen__content__slider__item">
                         <div class="vertical-slider-screen__content__slider__item__face">
                             <div class="vertical-slider-screen__content__slider__item__face__main">
@@ -17,7 +17,6 @@
                                     content right there right now Some content right there right now
                                 </p>
                                 <button class="vertical-slider-screen__content__slider__item__face__button body">
-
                                     <svg class="vertical-slider-screen__content__slider__item__face__button__icon"
                                          width="10" height="10">
                                         <use xlink:href="@svgSprite#plus-small"></use>
@@ -44,10 +43,13 @@
             </div>
             <div class="vertical-slider-screen__content__info">
                 <div class="vertical-slider-screen__content__selected-count body">
-                    <span class="vertical-slider-screen__content__selected-count__opacity">Выбрано:</span> 2 направления
+                    <span class="vertical-slider-screen__content__selected-count__opacity">Выбрано:</span>
+                    <span class="vertical-slider-screen__content__selected-count__text">0 направлений</span>
                 </div>
-                <button class="secondary-button alternative">Запросить пример программ</button>
+                <button type="button" class="open-form-modal-button secondary-button alternative">Запросить пример программ</button>
             </div>
         </div>
     </div>
+    @@include('../../modals/_form.html')
+    @@include('../../modals/_success.html')
 </section>

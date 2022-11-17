@@ -6,6 +6,15 @@
   flex-direction: column;
   margin-top: 70px;
 
+  padding-bottom: 120px;
+  @media screen and (max-width: $notebook_start) {
+    padding-bottom: auto-calculate($notebook_start, $phone_start, 120px, 60px);
+  }
+  @media screen and (max-width: $phone_start) {
+    padding-bottom: 60px;
+  }
+
+
   &__back-button {
     display: flex;
     justify-content: flex-start;

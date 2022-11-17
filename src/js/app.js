@@ -11,7 +11,7 @@ import HeaderTrigger from "./components/_headerTrigger.js";
 
 document.addEventListener('DOMContentLoaded', () => HeaderTrigger());
 
-if (document.querySelector('.open-form-modal-button')) document.querySelector('.open-form-modal-button').onclick = () => document.querySelector('.form-modal__wrapper').classList.toggle('show');
+// if (document.querySelector('.open-form-modal-button')) document.querySelector('.open-form-modal-button').onclick = () => document.querySelector('.form-modal__wrapper').classList.toggle('show');
 if (document.querySelector('.open-post-modal-button')) document.querySelector('.open-post-modal-button').onclick = () => document.querySelector('.post-modal__wrapper').classList.toggle('show');
 document.querySelectorAll('.modal-wrapper:not(.success-modal__wrapper)').forEach(el => el.onclick = event => {
     if (event.target.classList.contains('modal-wrapper')) event.target.classList.remove('show')
