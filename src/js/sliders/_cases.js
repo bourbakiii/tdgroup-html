@@ -14,7 +14,6 @@ const createSwiper = () => {
         init: false
     });
     swiper.on('afterInit', ({activeIndex: current_slide_index}) => animateActiveSlide(current_slide_index + 1));
-    // swiper.on('beforeSlideChangeStart', ({activeIndex: current_slide_index}) => animatePreviousSlide(current_slide_index + 1));
 
     swiper.on('slideChange', ({activeIndex: current_slide_index, previousIndex: previous_slide_index}) => {
         animatePreviousSlide(previous_slide_index + 1);
@@ -35,9 +34,7 @@ function animateActiveSlide(index) {
         }
     });
     timeline.to(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`, {
-        delay: .8,
         opacity: 1, duration: TRANSITION_SWIPER/2,
-
     });
 }
 
