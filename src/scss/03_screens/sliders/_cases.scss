@@ -100,16 +100,25 @@
         z-index: 2;
         gap: 10px;
         transition: $TRANSITION_SLIDERS;
-
-        > * {
-          width: 271px;
-          min-width: 271px;
-        }
-
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+
+        @media screen and (max-width: $phone_end) {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        > * {
+          width: 271px;
+          min-width: 271px;
+
+          @media screen and (max-width: $phone_end) {
+            min-width: 100%;
+            width: 100%;
+          }
+        }
 
         &__text {
           max-width: 100%;
@@ -119,13 +128,20 @@
       &__image {
         display: block;
         width: 295px;
+        height: 295px;
+        object-position: bottom;
         transition: $TRANSITION_SLIDERS;
         object-fit: contain;
         @media screen and (max-width: $tablet_start) {
-          width: 25%;
+          width: 200px;
+          height: 200px;
         }
         @media screen and (max-width: $tablet_end) {
           align-self: flex-end;
+        }
+        @media screen and (max-width: $phone_end) {
+          width: 100%;
+          height: 200px;
         }
       }
 
@@ -163,8 +179,14 @@
 
         &__image {
           width: 378px;
+          height: 378px;
           @media screen and (max-width: $tablet_start) {
-            width: 40%;
+            width: 250px;
+            height: 250px;
+          }
+          @media screen and (max-width: $phone_end) {
+            width: 100%;
+            height: 200px;
           }
         }
       }
