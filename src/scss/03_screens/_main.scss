@@ -86,6 +86,7 @@
     max-width: $notebook_start;
     margin-bottom: 100vh;
     z-index: 2;
+    -webkit-transform:translate3d(0,0,0);
 
     &__item {
       height: 100vh;
