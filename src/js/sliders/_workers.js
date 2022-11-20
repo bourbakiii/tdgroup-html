@@ -17,6 +17,8 @@ const createSwiper = () => {
     });
     swiper.on('afterInit', ({activeIndex: current_slide_index}) => animateActiveSlide(current_slide_index + 1));
     swiper.on('slideChange', ({activeIndex: current_slide_index, previousIndex: previous_slide_index}) => {
+        console.log('inner width is:', window.innerWidth);
+        if(window.innerWidth<=992) return
         animatePreviousSlide(previous_slide_index + 1);
         animateActiveSlide(current_slide_index + 1);
     });
