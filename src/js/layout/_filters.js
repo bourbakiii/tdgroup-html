@@ -6,17 +6,20 @@ const toggle = () => (is_filters_open = !is_filters_open) ? openFiltersAnimation
 
 function openFiltersAnimation() {
     document.querySelector('.filters__toggle-button__check').classList.add('rotate');
+
+    const padding = window.width > 1024 ? 40 : window.width > 768 ? 25 : window.width > 550 ? 15 : 12;
+
     gsap.to('.filters__content', {
-        paddingTop: '40px',
-        paddingBottom: '40px',
+        paddingTop: padding,
+        paddingBottom: padding,
         height: 'auto',
         duration: 1,
         borderWidth: 1.5,
         ease: 'power3'
     })
     gsap.to('.filters__accept', {
-        paddingTop: 40,
-        paddingBottom: 48,
+        paddingTop: padding,
+        paddingBottom: padding + 8,
         height: 'auto',
         duration: 1,
         borderWidth: 1.5,

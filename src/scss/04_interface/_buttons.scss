@@ -86,7 +86,7 @@
   font-size: 16px;
   line-height: 110%;
   transition: $TRANSITION;
-  background-color: rgba($IVORY, .95);
+  background-color: $UNDER_IVORY;
   color: rgba($BLACK, .60);
   @media screen and (max-width: $notebook) {
     padding: 12px 20px;
@@ -116,7 +116,8 @@
   }
 
   &.active:not(&:disabled, &.unhoverable):active {
-    background-color: rgba($IVORY, .95);
+    background-color: $UNDER_IVORY;
+
     color: rgba($BLACK, .60);
   }
 

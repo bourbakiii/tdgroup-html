@@ -26,14 +26,11 @@
     justify-content: flex-start;
     align-items: center;
     border: none;
-    @media screen and (max-width: $notebook) {
-      height: 80px;
+    @media screen and (max-width: $notebook_start) {
+      height: auto-calculate($notebook_start, $phone, 105px, 52.5px);
     }
-    @media screen and (max-width: $tablet_start) {
-      height: 75px;
-    }
-    @media screen and (max-width: $tablet) {
-      height: 70px;
+    @media screen and (max-width: $phone) {
+      height: 53px;
     }
   }
 
@@ -46,7 +43,7 @@
     gap: 13px;
     color: $BLACK;
     transition: 0.6s;
-
+    padding:0;
     &:active {
       transition: 0.2s;
       transform: scale(0.95);
@@ -68,14 +65,14 @@
     box-sizing: content-box;
     overflow: hidden;
     height: 0;
-    @media screen and (max-width: $notebook) {
-      gap: 35px;
+    @media screen and (max-width: $notebook_start) {
+      gap: auto-calculate($notebook_start, $phone_start, 48px, 24px);
     }
-    @media screen and (max-width: $tablet_start) {
-      height: 27px;
+    @media screen and (max-width: $phone_start) {
+      gap: auto-calculate($phone_start, $phone_end, 24px, 12px);
     }
-    @media screen and (max-width: $tablet) {
-      height: 20px;
+    @media screen and (max-width: $phone_end) {
+      gap: 12px;
     }
 
     &__section {

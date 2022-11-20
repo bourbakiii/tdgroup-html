@@ -18,12 +18,13 @@
   &__wrapper.white & {
     &__menu {
       &__button {
-        color:$IVORY !important;
+        color: $IVORY !important;
       }
     }
+
     &__button {
       background-color: $IVORY !important;
-      color:$GREEN !important;
+      color: $GREEN !important;
     }
   }
 
