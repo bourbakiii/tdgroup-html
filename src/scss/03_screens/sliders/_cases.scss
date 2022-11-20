@@ -3,16 +3,10 @@
   height: 611px;
 
   @media screen and (max-width: $tablet_start) {
-    height: 500px;
+    height: auto;
   }
 
-  @media screen and (max-width: $tablet) {
-    height: 450px;
-  }
 
-  @media screen and (max-width: $tablet_end) {
-    height: 460px;
-  }
 
   width: 100%;
 
@@ -42,6 +36,10 @@
       }
 
       &__title {
+        line-clamp: 3;
+        -webkit-line-clamp: 3;
+        height: 3em;
+
         &.heading_4 {
           width: 100%;
           max-width: 500px;
@@ -56,6 +54,10 @@
           @media screen and (max-width: $tablet_start) {
             max-width: 100%;
           }
+        }
+
+        @media screen and (max-width:$tablet_start) {
+          @include heading_4_mixin;
         }
       }
 
@@ -73,8 +75,8 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        @media screen and (max-width: $tablet_start) {
-          gap: 25px;
+        @media screen and (max-width: $tablet_start){
+          gap: 10px;
         }
       }
 
@@ -122,10 +124,8 @@
         transition: $TRANSITION_SLIDERS;
         object-fit: contain;
         @media screen and (max-width: $tablet_start) {
-          width: 25%;
-        }
-        @media screen and (max-width: $tablet_end) {
-          align-self: flex-end;
+          align-self: center;
+          width:55% !important;
         }
       }
 
@@ -163,9 +163,6 @@
 
         &__image {
           width: 378px;
-          @media screen and (max-width: $tablet_start) {
-            width: 40%;
-          }
         }
       }
     }
