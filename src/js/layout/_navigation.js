@@ -12,22 +12,22 @@ function setTopOfMainLogo() {
 }
 
 window.addEventListener('load', () => setTimeout(() => setTopOfMainLogo(), 0))
-window.addEventListener('resize', setTopOfMainLogo, {passive: true});
+window.addEventListener('resize', ()=>{setTopOfMainLogo(); closeAnimation(); closeAdaptiveAnimation();}, {passive: true});
 
 let is_navigation_menu_open = false;
 const toggle = () => is_navigation_menu_open ? close() : open();
+
 const open = () => {
     is_navigation_menu_open = true
     if (window.innerWidth > 620) openAnimation();
     else openAdaptiveAnimation();
-
 }
+
 const close = () => {
     is_navigation_menu_open = false;
     if (window.innerWidth > 620) closeAnimation();
     else closeAdaptiveAnimation();
 }
-
 
 // $IVORY: #F8F8F4;
 // $BLACK: #000000;
@@ -99,7 +99,7 @@ const adaptiveAnimation = gsap.fromTo('.navigation__sidebar', {}, {
     transform: 'translateX(0)',
     duration: .5,
     ease: 'power3',
-    opacity:1,
+    opacity: 1,
     paused: true
 })
 

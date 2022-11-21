@@ -7,7 +7,6 @@
     height: auto;
     padding-top: 19px !important;
     z-index: $navigation_z;
-    position: sticky;
     top: 0;
     position: relative;
     @media screen and (max-width: $notebook_start) {
@@ -100,7 +99,6 @@
       }
     }
 
-
     &__links {
       @media screen and (max-width: $tablet_end) {
         align-items: flex-start;
@@ -122,12 +120,9 @@
     right: 20px;
     top: 20px;
 
-    @media screen and (max-width: $tablet_start) {
-      right: 0;
-    }
     @media screen and (max-width: $tablet_end) {
       margin-left: auto;
-      top: 10px;
+      top: 8.5px;
       right: 0;
       transform: translateY(-50%);
     }
