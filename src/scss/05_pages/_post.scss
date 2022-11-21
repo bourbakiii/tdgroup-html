@@ -2,8 +2,6 @@
   width: 100%;
   margin-top: 140px;
   max-width: $maxwidth;
-
-
   @media screen and (max-width: $notebook_start) {
     margin-top: auto-calculate($notebook_start, $notebook, 140px, 70px);
   }
@@ -371,9 +369,13 @@
       margin-bottom: 59px;
     }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    //&__container {
+    //  margin: 0 auto;
+    //}
+
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
 
     &.on-post-page-based {
       display: block;
@@ -387,6 +389,10 @@
         margin: 0 auto;
         max-width: $notebook_start;
       }
+    }
+
+    .cases-slider-screen{
+      margin: 0 auto;
     }
   }
 
@@ -476,7 +482,6 @@
     gap: 24px;
   }
 }
-
 
 .gap-56 {
   gap: 56px;
