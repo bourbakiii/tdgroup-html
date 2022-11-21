@@ -14,9 +14,6 @@ function setTopOfMainLogo() {
 
 window.addEventListener('load', () => setTimeout(() => setTopOfMainLogo(), 0))
 window.addEventListener('resize', setTopOfMainLogo, {passive: true});
-window.addEventListener('scroll', ()=>{
-    console.log(window.scrollY);
-});
 
 let is_navigation_menu_open = false;
 const toggle = () => is_navigation_menu_open ? close() : open();
@@ -29,7 +26,7 @@ const close = () => {
     closeAnimation();
 }
 
-const heightChangeHandler = (type) => {
+const heightChangeHandler = () => {
     let element = null;
     if ((element = document.querySelector('.main-screen__logo')))
         element.style.height = `${document.documentElement.clientHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;

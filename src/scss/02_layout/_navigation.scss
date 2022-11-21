@@ -10,14 +10,32 @@
     position: sticky;
     top: 0;
     @media screen and (max-width: $notebook_start) {
-      padding-top: auto-calculate($notebook_start, $phone_start, 19px, 9.5px) !important;
+      padding-top: 17px !important;
+    }
+    @media screen and (max-width: $notebook) {
+      padding-top: 15px !important;
+    }
+    @media screen and (max-width: $tablet) {
+      padding-top: 13px !important;
     }
     @media screen and (max-width: $phone_start) {
-      padding-top: 9.5px !important;
+      padding: 22px 20px 10px !important;
     }
 
     &.fixed {
       position: fixed;
+    }
+
+    &.back-transparent {
+      background-color: transparent !important;
+    }
+
+    &.back-green {
+      background-color: $GREEN !important;
+    }
+
+    &.back-white {
+      background-color: $IVORY !important;
     }
   }
 
@@ -45,6 +63,11 @@
   @media screen and (max-width: $tablet_end) {
     justify-content: flex-start;
   }
+  @media screen and (max-width: $tablet_end) {
+    align-items: flex-start;
+
+  }
+
 
   &__menu {
     width: max-content;
@@ -59,6 +82,11 @@
     border-radius: 2px;
     @media screen and (max-width: $tablet_end) {
       align-items: flex-start;
+    }
+
+    @media screen and (max-width: $phone_start) {
+      margin-top: 0 !important;
+
     }
 
     &__button {
@@ -94,9 +122,17 @@
     position: absolute;
     right: 20px;
     top: 20px;
+
     @media screen and (max-width: $tablet_start) {
       right: 0;
     }
+    @media screen and (max-width: $phone_start) {
+      margin-left: auto;
+      top: 10px;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
   }
 }
 

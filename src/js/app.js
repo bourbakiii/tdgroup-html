@@ -8,9 +8,10 @@ import './sliders/_cases.js'
 import './sliders/_cases-detail.js'
 import VerticalSlider from './sliders/_vertical.js'
 import HeaderTrigger from "./components/_headerTrigger.js";
+import HeaderColorizeTrigger from "./components/_headerBackgroundColorizeTrigger.js";
 
 if (document.location.pathname === '/team.html' || document.location.pathname === '/theme.html') document.addEventListener('DOMContentLoaded', () => HeaderTrigger());
-
+HeaderColorizeTrigger();
 
 if (document.location.pathname === '/theme.html') VerticalSlider();
 
