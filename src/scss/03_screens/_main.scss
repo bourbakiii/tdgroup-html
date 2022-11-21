@@ -86,14 +86,36 @@
     max-width: $notebook_start;
     margin-bottom: 100vh;
     z-index: 2;
-    -webkit-transform:translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    @media screen and (max-width: $tablet) {
+      @include standart-padding-both_mixin;
+    }
 
     &__item {
       height: 100vh;
       position: relative;
-      .card{
-        cursor:pointer;
+
+      @media screen and (max-width: $tablet) {
+        height: max-content;
       }
+
+      .card {
+        cursor: pointer;
+        @media screen and (max-width: $tablet) {
+          position: initial;
+          margin: 0 auto 30vh;
+          &:nth-of-type(2n) {
+            margin-right: 0;
+          }
+          &:nth-of-type(2n + 1) {
+            margin-left: 0;
+          }
+        }
+        @media screen and (max-width: $phone_start) {
+          margin: 0 auto 30vh;
+        }
+      }
+
       &:nth-of-type(1) {
         .card {
           top: 0;
@@ -123,11 +145,7 @@
 
     &__card {
       position: absolute;
-      @media screen and (max-width: $tablet_end) {
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        right: auto;
-      }
+
     }
   }
 

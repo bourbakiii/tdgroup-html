@@ -63,7 +63,9 @@ button, a {
   scrollbar-width: none;
 }
 
-.standart-padding-left {
+
+
+@mixin standart-padding-left_mixin{
   padding-left: 100px;
   @media screen and (max-width: $notebook_start) {
     padding-left: auto-calculate($notebook_start, $notebook, 100px, 50px);
@@ -75,8 +77,10 @@ button, a {
     padding-left: 20px;
   }
 }
-
-.standart-padding-right {
+.standart-padding-left{
+  @include standart-padding-left_mixin;
+}
+@mixin standart-padding-right_mixin{
   padding-right: 100px;
   @media screen and (max-width: $notebook_start) {
     padding-right: auto-calculate($notebook_start, $notebook, 100px, 50px);
@@ -88,13 +92,19 @@ button, a {
     padding-right: 20px;
   }
 }
-
-
-.standart-padding-both {
-  @extend .standart-padding-left;
-  @extend .standart-padding-right;
+.standart-padding-right{
+  @include standart-padding-right_mixin;
 }
 
+
+@mixin standart-padding-both_mixin {
+  @include standart-padding-left_mixin;
+  @include standart-padding-right_mixin;
+}
+
+.standart-padding-both {
+  @include standart-padding-both_mixin;
+}
 .adaptive-non {
   @media screen and (max-width: $tablet) {
     display: none;
@@ -157,7 +167,7 @@ button, a {
   display: none;
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
 
