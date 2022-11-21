@@ -186,6 +186,10 @@
     border-color: $IVORY;
     fill: $IVORY;
   }
+
+  &__icon {
+    height: 100%;
+  }
 }
 
 .badge {
