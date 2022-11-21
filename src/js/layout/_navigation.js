@@ -4,7 +4,6 @@ const TRANSITION_TIME = 1.3;
 let top_of_main_logo_timer = null;
 
 function setTopOfMainLogo() {
-    console.log("аддлл")
     const element = document.querySelector('.main-screen__logo__wrapper');
     if (!element) return;
     top_of_main_logo_timer = null;
@@ -19,18 +18,16 @@ let is_navigation_menu_open = false;
 const toggle = () => is_navigation_menu_open ? close() : open();
 const open = () => {
     is_navigation_menu_open = true
-    openAnimation();
+    if (window.innerWidth > 620) openAnimation();
+    else openAdaptiveAnimation();
+
 }
 const close = () => {
     is_navigation_menu_open = false;
-    closeAnimation();
+    if (window.innerWidth > 620) closeAnimation();
+    else closeAdaptiveAnimation();
 }
 
-const heightChangeHandler = () => {
-    let element = null;
-    if ((element = document.querySelector('.main-screen__logo')))
-        element.style.height = `${document.documentElement.clientHeight - document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
-}
 
 // $IVORY: #F8F8F4;
 // $BLACK: #000000;
@@ -98,5 +95,22 @@ const closeAnimation = () => {
         ease: 'power3'
     });
 }
+const adaptiveAnimation = gsap.fromTo('.navigation__sidebar', {}, {
+    transform: 'translateX(0)',
+    duration: .5,
+    ease: 'power3',
+    opacity:1,
+    paused: true
+})
+
+
+const openAdaptiveAnimation = () => {
+    adaptiveAnimation.play();
+}
+
+const closeAdaptiveAnimation = () => {
+    adaptiveAnimation.reverse();
+}
 /////////////////////////////////////////////////////////////
 document.querySelector('.navigation__menu__button').onclick = toggle;
+document.querySelector('.navigation__sidebar__close-button').onclick = close;
