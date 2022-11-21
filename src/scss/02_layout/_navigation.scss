@@ -9,6 +9,12 @@
     z-index: $navigation_z;
     position: sticky;
     top: 0;
+    @media screen and (max-width: $notebook_start) {
+      padding-top: auto-calculate($notebook_start, $phone_start, 19px, 9.5px) !important;
+    }
+    @media screen and (max-width: $phone_start) {
+      padding-top: 9.5px !important;
+    }
 
     &.fixed {
       position: fixed;
