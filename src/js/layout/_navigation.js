@@ -11,8 +11,12 @@ function setTopOfMainLogo() {
     element.style.top = `${document.querySelector('.navigation__wrapper').getBoundingClientRect().height}px`;
 }
 
-window.addEventListener('load', () => setTimeout(() => setTopOfMainLogo(), 0))
-window.addEventListener('resize', ()=>{setTopOfMainLogo(); closeAnimation(); closeAdaptiveAnimation();}, {passive: true});
+window.addEventListener('load', setTopOfMainLogo)
+window.addEventListener('resize', () => {
+    setTopOfMainLogo();
+    closeAnimation();
+    closeAdaptiveAnimation();
+}, {passive: true});
 
 let is_navigation_menu_open = false;
 const toggle = () => is_navigation_menu_open ? close() : open();
