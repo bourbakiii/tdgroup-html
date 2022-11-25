@@ -46,6 +46,7 @@
     height: auto;
     object-fit: contain;
     display: block;
+
     &__wrapper {
       display: none;
     }
@@ -76,8 +77,17 @@
       word-break: break-word;
       @extend .subheader_1;
     }
-    &__arrow-button{
-     margin: 0 auto;
+
+    &__arrow-button {
+      margin: 0 auto;
+    }
+  }
+
+  &.arrow-hide-tablet &__content {
+    &__arrow-button {
+      @media screen and (max-width: $tablet_end) {
+        display: none;
+      }
     }
   }
 
@@ -94,9 +104,21 @@
     }
 
     &__content {
+      @media screen and (max-width: $tablet_end) {
+        height:100%;
+      }
       &__text {
         margin: 50px 0 46px;
         @extend .subheader_2;
+        @media screen and (max-width: $notebook) {
+          margin: 20px 0;
+        }
+        @media screen and (max-width: $tablet_start) {
+          margin: 15px 0;
+        }
+        @media screen and (max-width: $tablet_end) {
+          margin-bottom: 0;
+        }
       }
     }
   }
