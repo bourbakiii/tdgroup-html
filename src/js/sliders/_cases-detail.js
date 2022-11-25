@@ -12,10 +12,15 @@ const createSwiper = () => {
         },
         init: false
     });
-    swiper.on('afterInit', ({activeIndex: current_slide_index}) => animateActiveSlide(current_slide_index + 1));
-    swiper.on('beforeSlideChangeStart', ({activeIndex: current_slide_index}) => animatePreviousSlide(current_slide_index + 1));
+    swiper.on('afterInit', ({activeIndex: current_slide_index}) =>{
+        if(window.innerWidth<=992) return;
+        animateActiveSlide(current_slide_index + 1)
+    });
+    // swiper.on('beforeSlideChangeStart', ({activeIndex: current_slide_index}) => animatePreviousSlide(current_slide_index + 1));
 
     swiper.on('slideChange', ({activeIndex: current_slide_index, previousIndex: previous_slide_index}) => {
+        if(window.innerWidth<=992) return;
+
         animatePreviousSlide(previous_slide_index + 1);
         animateActiveSlide(current_slide_index + 1);
     });

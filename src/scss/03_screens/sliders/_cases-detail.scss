@@ -12,10 +12,14 @@
     }
     @media screen and (max-width: $tablet_end) {
       padding-right: 0;
-      height: 480px;
+      height: auto;
     }
-
-    &__item {
+    .swiper-slide {
+      @media screen and (max-width: $tablet_start) {
+        height:auto;
+      }
+    }
+      &__item {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -38,10 +42,8 @@
         &__image {
           height: max-content;
           max-width: 463px;
-          @media screen and (max-width: $tablet_start) {
-            max-width: none;
-            width: 40%;
-          }
+
+
         }
 
         &__info {
@@ -55,9 +57,8 @@
           }
           @media screen and (max-width: $tablet_end) {
             min-width: auto;
-            max-width:100%;
-            margin-left: 0;
-            margin-bottom: 10px;
+            max-width: 100%;
+            margin: 0;
           }
         }
       }
@@ -88,7 +89,8 @@
           width: 25%;
         }
         @media screen and (max-width: $tablet_end) {
-          align-self: flex-end;
+            width: 55% !important;
+            margin: 0 auto 10px;
         }
       }
 
@@ -107,8 +109,8 @@
           min-width: 298px;
         }
         @media screen and (max-width: $tablet_end) {
-          margin-left: 0;
-          margin-bottom: 10px;
+          margin: 0;
+
         }
 
 
@@ -133,7 +135,7 @@
           justify-content: flex-start;
         }
         @media screen and (max-width: $tablet_end) {
-          flex-direction: column-reverse;
+          flex-direction: column;
           align-items: flex-start;
         }
       }
@@ -141,10 +143,7 @@
       &__title {
         width: 100%;
         overflow: hidden;
-        line-clamp: 3;
-        -webkit-line-clamp: 3;
         max-width: 100%;
-        height: 3em;
         flex-grow: 0;
         flex-shrink: 0;
 
@@ -161,6 +160,9 @@
 
         &.heading_5 {
           max-width: 100%;
+        }
+        @media screen and (max-width: $tablet_start) {
+          @include heading_4_mixin;
         }
       }
 
