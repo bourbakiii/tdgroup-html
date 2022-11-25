@@ -9,6 +9,7 @@
     z-index: $navigation_z;
     top: 0;
     position: sticky;
+    transition: background-color $TRANSITION;
     @media screen and (max-width: $notebook_start) {
       padding-top: 17px !important;
     }
@@ -38,10 +39,13 @@
     &.back-white {
       background-color: $IVORY !important;
     }
+
+    &.white {
+      background-color: transparent !important;
+    }
   }
 
   &__wrapper.white & {
-    background-color: transparent;
     &__menu {
       &__button {
         color: $IVORY !important;
