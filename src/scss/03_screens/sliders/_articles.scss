@@ -5,11 +5,14 @@
   &__wrapper {
     width: 100%;
     overflow: hidden;
+    height:100%;
   }
 
   &__slider {
     overflow: visible;
-
+    .swiper-slide{
+      height: auto;
+    }
     &__item {
       padding: 0 22px;
       border-right: 2px solid $GREEN;
@@ -46,8 +49,7 @@
       }
 
       &__title {
-        line-clamp: 2;
-        -webkit-line-clamp: 2;
+
         &:hover{
           text-decoration: underline;
         }
