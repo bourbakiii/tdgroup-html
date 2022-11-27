@@ -14,13 +14,13 @@ const createSwiper = () => {
         init: false
     });
     swiper.on('afterInit', ({activeIndex: current_slide_index}) => {
-        if(window.innerWidth<=992) return;
+        if (window.innerWidth <= 992) return;
         animateActiveSlide(current_slide_index + 1)
 
     });
 
     swiper.on('slideChange', ({activeIndex: current_slide_index, previousIndex: previous_slide_index}) => {
-        if(window.innerWidth<=992) return;
+        if (window.innerWidth <= 992) return;
         animatePreviousSlide(previous_slide_index + 1);
         animateActiveSlide(current_slide_index + 1);
     });
@@ -28,32 +28,28 @@ const createSwiper = () => {
 }
 
 function animateActiveSlide(index) {
-    console.log('Active, ', index);
-
     const timeline = gsap.timeline();
-
     timeline.to(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`, {
-        opacity: 0, duration: TRANSITION_SWIPER/2, onComplete: () => {
+        opacity: 0, duration: TRANSITION_SWIPER / 2, onComplete: () => {
             document.querySelector(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`).classList.remove('heading_5')
             document.querySelector(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`).classList.add('heading_4');
         }
     });
     timeline.to(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`, {
-        opacity: 1, duration: TRANSITION_SWIPER/2,
+        opacity: 1, duration: TRANSITION_SWIPER / 2,
     });
 }
 
 function animatePreviousSlide(index) {
-    console.log('Previous, ', index);
     const timeline = gsap.timeline();
     timeline.to(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`, {
-        opacity: 0, duration: TRANSITION_SWIPER/2, onComplete: () => {
+        opacity: 0, duration: TRANSITION_SWIPER / 2, onComplete: () => {
             document.querySelector(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`).classList.remove('heading_4');
             document.querySelector(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`).classList.add('heading_5')
         }
     });
     timeline.to(`.cases-slider-screen__slider__item:nth-child(${index}) .cases-slider-screen__slider__item__title`, {
-        opacity: 1, duration: TRANSITION_SWIPER/2,
+        opacity: 1, duration: TRANSITION_SWIPER / 2,
     });
 }
 

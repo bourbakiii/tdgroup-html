@@ -16,9 +16,7 @@ const createSwiper = () => {
         init: false
     });
     swiper.on('afterInit', ({activeIndex: current_slide_index}) => {
-        console.log(123);
         if (window.innerWidth <= 992) return;
-        console.log(456, window.innerWidth);
         animateActiveSlide(current_slide_index + 1)
     });
     swiper.on('slideChange', ({activeIndex: current_slide_index, previousIndex: previous_slide_index}) => {
@@ -30,7 +28,6 @@ const createSwiper = () => {
 }
 
 function animateActiveSlide(index) {
-    console.log("animating");
     const timeline = gsap.timeline();
     timeline.to(`.workers-slider-screen__slider__item:nth-child(${index}) .workers-slider-screen__slider__item__content`, {
         opacity: 0, duration: TRANSITION_SLIDERS / 2, onComplete: () => {

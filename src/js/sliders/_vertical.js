@@ -29,7 +29,6 @@ export default function VerticalSlider(){
             }
         });
 
-    console.log(document.querySelectorAll('.vertical-slider-screen__content__slider__item__face__add-button'))
 
 
 // Тут в выбранное добавляются ИНДЕКСЫ DOM ЭЛЕМЕНТА + 1, а не ID!!! Я просто хз как это в итоге работать будет.

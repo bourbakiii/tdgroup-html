@@ -48,7 +48,6 @@ console.log(document.location);
 
 if (document.location.pathname === '/') {
     document.querySelectorAll('.main-screen__overlay-sections__card').forEach((el) => {
-        console.log(el);
         el.onclick = () => document.querySelector('.post-modal__wrapper').classList.toggle('show')
     })
 }

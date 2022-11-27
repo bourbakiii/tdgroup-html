@@ -5,7 +5,6 @@ let swiper = null;
 
 
 const createSwiper = () => {
-    console.log("swiper");
 
     swiper = new Swiper(".articles-slider-screen__slider", {
         slidesPerView: 1,

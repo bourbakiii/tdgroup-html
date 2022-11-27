@@ -5,21 +5,17 @@
   &__slider {
     overflow: visible;
     padding-right: calc(100% - 335px);
-    height: 603px;
+    height: 615px;
     @media screen and (max-width: $tablet_start) {
       padding-right: 0;
-      height: 530px;
-    }
-    @media screen and (max-width: $tablet_end) {
-      padding-right: 0;
       height: auto;
-    }
-    .swiper-slide {
-      @media screen and (max-width: $tablet_start) {
-        height:auto;
+      .swiper-slide {
+        height: auto;
       }
     }
-      &__item {
+
+
+    &__item {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -28,40 +24,12 @@
       width: 335px;
       gap: 7.2%;
       @media screen and (max-width: $tablet_start) {
-        gap: 5%;
+        gap: 10px;
         flex-direction: column;
       }
-      transition: width 1s;
+      transition: width $TRANSITION_SLIDERS;
       color: $GREEN;
 
-      &.swiper-slide-active {
-        width: 925px;
-      }
-
-      &.swiper-slide-active & {
-        &__image {
-          height: max-content;
-          max-width: 463px;
-
-
-        }
-
-        &__info {
-          width: 298px;
-          min-width: 298px;
-          margin-left: 20px;
-          opacity: 1;
-          visibility: visible;
-          @media screen and (max-width: $tablet_start) {
-            margin-left: 10px;
-          }
-          @media screen and (max-width: $tablet_end) {
-            min-width: auto;
-            max-width: 100%;
-            margin: 0;
-          }
-        }
-      }
 
       &__pre {
         flex-shrink: 0;
@@ -83,19 +51,18 @@
         width: 100%;
         max-width: 210px;
         object-fit: contain;
-        transition: 1s;
+        transition: $TRANSITION_SLIDERS;
         @media screen and (max-width: $tablet_start) {
           max-width: none;
-          width: 25%;
+          width: 55% !important;
         }
         @media screen and (max-width: $tablet_end) {
-            width: 55% !important;
-            margin: 0 auto 10px;
+          margin: 0 auto 10px;
         }
       }
 
       &__info {
-        transition: 1s;
+        transition: $TRANSITION_SLIDERS;
         width: 0;
         min-width: 0;
         z-index: 2;
@@ -105,18 +72,20 @@
         @media screen and (max-width: $tablet_start) {
           margin-left: 10px;
           visibility: visible;
-          width: 298px;
-          min-width: 298px;
+          flex-grow: 1;
+          width: 100% !important;
         }
         @media screen and (max-width: $tablet_end) {
           margin: 0;
-
         }
 
 
         &__text {
           margin-bottom: 10px;
           width: 298px;
+          @media screen and (max-width: $tablet_start) {
+            width: 100%;
+          }
         }
 
         &__button {
@@ -146,12 +115,10 @@
         max-width: 100%;
         flex-grow: 0;
         flex-shrink: 0;
+        margin-bottom: 44px;
 
         &.heading_4 {
           max-width: 560px;
-          line-clamp: 2;
-          -webkit-line-clamp: 2;
-          height: 2em;
 
           @media screen and (max-width: $tablet_start) {
             max-width: 100%;
@@ -161,6 +128,7 @@
         &.heading_5 {
           max-width: 100%;
         }
+
         @media screen and (max-width: $tablet_start) {
           @include heading_4_mixin;
         }
@@ -175,6 +143,34 @@
 
       &:last-of-type {
         padding-right: 0;
+      }
+
+      &.swiper-slide-active {
+        width: 925px;
+      }
+
+      &.swiper-slide-active & {
+        &__image {
+          max-width: 463px;
+        }
+
+        &__info {
+          width: 298px;
+          min-width: 298px;
+          margin-left: 20px;
+          opacity: 1;
+          visibility: visible;
+          @media screen and (max-width: $tablet_start) {
+            margin-left: 10px;
+            width: 100%;
+            min-width: auto;
+          }
+          @media screen and (max-width: $tablet_end) {
+            min-width: auto;
+            max-width: 100%;
+            margin: 0;
+          }
+        }
       }
     }
   }
