@@ -3,6 +3,10 @@
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
+  @media screen and (max-width: $phone_start) {
+    height: 420px;
+  }
+
 
   &__image {
     display: block;
@@ -10,6 +14,9 @@
     height: auto;
     object-fit: cover;
     transform: translateX(calc((140 / 1440) * 100%));
+    @media screen and (max-width: $phone_start) {
+      height: 100%;
+    }
   }
 
   &__content {

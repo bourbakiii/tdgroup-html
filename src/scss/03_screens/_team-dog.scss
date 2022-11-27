@@ -2,6 +2,9 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  @media screen and (max-width: $phone_start) {
+    height: 320px;
+  }
 
   &__image {
     display: block;
@@ -9,6 +12,9 @@
     width: 50%;
     height: auto;
     object-fit: cover;
+    @media screen and (max-width: $phone_start) {
+      height: 100%;
+    }
   }
 
   &__content {
